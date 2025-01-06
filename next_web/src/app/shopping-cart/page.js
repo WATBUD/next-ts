@@ -9,7 +9,7 @@ export default function App() {
     expenses.reduce((total, expenses) => total + expenses.price, 0, [expenses])
   );
 
-  const addExpense = () => {
+  const addItem = () => {
     if (title.trim() === "" || price.trim() === "") return;
     setExpenses([
       ...expenses,
@@ -51,7 +51,7 @@ export default function App() {
     setEditingId(item.id);
   };
 
-  const deleteExpense = (id) => {
+  const deleteItem = (id) => {
     console.log(id);
     setExpenses(expenses.filter((item) => item.id !== id));
   };
@@ -72,7 +72,7 @@ export default function App() {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-        <button onClick={addExpense}> Add</button>
+        <button onClick={addItem}> Add</button>
       </div>
       <ul>
         {expenses.map((item) => (
@@ -98,7 +98,7 @@ export default function App() {
               <div>
                 {item.title}:${item.price}
                 <button onClick={() => startEditing(item)}>edit</button>
-                <button onClick={() => deleteExpense(item.id)}>delete</button>
+                <button onClick={() => deleteItem(item.id)}>delete</button>
               </div>
             )}
           </li>

@@ -33,6 +33,10 @@ const DropdownMenu = () => {
           <li>
             <Link href="/shopping-cart">shopping-cart</Link>
           </li>
+          <li>
+            <Link href="/debounce-throttle">debounce-throttle</Link>
+          </li>
+          
         </ul>
       )}
     </div>
