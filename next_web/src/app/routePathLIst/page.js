@@ -30,6 +30,9 @@ const DropdownMenu = () => {
           <li>
             <Link href="/dashboard_Table">dashboard_Table</Link>
           </li>
+          <li>
+            <Link href="/shopping-cart">shopping-cart</Link>
+          </li>
         </ul>
       )}
     </div>
