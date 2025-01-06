@@ -31,21 +31,22 @@ export default function Home() {
           adSlot="4767523822"
       /> */}
       <div
+        //className="!h-[14.5vh]"
         style={{
           position: "fixed",
           display: "flex",
           backgroundColor: "#0000",
           zIndex: 9999,
           overflow: "hidden",
-          marginTop:  isMobile ? "85vh" : "85vh",
+          marginTop:  isMobile ? "90vh" : "90vh",
           //bottom: 0,
           // bottom: isMobile ? "-30vh" : "-20vh",
           justifyContent: "center",
           alignItems: "center",
-          width: "100%",
-          height: "14.5vh",
+          width: "100%"
         }}
       >
+        <div>
         <GoogleAd
           isMobile={isMobile}
           adClient={adClient}
@@ -56,6 +57,7 @@ export default function Home() {
           }}
           adSlot="1239843369"
         />
+        </div>
       </div>
       {!isMobile && (
         <GoogleAdPC

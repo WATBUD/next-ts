@@ -1,6 +1,5 @@
 "use client";
 import React, { useState,useMemo } from "react";
-
 export default function App() {
   const [expenses, setExpenses] = useState([]);
   const [title, setTilte] = useState("");
@@ -109,3 +108,4 @@ export default function App() {
     </div>
   );
 }
+
