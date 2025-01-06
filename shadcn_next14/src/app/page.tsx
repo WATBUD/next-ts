@@ -37,12 +37,13 @@ export default function Home() {
           backgroundColor: "#0000",
           zIndex: 9999,
           overflow: "hidden",
-          marginTop:  isMobile ? "85vh" : "80vh",
+          marginTop:  isMobile ? "85vh" : "85vh",
           //bottom: 0,
           // bottom: isMobile ? "-30vh" : "-20vh",
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
+          height: "14.5vh",
         }}
       >
         <GoogleAd
