@@ -66,7 +66,7 @@ const optionsSlice = createSlice({
     setShowOptionUI(state, action: PayloadAction<boolean>) {
       state.showOptionUI = action.payload;
     },
-    setDatabaseHasBeenLoaded(state, action: PayloadAction<boolean>) {
+    setDbHasBeenLoaded(state, action: PayloadAction<boolean>) {
       state.databaseHasBeenLoaded = action.payload;
     },
     batchUpdateConfigOptions(state, action: PayloadAction<Partial<OptionsState['configOptions']>>) {
@@ -187,7 +187,7 @@ const optionsSlice = createSlice({
   },
 });
 
-export const { resetState,initializeConfigOptions,setShowOptionUI, setDatabaseHasBeenLoaded, setConfigOptions, updateConfigOptions, setFavorites, handleShowMode, handleInputChange, toggleStarred, setQuery } = optionsSlice.actions;
+export const { resetState,initializeConfigOptions,setShowOptionUI, setDbHasBeenLoaded, setConfigOptions, updateConfigOptions, setFavorites, handleShowMode, handleInputChange, toggleStarred, setQuery } = optionsSlice.actions;
 
 export default optionsSlice.reducer;
 
@@ -200,7 +200,7 @@ type OptionsActions = {
 };
 export const useOptions = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const optionsState = useSelector((state: RootState) => state.options);
+  const statesValue = useSelector((state: RootState) => state.options);
   const actions: OptionsActions = Object.keys(optionsSlice.actions).reduce(
     (accumulator, actionName) => {
       accumulator[actionName as keyof OptionsActions] = (payload) =>
@@ -210,7 +210,7 @@ export const useOptions = () => {
     {} as OptionsActions
   );
   return {
-    ...optionsState,
+    ...statesValue,
     ...actions,
   };
 };

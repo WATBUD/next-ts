@@ -32,14 +32,12 @@ const SearchList: React.FC = () => {
     databaseHasBeenLoaded,
     handleInputChange,
     initializeConfigOptions,
-    batchUpdateConfigOptions,
     handleShowMode,
     toggleStarred,
     configOptions,
     favorites,
     setFavorites,
-    setDatabaseHasBeenLoaded,
-    setConfigOptions,
+    setDbHasBeenLoaded,
     setShowOptionUI,
     filteredData,
     queryString,
@@ -87,7 +85,7 @@ const SearchList: React.FC = () => {
           console.log("favorites/data retrieved successfully:", favoritesData);
           setFavorites(favoritesData);
         }
-        setDatabaseHasBeenLoaded(true);
+        setDbHasBeenLoaded(true);
       })
       .catch((error) => {
         console.error((error as Error).message);

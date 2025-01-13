@@ -60,10 +60,10 @@ const OptionsModal = () => {
             id="copyTheTextAbove"
             checked={configOptions.copyTheTextAbove}
             onChange={() => {
-              setConfigOptions(({
+              setConfigOptions({
                 ...configOptions,
                 copyTheTextAbove: !configOptions.copyTheTextAbove,
-              }));
+              });
             }}
             className="mr-2 w-5 h-5"
           />
@@ -77,10 +77,10 @@ const OptionsModal = () => {
             id="copyTheTextAbove"
             checked={configOptions.copyTheTextBelow}
             onChange={() => {
-              setConfigOptions(({
+              setConfigOptions({
                 ...configOptions,
                 copyTheTextBelow: !configOptions.copyTheTextBelow,
-              }));
+              });
             }}
             className="mr-2 w-5 h-5"
           />
