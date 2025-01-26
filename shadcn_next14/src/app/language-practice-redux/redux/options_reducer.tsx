@@ -2,7 +2,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './store'; 
-import { showCustomToast } from '../../common/sharedFunction';
+import { showCustomToast } from '../../common/shared_function';
 import language_data_sheet from "../language_data_sheet.json";
 import language_data_tag from "../language_data_tag.json";
 
@@ -35,7 +35,7 @@ const initialState: OptionsState = {
 };
 
 const optionsSlice = createSlice({
-  name: 'options',
+  name: "options",
   initialState,
   reducers: {
     resetState(state) {
@@ -43,22 +43,29 @@ const optionsSlice = createSlice({
       //state.databaseHasBeenLoaded = false;
       state.configOptions = initialState.configOptions; // Resets to the initial config options
       state.favorites = [];
-      state.queryString = '';
+      state.queryString = "";
       state.filteredData = [];
     },
-    initializeConfigOptions(state, action: PayloadAction<Partial<OptionsState['configOptions']>>) {
+    initializeConfigOptions(
+      state,
+      action: PayloadAction<Partial<OptionsState["configOptions"]>>
+    ) {
       if (action.payload) {
-        if (typeof action.payload.copyTheTextBelow === 'boolean') {
-          state.configOptions.copyTheTextBelow = action.payload.copyTheTextBelow;
+        if (typeof action.payload.copyTheTextBelow === "boolean") {
+          state.configOptions.copyTheTextBelow =
+            action.payload.copyTheTextBelow;
         }
-        if (typeof action.payload.copyTheTextAbove === 'boolean') {
-          state.configOptions.copyTheTextAbove = action.payload.copyTheTextAbove;
+        if (typeof action.payload.copyTheTextAbove === "boolean") {
+          state.configOptions.copyTheTextAbove =
+            action.payload.copyTheTextAbove;
         }
-        if (typeof action.payload.showFavoritesListOnly === 'boolean') {
-          state.configOptions.showFavoritesListOnly = action.payload.showFavoritesListOnly;
+        if (typeof action.payload.showFavoritesListOnly === "boolean") {
+          state.configOptions.showFavoritesListOnly =
+            action.payload.showFavoritesListOnly;
         }
         if (Array.isArray(action.payload.selectedLanguages)) {
-          state.configOptions.selectedLanguages = action.payload.selectedLanguages;
+          state.configOptions.selectedLanguages =
+            action.payload.selectedLanguages;
         }
       }
       state.databaseHasBeenLoaded = true;
@@ -69,15 +76,28 @@ const optionsSlice = createSlice({
     setDbHasBeenLoaded(state, action: PayloadAction<boolean>) {
       state.databaseHasBeenLoaded = action.payload;
     },
-    batchUpdateConfigOptions(state, action: PayloadAction<Partial<OptionsState['configOptions']>>) {
+    batchUpdateConfigOptions(
+      state,
+      action: PayloadAction<Partial<OptionsState["configOptions"]>>
+    ) {
       Object.entries(action.payload).forEach(([key, value]) => {
         (state.configOptions as any)[key] = value;
       });
     },
-    setConfigOptions(state, action: PayloadAction<OptionsState['configOptions']>) {
+    setConfigOptions(
+      state,
+      action: PayloadAction<OptionsState["configOptions"]>
+    ) {
       state.configOptions = action.payload;
     },
-    updateConfigOptions(state, action: PayloadAction<(prevOptions: OptionsState['configOptions']) => OptionsState['configOptions']>) {
+    updateConfigOptions(
+      state,
+      action: PayloadAction<
+        (
+          prevOptions: OptionsState["configOptions"]
+        ) => OptionsState["configOptions"]
+      >
+    ) {
       state.configOptions = action.payload(state.configOptions);
     },
     setFavorites(state, action: PayloadAction<number[]>) {
@@ -86,104 +106,104 @@ const optionsSlice = createSlice({
     setQuery: (state, action: PayloadAction<string>) => {
       state.queryString = action.payload;
     },
-    handleShowMode: (
-      state
-    ) => {
+    handleShowMode: (state) => {
       //const { showFavoritesListOnly} = action.payload;
       console.log(
         "%c handleShowMode",
         "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
         "state:",
-        JSON.parse(JSON.stringify(state)),
+        JSON.parse(JSON.stringify(state))
       );
-      
+
       if (state.databaseHasBeenLoaded) {
-        showCustomToast(state.configOptions.showFavoritesListOnly ? "最愛模式" : "全部模式");
-        
+        showCustomToast(
+          state.configOptions.showFavoritesListOnly ? "最愛模式" : "全部模式"
+        );
+
         optionsSlice.caseReducers.applyFilter(state);
       }
     },
-   handleInputChange: (state, action: PayloadAction<string>) => {
-    console.log(
-      "%c handleInputChange",
-      "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
-      "action:",
-      action,
-    );
-    state.queryString =action.payload;
-    optionsSlice.caseReducers.applyFilter(state);
-   },
-   applyFilter: (state) => {
-    const inputQueryString = state.queryString.trim();
-    let mergedData = language_data_sheet.map((item) => ({
-      ...item,
-      tag: "",
-    }));
-    const missingIndexes: number[] = [];
-
-    language_data_tag.forEach((tagItem, index) => {
-      if (mergedData[index]) {
-        mergedData[index].tag = tagItem.tag;
-      } else {
-        missingIndexes.push(tagItem.index);
-      }
-    });
-
-    if (missingIndexes.length > 0) {
+    handleInputChange: (state, action: PayloadAction<string>) => {
       console.log(
-        "%c Missing indexes in mergedData:",
-        "color:#FF0000;font-family:system-ui;font-size:1.5rem;font-weight:bold",
-        missingIndexes
+        "%c handleInputChange",
+        "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+        "action:",
+        action
       );
-    }
+      state.queryString = action.payload;
+      optionsSlice.caseReducers.applyFilter(state);
+    },
+    applyFilter: (state) => {
+      const inputQueryString = state.queryString.trim();
+      let mergedData = language_data_sheet.map((item) => ({
+        ...item,
+        tag: "",
+      }));
+      const missingIndexes: number[] = [];
 
-    console.log(
-      "%c mergedData",
-      "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
-      mergedData
-    );
+      language_data_tag.forEach((tagItem, index) => {
+        if (mergedData[index]) {
+          mergedData[index].tag = tagItem.tag;
+        } else {
+          missingIndexes.push(tagItem.index);
+        }
+      });
 
-    const filtered = mergedData.filter((item) => {
-      if (inputQueryString.length === 0) {
-        return state.configOptions.showFavoritesListOnly
-          ? state.favorites.includes(item.index)
-          : true;
+      if (missingIndexes.length > 0) {
+        console.log(
+          "%c Missing indexes in mergedData:",
+          "color:#FF0000;font-family:system-ui;font-size:1.5rem;font-weight:bold",
+          missingIndexes
+        );
       }
 
-      return (
-        Object.values(item.translations).some((translation: string) =>
-          translation.toLowerCase().includes(inputQueryString.toLowerCase())
-        ) &&
-        (!state.configOptions.showFavoritesListOnly ||
-          state.favorites.includes(item.index))
+      console.log(
+        "%c mergedData",
+        "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
+        mergedData
       );
-    });
 
-    console.log(
-      "%c languagePracticeTool_filtered",
-      "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
-      "filtered:",
-      filtered
-    );
+      const filtered = mergedData.filter((item) => {
+        if (inputQueryString.length === 0) {
+          return state.configOptions.showFavoritesListOnly
+            ? state.favorites.includes(item.index)
+            : true;
+        }
 
-    state.filteredData = filtered;
+        return (
+          Object.values(item.translations).some((translation: string) =>
+            translation.toLowerCase().includes(inputQueryString.toLowerCase())
+          ) &&
+          (!state.configOptions.showFavoritesListOnly ||
+            state.favorites.includes(item.index))
+        );
+      });
 
-    if (filtered.length <= 0 && state.configOptions.showFavoritesListOnly) {
-      showCustomToast("最愛模式:無收藏名單");
-    }
-  },
-   toggleStarred: (state, action: PayloadAction<number>) => {
+      console.log(
+        "%c languagePracticeTool_filtered",
+        "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
+        "filtered:",
+        filtered
+      );
+
+      state.filteredData = filtered;
+
+      if (filtered.length <= 0 && state.configOptions.showFavoritesListOnly) {
+        showCustomToast("最愛模式:無收藏名單");
+      }
+    },
+    toggleStarred: (state, action: PayloadAction<number>) => {
       const index = action.payload;
       const favorites = state.favorites;
 
       if (favorites.includes(index)) {
-        state.favorites = favorites.filter(fav => fav !== index);
+        state.favorites = favorites.filter((fav) => fav !== index);
         showCustomToast("已移除最愛");
       } else {
         state.favorites.push(index);
         showCustomToast("已添加至最愛");
       }
-   },
+    },
   },
 });
 

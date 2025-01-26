@@ -1,10 +1,10 @@
 import React from "react";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
-import { showCustomToast } from "../common/sharedFunction";
-import './options-css.css';
+import { showCustomToast } from "../common/shared_function";
+import './options_css.css';
 
-import { useOptions } from "./redux/optionsReducer";
-import LanguageSelector from "./languageSelector"; // 引入新的組件
+import { useOptions } from "./redux/options_reducer";
+import LanguageSelector from "./language_selector"; // 引入新的組件
 
 const OptionsModal = () => {
   const {

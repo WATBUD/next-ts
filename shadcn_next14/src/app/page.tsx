@@ -1,10 +1,10 @@
 "use client";
 import LanguagePracticeRedux from "../app/language-practice-redux/page";
-import GoogleAd from "@/components/google-ad";
-import GoogleAdPC from "@/components/google-ad-pc";
+import GoogleAd from "@/components/google_ad";
+import GoogleAdPC from "@/components/google_ad_pc";
 import Script from 'next/script';
 
-import {useIsMobile} from './common/sharedFunction';
+import {useIsMobile} from './common/shared_function';
 
 export default function Home() {
   const isMobile = useIsMobile();
@@ -81,7 +81,7 @@ export default function Home() {
             position: "fixed",
             backgroundColor: "#0000",
             zIndex: 9999,
-            right: "0",
+            right: "20",
             width: "120px",
             height: "1200px",
             maxHeight: "100%",

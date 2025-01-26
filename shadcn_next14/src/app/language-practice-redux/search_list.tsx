@@ -17,13 +17,12 @@ import toast, {
   Toaster,
   ValueFunction,
 } from "react-hot-toast";
-import OptionsModal from "./optionsModal";
-import { useOptions } from "./redux/optionsReducer";
+import OptionsModal from "./options_modal";
+import { useOptions } from "./redux/options_reducer";
 
-import { copyText,handleScroll,scrollToTop  } from './languagePracticeTool';
-import { useIsMobile,translateTextAndSpeak } from '../common/sharedFunction';
-import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDBUtils";
-import './languageComponent.css'; 
+import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../common/shared_function';
+import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDB_utils";
+import './language_component.css'; 
 import { useDispatch } from "react-redux";
 const SearchList: React.FC = () => {
   const isMobile = useIsMobile();
@@ -93,15 +92,9 @@ const SearchList: React.FC = () => {
     }
     handleScroll();
   }, []);
-  const highlightText = (text: string, query: string) => {
-    if (!query) return text; 
-    const parts = text.split(new RegExp(`(${query})`, "gi")); 
-    return parts.map((part, index) => 
-      part.toLowerCase() === query.toLowerCase() ? (
-        <span key={index} style={{ backgroundColor: "#ff0" }}>{part}</span> 
-      ) : part
-    );
-  };
+
+
+
 
   return (
     <div className="w-full flex flex-col items-center mr-5">
@@ -200,7 +193,7 @@ const SearchList: React.FC = () => {
                     <button
                       className=""
                       onClick={() => {
-                        translateTextAndSpeak(item.translations.en);
+                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]]);
                       }}
                     >
                       <SpeakerWaveIcon className="h-6 w-6 fill-current text-gray-200" />
@@ -208,7 +201,7 @@ const SearchList: React.FC = () => {
                     <button
                       className="ml-2"
                       onClick={() => {
-                        copyText(item, configOptions);
+                        copyText(item.translations[configOptions.selectedLanguages[0]],item.translations[configOptions.selectedLanguages[1]], configOptions);
                       }}
                     >
                       <DocumentDuplicateIconSolid className="h-6 w-6 fill-current text-gray-200" />

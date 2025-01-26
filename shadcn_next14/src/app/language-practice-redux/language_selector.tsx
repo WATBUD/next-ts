@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useOptions } from "./redux/optionsReducer";
+import { useOptions } from "./redux/options_reducer";
 
 const LanguageSelector = () => {
   const {
