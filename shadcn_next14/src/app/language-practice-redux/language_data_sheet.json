@@ -1,5 +1,917 @@
 [
   {
+    "index": 273,
+    "translations": {
+      "en": "What format will the data become after using this?",
+      "zh": "使用這個後資料會變成甚麼格式?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 272,
+    "translations": {
+      "en": "Why do you have to work today?",
+      "zh": "為甚麼你今天要上班呀?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 271,
+    "translations": {
+      "en": "Refactor File Naming Conventions",
+      "zh": "重構文件命名約定"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 270,
+    "translations": {
+      "en": "I’ll have to claim before you visit again",
+      "zh": "在您再次訪問之前我必須先聲明"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 269,
+    "translations": {
+      "en": "Otherwise none of you will get energy from trade",
+      "zh": "否則你們誰都不會從貿易中獲得能量"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 268,
+    "translations": {
+      "en": "Hi can somebody help me with removing an object?",
+      "zh": "你好，有人可以幫我移除一個物體嗎？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 267,
+    "translations": {
+      "en": "People always need to have dreams",
+      "zh": "人總是要有夢想"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 266,
+    "translations": {
+      "en": "My life still has so many things left unfinished.",
+      "zh": "我的人生還有很多事沒做完"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 265,
+    "translations": {
+      "en": "I've been so loyal and cooperative with you, yet you suddenly want to hit me. QQ",
+      "zh": "我那麼忠心的配合你,你遽然想打我QQ"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 264,
+    "translations": {
+      "en": "Because we agreed to practice English together.",
+      "zh": "因為我們說好一起練英文"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 263,
+    "translations": {
+      "en": "The world is big, and you are amazing.",
+      "zh": "世界很大,你很棒"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 262,
+    "translations": {
+      "en": "I’m grinding problems on LeetCode every day.",
+      "zh": "我每天都在 LeetCode 上刷題。"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 261,
+    "translations": {
+      "en": "Got it. Please notify me and arrange the testing.",
+      "zh": "可以,再麻煩通知安排測試"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 260,
+    "translations": {
+      "en": "I'm just here to remind you, haha.",
+      "zh": "我只是來提醒哈哈"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 259,
+    "translations": {
+      "en": "Good morning, are you still tied up with SMH?",
+      "zh": "早,您這邊還在忙smh嗎？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 258,
+    "translations": {
+      "en": "I see you also got called in to work over the weekend, QQ.",
+      "zh": "我看你假日也被叫上線了QQ"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 257,
+    "translations": {
+      "en": "Or do we not need to replace it?",
+      "zh": "還是我們不需要替換呀@@?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 256,
+    "translations": {
+      "en": "May I ask which page of the document contains the translation for this page?",
+      "zh": "想請問這個頁面的翻譯在文件的哪個頁面?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 255,
+    "translations": {
+      "en": "You can clearly see that the text quantity and colors displayed are completely different from the app. I'm worried no one will notice, and everyone will end up redoing it later XD.",
+      "zh": "主要是可以看到他顯示的文字數量跟顏色都跟app完全不一樣，我怕沒人發現，到時候大家都重做一次XD。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 254,
+    "translations": {
+      "en": "Is this UI ready? I have time to work on it now.",
+      "zh": "請問這個UI有了嗎？我這邊有空做了"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 253,
+    "translations": {
+      "en": "I think you have a good chance.",
+      "zh": "我認為你有一個很好的機會。"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 252,
+    "translations": {
+      "en": "Is that person a girl?",
+      "zh": "那個人是女孩嗎？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 251,
+    "translations": {
+      "en": "Since he is willing to go out with you a second time, it means he likes you.",
+      "zh": "既然他願意跟你出來第二次 代表他對你有好感"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 250,
+    "translations": {
+      "en": "As long as you're here, nothing is a problem.",
+      "zh": "只要有你在 什麼都不是問題"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 249,
+    "translations": {
+      "en": "Change him with love",
+      "zh": "用愛去感化他"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 248,
+    "translations": {
+      "en": "He may still feel awkward",
+      "zh": "他可能還是覺得尷尬"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 247,
+    "translations": {
+      "en": "Update the unused backend API.",
+      "zh": "修正已無使用的後端API"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 246,
+    "translations": {
+      "en": "Is he a foreigner?",
+      "zh": "他是外國人嗎？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 245,
+    "translations": {
+      "en": "He may feel uncomfortable due to language problem",
+      "zh": "他可能會因為語言問題而感到不舒服"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 244,
+    "translations": {
+      "en": "Remember to invite me to your wedding next year.",
+      "zh": "明年記得請我喝喜酒"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 243,
+    "translations": {
+      "en": "You never know unless you ask, right?",
+      "zh": "總是要問問看才有機會嘛,對吧？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 242,
+    "translations": {
+      "en": "I bet he wouldn't want to come",
+      "zh": "我打賭他不想來"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 241,
+    "translations": {
+      "en": "but he is pretty introverted",
+      "zh": "但他很內向"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 240,
+    "translations": {
+      "en": "His appearance perfectly matches",
+      "zh": "他的外表很配"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 239,
+    "translations": {
+      "en": "You can have both love and bread",
+      "zh": "你可以愛情跟麵包同時擁有呀"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 238,
+    "translations": {
+      "en": "Is he your type",
+      "zh": "他是你的菜嗎？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 237,
+    "translations": {
+      "en": "That means he cares about you",
+      "zh": "代表他在乎你"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 236,
+    "translations": {
+      "en": "He saved his precious scheduled leave for me",
+      "zh": "他為我節省了寶貴的預定假期"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 235,
+    "translations": {
+      "en": "Are you going to meet the handsome young man",
+      "zh": "那你要去跟小鮮肉見面嗎？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 234,
+    "translations": {
+      "en": "I would like to learn more about cryptocurrency recently",
+      "zh": "我最近想了解更多關於加密貨幣的知識"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 233,
+    "translations": {
+      "en": "I invest in stock markets for long-term growth rather than short-term trading",
+      "zh": "我投資股票市場是為了長期成長而不是短期交易"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 232,
+    "translations": {
+      "en": "Do you usually invest in stocks?",
+      "zh": "你平常會投資股票嗎?"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 231,
+    "translations": {
+      "en": "Sounds great",
+      "zh": "聽起來很棒"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 230,
+    "translations": {
+      "en": "Hi, according to Ray's response, he mentioned that he got version 0.9 from QA, but the link I checked is version 0.7. Do we have an updated link?",
+      "zh": "hi,根據ray的回覆 他說他有從QA手上拿到0.9版本,但是這個連結我查看是0.7,我們有更新的連結嗎"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 229,
+    "translations": {
+      "en": "Sure, please give me a moment.",
+      "zh": "當然，請給我一點時間。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 228,
+    "translations": {
+      "en": "Could you give me the dc link?",
+      "zh": "能給我dc連結嗎？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 227,
+    "translations": {
+      "en": "Many people also don't speak, they just go up to listen to the chat like a podcast while coding.",
+      "zh": "很多人也是不講話,上去當podcast聽聊天,然後coding"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 226,
+    "translations": {
+      "en": "You might consider joining DC, where we often discuss code and do live coding chats.",
+      "zh": "你可以考慮加入DC,我們常常在上面討論程式碼與聊天直播CODING"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 225,
+    "translations": {
+      "en": "After the event, when we get back home, we can do voice coding and discuss programming together.",
+      "zh": "活動結束後,回到家我們可以一起語音交流寫程式"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 224,
+    "translations": {
+      "en": "Then we can cancel the coffee shop plan for now. I'll go with you to this event instead.",
+      "zh": "那可以把咖啡廳活動先取消,我陪你去這個活動"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 223,
+    "translations": {
+      "en": "The main reason is that I use multiple monitors for coding, which allows me to work on projects much more efficiently.XD",
+      "zh": "主要是我coding會使用多個螢幕開發程式,這樣可以非常有效率地做專案"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 222,
+    "translations": {
+      "en": "We can try coding together at a coffee shop.",
+      "zh": "我們可以試著到咖啡館一起coding"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 221,
+    "translations": {
+      "en": "I think going to a coffee shop gives a different vibe.XD",
+      "zh": "我認為去咖啡館是不一樣的感覺"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 220,
+    "translations": {
+      "en": "rather than at a cafe?",
+      "zh": "而不是在咖啡館？"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 219,
+    "translations": {
+      "en": "I’m more likely to hide at home and write code XD",
+      "zh": "我比較有可能躲在家裡寫程式XD"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 218,
+    "translations": {
+      "en": "Looks good? I'll consider it.",
+      "zh": "看起來不錯?我會考慮看看"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 217,
+    "translations": {
+      "en": "OK, please open your Line Pay account.",
+      "zh": "OK,請開啟你的line pay 帳戶"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 216,
+    "translations": {
+      "en": "Good morning! Is there anything I can help you with?",
+      "zh": "早安 有什麼我可以幫助你的嗎?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 215,
+    "translations": {
+      "en": "I’d like to ask, on which page can I find the translation for this page?",
+      "zh": "我想請問這個頁面翻譯在哪一頁?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 214,
+    "translations": {
+      "en": "Or is there a more updated document available?",
+      "zh": "還是我們有更新的文檔？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 213,
+    "translations": {
+      "en": "Hi CY, good morning! I’d like to ask if this URL contains the latest translations?",
+      "zh": "HI,CY早,我想問這個網址是最新的翻譯嗎？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 212,
+    "translations": {
+      "en": "Add automatic language swap feature.",
+      "zh": "新增自動交換語系功能"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 211,
+    "translations": {
+      "en": "This is two different features.",
+      "zh": "這是兩個不同的功能"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 210,
+    "translations": {
+      "en": "Normal process: We need to determine whether this user receives different fee percentages based on their account.",
+      "zh": "正常流程:我們需要知道這個用戶是否根據帳號獲取不同的手續費百分比"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 209,
+    "translations": {
+      "en": "Therefore, the backend should return the percentage to the frontend as soon as the page loads.",
+      "zh": "所以後端應該在頁面一進入時回傳百分比給前端"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 208,
+    "translations": {
+      "en": "Alternatively, this part of the UI could be removed.",
+      "zh": "或者移除這部分的ui"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 207,
+    "translations": {
+      "en": "Would it be strange to display the handling fee directly?",
+      "zh": "直接顯示手續費會不會很奇怪？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 206,
+    "translations": {
+      "en": "For the handling fee at points 13 and 14 in the user interface, how would you like it to be presented?",
+      "zh": "對於第13/14點手續費部分使用者UI,您這邊想如何呈現?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 205,
+    "translations": {
+      "en": "OK, then I will handle them separately. PIX and Bank will each have their own independent screens.",
+      "zh": "OK,那我拆開來做 PIX/Bank都是獨立畫面"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 204,
+    "translations": {
+      "en": "Currently, we only have PIX. Should we implement it following the bank's UI?",
+      "zh": "我們目前只有pix 是一樣依照銀行的ui去實作嗎?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 203,
+    "translations": {
+      "en": "Are PIX and Bank separate screens, or do they share the same screen?",
+      "zh": "是PIX/Bank都是獨立畫面 還是共用畫面?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 202,
+    "translations": {
+      "en": "Remove unnecessary files",
+      "zh": "移除不必要檔案"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 201,
+    "translations": {
+      "en": "At the core, only the supervisor should be able to control your two permissions. The company's processes should be improved.",
+      "zh": "從本質上講，只有主管才能控制你的兩個權限。公司的流程應該要改進。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 200,
+    "translations": {
+      "en": "it's just that people often fail to understand each other's perspectives.",
+      "zh": "只是人們常常無法理解彼此的觀點。"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 199,
+    "translations": {
+      "en": "I'm not sure when the final version will be ready; the UI keeps changing.",
+      "zh": "不曉得什麼時候會有最終版 UI一直改"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 198,
+    "translations": {
+      "en": "I'm still working hard on modifying the Withdrawal and Deposit V4 versions XD.",
+      "zh": "我還在努力改Withdrawal 跟deposit V4版本XD"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 197,
+    "translations": {
+      "en": "Okay, I'll package a version right away.",
+      "zh": "ok,我馬上打包一版"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 196,
+    "translations": {
+      "en": "Modify the domain key name based on backend requirements.",
+      "zh": "根據後端需求修改domain key 名稱"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 195,
+    "translations": {
+      "en": "OK, the lucky wheel issue is a backend problem. The backend will return the lucky wheel domain.",
+      "zh": "ok,幸運輪問題是後端的問題,後端會回傳幸運輪domain 英文怎麼說"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 194,
+    "translations": {
+      "en": "I mean, why did you respond to the withdrawal issue with the lucky wheel ticket? XD",
+      "zh": "我意思是,為什麼你回覆的提款問題 貼的是幸運輪工單XD"
+    },
+    "tag": "Personal"
+  },
+  {
+    "index": 193,
+    "translations": {
+      "en": "I’d like to ask if this option will be hidden.",
+      "zh": "想問這個選項會隱藏嗎？"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 192,
+    "translations": {
+      "en": "Good morning, may I ask if Zeplin currently provides the UI for this screen? Based on the web version, the color theme seems to differ significantly.",
+      "zh": "早,請問目前zeplin可以提供這個畫面的UI嗎?目前參照網頁部分看起來顏色主題差異過大"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 191,
+    "translations": {
+      "en": "Hi, I need the new images for all VIP levels. Where can I get them?",
+      "zh": "我需要vip所有等級的新圖片@@ 請問我可以去哪裡拿?"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 190,
+    "translations": {
+      "en": "I just fixed it. I'll finish fixing all the tasks and package them into one version for you.",
+      "zh": "我剛剛修掉了,我全部單子一起修完再給你包一版"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 189,
+    "translations": {
+      "en": "I've tested four work orders here, and they are all in UAT. Try the hot update on your side.",
+      "zh": "我這邊測試四張工單都在uat了,你熱更新試試"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 188,
+    "translations": {
+      "en": "Issue #2: What is the expected outcome or changes?",
+      "zh": "Issue #2 期望要改成什麼樣子？"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 187,
+    "translations": {
+      "en": "Since the order status is in SIT, I won't move it to UAT.",
+      "zh": "因為單子狀態在sit我不會換到uat"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 186,
+    "translations": {
+      "en": "Should I just directly change the order status to UAT test afterward?",
+      "zh": "那我之後直接把單子狀態都切到uat test@@?"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 185,
+    "translations": {
+      "en": "Sure, please update Zeplin when you have time. Since we currently have standalone page UIs, we've created two versions.",
+      "zh": "OK 麻煩有空請更新Zeplin,因為目前有獨立頁面Page UI 所以我們做了兩個版本"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 184,
+    "translations": {
+      "en": "Hi lee, will we still have a standalone offer page, or will everything be unified under the Offer Center?",
+      "zh": "hi 李,目前我們還會有獨立的offer page頁面嗎？還是統一進入 offer center"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 183,
+    "translations": {
+      "en": "kindly take note about this as well",
+      "zh": "也請注意這部分。"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 182,
+    "translations": {
+      "en": "Currently, I can't retrieve the trendChart domain in the settings. Has anything been changed in this part?",
+      "zh": "目前在settings拿不到trendChart Domain,想請問這部分有改什麼嗎? 英文怎麼說"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 181,
+    "translations": {
+      "en": "Enter the JWT Token directly, without adding the 'Bearer ' prefix.",
+      "zh": "直接輸入 JWT Token，不需加上 'Bearer ' 前綴"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 180,
+    "translations": {
+      "en": "May I ask if the new offers mission still requires the promotion page? I currently can't find the page style in Zeplin.",
+      "zh": "請問新的offers mission還需要promotion這個頁面嗎? 目前在zeplin styles找不到頁面樣式"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 179,
+    "translations": {
+      "en": "How could you leave me all alone in this world?",
+      "zh": "你怎麼能丟下我一個人在這個世界上？"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 178,
+    "translations": {
+      "en": "I gave you everything, and you still left me. Why?",
+      "zh": "我給了你一切，你卻還是離開了我。為什麼？"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 177,
+    "translations": {
+      "en": "Move the copyText function to a shared function file named languagePracticeTool.",
+      "zh": "將copyText fn 移到共用 fn檔案 languagePracticeTool"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 176,
+    "translations": {
+      "en": "Refactor user deposit-related files.",
+      "zh": "重構user deposit 相關檔案"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 175,
+    "translations": {
+      "en": "I usually take freelance projects on weekends.",
+      "zh": "我平時假日有在接案"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 174,
+    "translations": {
+      "en": "The initial version of the Deposit app has been deployed. If you have time, please help arrange testing. Thank you.",
+      "zh": "存款應用程式的初始版本已部署。如果您有時間，請幫忙安排測試。謝謝。"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 173,
+    "translations": {
+      "en": "The App version of the Transfer app has been deployed. If you have time, please help arrange testing. Thank you.",
+      "zh": "Transfer應用程式的App版本已部署。如果您有時間，請幫忙安排測試。謝謝。"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 172,
+    "translations": {
+      "en": "Should we keep the amount?",
+      "zh": "那我們金額保留嗎?"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 171,
+    "translations": {
+      "en": "Can we let the UI create the schematic?",
+      "zh": "我們可以讓 UI 建立原理圖嗎？"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 170,
+    "translations": {
+      "en": "Revise New Withdrawal Standards (Tentative)",
+      "zh": "修改新提款標準(暫定)"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 169,
+    "translations": {
+      "en": "Error occasionally occurs during login. Is the backend being deployed?",
+      "zh": "登入時不時會出現error, 請問後端有在部署嗎？"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 168,
+    "translations": {
+      "en": "The username or account already exists. Please use a different name.",
+      "zh": "使用者名稱或帳號已存在，請使用不同的名稱"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 167,
+    "translations": {
+      "en": "User created successfully.",
+      "zh": "使用者創建成功"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 166,
+    "translations": {
+      "en": "User creation failed.",
+      "zh": "使用者創建失敗"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 165,
+    "translations": {
+      "en": "User does not exist.",
+      "zh": "使用者不存在"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 164,
+    "translations": {
+      "en": "Incorrect password.",
+      "zh": "密碼不正確"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 163,
+    "translations": {
+      "en": "Unable to retrieve user ID.",
+      "zh": "無法獲取使用者 ID"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 162,
+    "translations": {
+      "en": "The device has been successfully removed.",
+      "zh": "設備已成功刪除"
+    },
+    "tag": "default"
+  },
+  {
+    "index": 161,
+    "translations": {
+      "en": "It is great, but it will be better to use voice chat.",
+      "zh": "很棒，但使用語音聊天會更好"
+    },
+    "tag": "English"
+  },
+  {
+    "index": 160,
+    "translations": {
+      "en": "Actually, we can practice speaking English directly in the sheep group.",
+      "zh": "其實我們可以直接在綿羊群用英文練習對話"
+    },
+    "tag": "English"
+  },
+  {
     "index": 159,
     "translations": {
       "en": "If the index doesn't exist, log it for later review.",

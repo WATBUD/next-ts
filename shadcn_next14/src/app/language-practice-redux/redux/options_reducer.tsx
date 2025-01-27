@@ -19,19 +19,24 @@ export interface OptionsState {
   filteredQueryData: any[];
   languageDataSheet: any[];
 }
-const filteredLanguageDataSheet = language_data_sheet.map((entry) => {
-  // const filteredTranslations = Object.fromEntries(
+
+const filteredLanguageDataSheet = (languages:string[]) => {
+  return language_data_sheet.map((entry:any) => {
+    // Filter translations to only include the specified languages
+    const filteredTranslations = {
+      [languages[0]]: entry.translations[languages[0]],
+      [languages[1]]: entry.translations[languages[1]],
+    };
+    return { ...entry, translations: filteredTranslations }; // Return the updated entry with filtered translations
+  });
+    // const filteredTranslations = Object.fromEntries(
   //   Object.entries(entry.translations).filter(([lang]) => ['en', 'zh'].includes(lang))
   // );
   // return { ...entry, translations: filteredTranslations };
+};
 
-  // Filter translations to only include 'en' and 'zh'
-  const filteredTranslations = {
-    en: entry.translations.en,
-    zh: entry.translations.zh,
-  };
-  return { ...entry, translations: filteredTranslations }; // Return the updated entry with filtered translations
-});
+
+
 
 const initialState: OptionsState = {
   showOptionUI: false,
@@ -45,7 +50,7 @@ const initialState: OptionsState = {
   favorites: [],
   queryString: '',
   filteredQueryData: [],
-  languageDataSheet: filteredLanguageDataSheet 
+  languageDataSheet: filteredLanguageDataSheet(["en", "zh"])
 };
 
 const optionsSlice = createSlice({
@@ -157,7 +162,7 @@ const optionsSlice = createSlice({
       // );
       // downloadJSONFile("test",mergedData);
 
-      const filtered = filteredLanguageDataSheet.filter((item) => {
+      const filtered = state.languageDataSheet.filter((item) => {
         if (inputQueryString.length === 0) {
           return state.configOptions.showFavoritesListOnly
             ? state.favorites.includes(item.index)
@@ -165,7 +170,7 @@ const optionsSlice = createSlice({
         }
 
         return (
-          Object.values(item.translations).some((translation: string) =>
+          Object.values(item.translations).some((translation: any) =>
             translation.toLowerCase().includes(inputQueryString.toLowerCase())
           ) &&
           (!state.configOptions.showFavoritesListOnly ||
