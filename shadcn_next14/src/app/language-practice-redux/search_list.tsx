@@ -38,7 +38,7 @@ const SearchList: React.FC = () => {
     setFavorites,
     setDbHasBeenLoaded,
     setShowOptionUI,
-    filteredData,
+    filteredQueryData: filteredData,
     queryString,
   } = useOptions();
 
@@ -155,9 +155,9 @@ const SearchList: React.FC = () => {
                 <ChevronDoubleUpIcon className="h-6 w-6 fill-current text-yellow-50 mr-2" />
                 Top
               </button>
-              {filteredData.map((item, index) => (
+              {filteredData.map((item) => (
                 <li
-                  key={index}
+                  key={item.index}
                   className="flex w-[100%] items-center border-b border-gray-300 py-2"
                 >
                   <button

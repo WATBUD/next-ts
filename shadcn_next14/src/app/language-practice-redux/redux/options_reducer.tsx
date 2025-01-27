@@ -2,9 +2,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './store'; 
-import { showCustomToast } from '../../common/shared_function';
+import { showCustomToast,downloadJSONFile } from '../../common/shared_function';
 import language_data_sheet from "../language_data_sheet.json";
-import language_data_tag from "../language_data_tag.json";
 
 export interface OptionsState {
   showOptionUI: boolean;
@@ -17,8 +16,22 @@ export interface OptionsState {
   };
   favorites: number[];
   queryString: string;
-  filteredData: any[];
+  filteredQueryData: any[];
+  languageDataSheet: any[];
 }
+const filteredLanguageDataSheet = language_data_sheet.map((entry) => {
+  // const filteredTranslations = Object.fromEntries(
+  //   Object.entries(entry.translations).filter(([lang]) => ['en', 'zh'].includes(lang))
+  // );
+  // return { ...entry, translations: filteredTranslations };
+
+  // Filter translations to only include 'en' and 'zh'
+  const filteredTranslations = {
+    en: entry.translations.en,
+    zh: entry.translations.zh,
+  };
+  return { ...entry, translations: filteredTranslations }; // Return the updated entry with filtered translations
+});
 
 const initialState: OptionsState = {
   showOptionUI: false,
@@ -31,7 +44,8 @@ const initialState: OptionsState = {
   },
   favorites: [],
   queryString: '',
-  filteredData: [],
+  filteredQueryData: [],
+  languageDataSheet: filteredLanguageDataSheet 
 };
 
 const optionsSlice = createSlice({
@@ -44,7 +58,7 @@ const optionsSlice = createSlice({
       state.configOptions = initialState.configOptions; // Resets to the initial config options
       state.favorites = [];
       state.queryString = "";
-      state.filteredData = [];
+      state.filteredQueryData = [];
     },
     initializeConfigOptions(
       state,
@@ -69,6 +83,7 @@ const optionsSlice = createSlice({
         }
       }
       state.databaseHasBeenLoaded = true;
+
     },
     setShowOptionUI(state, action: PayloadAction<boolean>) {
       state.showOptionUI = action.payload;
@@ -135,35 +150,14 @@ const optionsSlice = createSlice({
     },
     applyFilter: (state) => {
       const inputQueryString = state.queryString.trim();
-      let mergedData = language_data_sheet.map((item) => ({
-        ...item,
-        tag: "",
-      }));
-      const missingIndexes: number[] = [];
+      // console.log(
+      //   "%c mergedData",
+      //   "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
+      //   mergedData
+      // );
+      // downloadJSONFile("test",mergedData);
 
-      language_data_tag.forEach((tagItem, index) => {
-        if (mergedData[index]) {
-          mergedData[index].tag = tagItem.tag;
-        } else {
-          missingIndexes.push(tagItem.index);
-        }
-      });
-
-      if (missingIndexes.length > 0) {
-        console.log(
-          "%c Missing indexes in mergedData:",
-          "color:#FF0000;font-family:system-ui;font-size:1.5rem;font-weight:bold",
-          missingIndexes
-        );
-      }
-
-      console.log(
-        "%c mergedData",
-        "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
-        mergedData
-      );
-
-      const filtered = mergedData.filter((item) => {
+      const filtered = filteredLanguageDataSheet.filter((item) => {
         if (inputQueryString.length === 0) {
           return state.configOptions.showFavoritesListOnly
             ? state.favorites.includes(item.index)
@@ -186,7 +180,7 @@ const optionsSlice = createSlice({
         filtered
       );
 
-      state.filteredData = filtered;
+      state.filteredQueryData = filtered;
 
       if (filtered.length <= 0 && state.configOptions.showFavoritesListOnly) {
         showCustomToast("最愛模式:無收藏名單");

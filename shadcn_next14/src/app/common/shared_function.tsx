@@ -128,7 +128,7 @@ export const scrollToTop = () => {
 
 };
 
-function downloadJSONFile(filename: string, data: object) {
+export function downloadJSONFile(filename: string, data: object) {
   // Convert data to a JSON string
   const jsonString = JSON.stringify(data, null, 2);
 

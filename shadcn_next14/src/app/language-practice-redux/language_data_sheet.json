@@ -4,1112 +4,1271 @@
     "translations": {
       "en": "If the index doesn't exist, log it for later review.",
       "zh": "如果不存在的index要存起來印出看LOG"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 158,
     "translations": {
       "en": "I separated the tags from the JSON and created a standalone tags JSON.",
       "zh": "我把tag從json分離獨立成tag json"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 157,
     "translations": {
       "en": "Let's chat later.",
       "zh": "我們稍後再聊吧。"
-    }
+    },
+    "tag": "Communication"
   },
   {
     "index": 156,
     "translations": {
       "en": "It’s been a pleasure working with you.",
       "zh": "與您合作很愉快。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 155,
     "translations": {
       "en": "Let’s make sure to celebrate our achievements, no matter how small.",
       "zh": "讓我們確保慶祝我們的成就，不管它們多麼微小。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 154,
     "translations": {
       "en": "Please reach out if you have any questions or need assistance.",
       "zh": "如有任何問題或需要協助，請隨時聯繫我。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 153,
     "translations": {
       "en": "Let’s create a list of action items from our meeting today.",
       "zh": "讓我們從今天的會議中創建一個行動項目清單。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 152,
     "translations": {
       "en": "Are there any specific areas of concern that we need to address?",
       "zh": "我們是否需要解決任何特定的問題？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 151,
     "translations": {
       "en": "I appreciate your help with this project, it means a lot to me.",
       "zh": "感謝您對這個項目的幫助，這對我來說意義重大。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 150,
     "translations": {
       "en": "Let’s ensure that all team members are on the same page regarding project goals.",
       "zh": "讓我們確保所有團隊成員對專案目標有相同的理解。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 149,
     "translations": {
       "en": "Can you help me to understand the workflow better?",
       "zh": "您能幫我更好地理解工作流程嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 148,
     "translations": {
       "en": "It’s important to maintain a clean and organized code structure.",
       "zh": "保持乾淨有序的代碼結構是很重要的。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 147,
     "translations": {
       "en": "We will establish a knowledge base for our project to assist future team members.",
       "zh": "我們將為專案建立一個知識庫，以幫助未來的團隊成員。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 146,
     "translations": {
       "en": "Make sure to document any changes made to the codebase.",
       "zh": "確保記錄對代碼庫所做的任何更改。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 145,
     "translations": {
       "en": "It’s crucial that everyone stays updated on the project’s status.",
       "zh": "每個人都能保持專案狀態的更新是至關重要的。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 144,
     "translations": {
       "en": "I’ll send you the meeting invite as soon as we finalize the schedule.",
       "zh": "一旦我們確定了時間表，我會馬上發送會議邀請給您。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 143,
     "translations": {
       "en": "Let’s set up a schedule for our weekly meetings to discuss progress.",
       "zh": "讓我們設定每週會議的時間表以討論進展。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 142,
     "translations": {
       "en": "Our team can provide feedback on your implementation to improve it further.",
       "zh": "我們團隊可以對您的實現提供反饋，以進一步改進。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 141,
     "translations": {
       "en": "Let’s conduct a code review session before the next deployment.",
       "zh": "讓我們在下次部署之前進行一次代碼審查會議。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 140,
     "translations": {
       "en": "I will ensure that all new code is covered by tests before it gets deployed.",
       "zh": "我會確保所有新代碼在部署之前都有測試覆蓋。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 139,
     "translations": {
       "en": "Can you set up unit tests for our new features?",
       "zh": "您能為我們的新功能設置單元測試嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 138,
     "translations": {
       "en": "We can use tools like Postman or Swagger for testing our API.",
       "zh": "我們可以使用Postman或Swagger等工具來測試我們的API。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 137,
     "translations": {
       "en": "Can you suggest any tools for monitoring our API performance?",
       "zh": "您能建議任何工具來監控我們的API性能嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 136,
     "translations": {
       "en": "Our API will receive many requests simultaneously, and it needs to handle them efficiently.",
       "zh": "我們的API將會同時接收到許多請求，並且需要有效地處理它們。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 135,
     "translations": {
       "en": "I’ll review our database queries to see if any optimizations can be made.",
       "zh": "我會檢查我們的數據庫查詢，以查看是否可以進行優化。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 134,
     "translations": {
       "en": "Is it possible to reduce the loading time of our API responses?",
       "zh": "是否有可能減少我們API響應的加載時間？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 133,
     "translations": {
       "en": "What kind of performance improvements can I expect?",
       "zh": "我可以期待什麼樣的性能改善？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 132,
     "translations": {
       "en": "In addition to fixing bugs, I can also work on optimizing the database performance.",
       "zh": "除了修復錯誤外，我還可以致力於優化資料庫性能。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 131,
     "translations": {
       "en": "You can focus on other areas after clearing this issue.",
       "zh": "在解決此問題後，您可以專注於其他領域。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 130,
     "translations": {
       "en": "You can move on to your next task after you finish this one.",
       "zh": "在完成這項工作後，您可以進入下一個任務。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 129,
     "translations": {
       "en": "Let’s also add a button to display the card details.",
       "zh": "讓我們也添加一個按鈕來顯示卡片詳情。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 128,
     "translations": {
       "en": "Can you add an entry for the countdown timer to the create button?",
       "zh": "可以在創建按鈕上添加倒計時器的條目嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 127,
     "translations": {
       "en": "You can start developing this API while waiting for the opening.",
       "zh": "在等待開通的過程中，您可以先開始開發這個API。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 126,
     "translations": {
       "en": "Could you please let me know who I can contact to get access opened?",
       "zh": "您能否告訴我可以聯絡誰來開通存取權限？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 125,
     "translations": {
       "en": "Currently, we are using https://www.google.com/",
       "zh": "目前我們是使用https://www.google.com/"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 124,
     "translations": {
       "en": "May I ask which domain this API will be deployed to?",
       "zh": "請問這個api會部署到哪一個domain?"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 123,
     "translations": {
       "en": "Anna, the world needs you to step up and save it!",
       "zh": "Anna需要你出來拯救世界了。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 122,
     "translations": {
       "en": "I've called the API, but it's returning a 404 error.",
       "zh": "我有呼叫了api會404錯誤。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 121,
     "translations": {
       "en": "It’s sad, but I’m not surprised.",
       "zh": "是很難過，但我不意外。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 120,
     "translations": {
       "en": "I researched mathematical algorithms and created custom RGB effects for these devices, offering features that are different from those available on the market.",
       "zh": "我研究了數學演算法並為這些設備創建了自訂RGB效果，提供了與市場上可用的功能不同的功能。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 119,
     "translations": {
       "en": "JavaScript, because in my nine-year career, every job has involved JavaScript in some capacity. I also use JavaScript for side projects after work or on weekends.",
       "zh": "JavaScript，因為在我九年的職業生涯中，每項工作都以某種方式涉及JavaScript。我也會在下班後或週末使用JavaScript進行業餘專案。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 118,
     "translations": {
       "en": "Especially since I have to handle both SMH and this one at the same time.",
       "zh": "畢竟要同時做smh跟這個。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 117,
     "translations": {
       "en": "So I probably won't be too happy about it.",
       "zh": "所以我應該是不會開心XD。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 116,
     "translations": {
       "en": "I heard this project is really rushed.",
       "zh": "聽說這個案子很趕。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 115,
     "translations": {
       "en": "He said he will give me an update next week to decide when to start the development.",
       "zh": "他說下週會給我消息決定何時開發。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 114,
     "translations": {
       "en": "What I know so far is that MC is working on infrastructure development and deciding which project to use as the foundation.",
       "zh": "到目前為止我所知道的是MC正在處理基礎設施開發，並選擇使用哪個專案作為基礎。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 113,
     "translations": {
       "en": "It seems like I won’t be able to avoid getting involved.",
       "zh": "我應該是跑不掉要參與。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 112,
     "translations": {
       "en": "Updated services and controllers to use the new DI setup.",
       "zh": "更新服務和控制器使用新的DI設定。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 111,
     "translations": {
       "en": "Improved clarity of dependency management across the application.",
       "zh": "提高整體應用程式依賴關係清晰度。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 110,
     "translations": {
       "en": "Refactor user avatar logic and user authentication logic.",
       "zh": "重構使用者頭像邏輯與user檢查帳密邏輯。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 109,
     "translations": {
       "en": "Hi L, do you have any SMH agent account in SIT/UAT that can borrow me to do a testing? Thank you.",
       "zh": "你好，L，你在SIT/UAT有SMH代理帳戶可以借我來做測試嗎？謝謝。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 108,
     "translations": {
       "en": "Sorry to bother you, but do you have multiple agent accounts on the SMH platform? I need them for testing.",
       "zh": "打擾下,請問smh平台你有很多代理的帳號嗎?我需要做測試。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 107,
     "translations": {
       "en": "Refactor GetUserChatrooms using MongoDB's aggregation pipeline for data composition.",
       "zh": "使用MongoDB的聚合管道重構GetUserChatrooms以進行資料組合。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 106,
     "translations": {
       "en": "A D should not be constructed with duplicate key names, as that can cause undefined server behavior.",
       "zh": "D應該避免使用重複的鍵名，因為這可能會導致伺服器行為異常。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 105,
     "translations": {
       "en": "If the order of the elements does not matter, an M should be used instead.",
       "zh": "如果元素的順序不重要，則應使用M代替。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 104,
     "translations": {
       "en": "This type should be used when the order of the elements matters.",
       "zh": "當元素的順序很重要時，應該使用這種類型。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 103,
     "translations": {
       "en": "D is an ordered representation of a BSON document.",
       "zh": "D是BSON文件的一種有序表示方式。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 102,
     "translations": {
       "en": "Do we also need to have a return and a title?",
       "zh": "那一樣要有返回跟標題嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 101,
     "translations": {
       "en": "Is this feature designed to open the mobile browser directly, or do we need to set up a page for it?",
       "zh": "這個功能是為了直接開啟手機瀏覽器而設計的，還是需要我們為其設定一個頁面？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 100,
     "translations": {
       "en": "Modify the shard's dependency injection and move it to the index file.",
       "zh": "修改shard的依賴注入移到index檔案。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 99,
     "translations": {
       "en": "I’m at an age that is well-suited for being with you.",
       "zh": "我是很適合跟你在一起的年齡。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 98,
     "translations": {
       "en": "Remove the loop calling BroadcastToUsers and change it to a single input.",
       "zh": "移除迴圈呼叫BroadcastToUsers改成一次性輸入。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 97,
     "translations": {
       "en": "Remove field [NotificationOn] from the struct.",
       "zh": "移除結構中的NotificationOn欄位。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 96,
     "translations": {
       "en": "Add segmented loading functionality to the API.",
       "zh": "新增api分段加載功能。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 95,
     "translations": {
       "en": "Modify the TypeScript-style code in lotterHistoryData.js/slider.js to resolve issues when applied in JavaScript.",
       "zh": "修改lotterHistoryData.js/slider.js ts寫法用在js的問題。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 94,
     "translations": {
       "en": "Add a 'lint:error' script to the package.json file.",
       "zh": "將“lint:error”腳本加入到 package.json 檔案中。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 93,
     "translations": {
       "en": "Add feature to send notifications to all chatroom users.",
       "zh": "新增推播給所有聊天室使用者功能"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 92,
     "translations": {
       "en": "Your microphone has no sound.",
       "zh": "你的麥克風沒有聲音"
-    }
+    },
+    "tag": "Technical"
   },
   {
     "index": 91,
     "translations": {
       "en": "Hi, could you insert game records into my account from the back end? I need them for testing.",
       "zh": "hi,請問您這邊可以從後端塞遊戲紀錄進我的帳號嗎?我才能測試 謝謝"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 90,
     "translations": {
       "en": "Please let me know if there are any specific changes needed, and I will make the necessary adjustments.",
       "zh": "Ok,如果有具體的改動再麻煩告知我,我配合修改"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 89,
     "translations": {
       "en": "If the app isn't updated, please let me know.",
       "zh": "如果app沒更新,請跟我說"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 88,
     "translations": {
       "en": "Hey, do you know who is responsible for the backend? I'd like to contact them to insert some data.",
       "zh": "cy,想問你知道這個後端是誰負責嗎@@? 我去找他塞資料好了"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 87,
     "translations": {
       "en": "So, after you finish writing the backend, would you still want to write more?",
       "zh": "所以你寫後端後還會想寫嗎？@@"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 86,
     "translations": {
       "en": "Didn't we agree to practice English together? QQ",
       "zh": "我們不是說好要一起練英文嗎？QQ"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 85,
     "translations": {
       "en": "What functionalities does your backend need to have?",
       "zh": "你後端要做什麼功能?"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 84,
     "translations": {
       "en": "A birthday of a very cute girl.",
       "zh": "一個很可愛的女生的生日"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 83,
     "translations": {
       "en": "I would like to confirm the requirements.",
       "zh": "我想確認一下這張單需求"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 82,
     "translations": {
       "en": "That's a great approach. I'll consider it for future optimizations as well.",
       "zh": "很好的做法,我以後也參考優化一下"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 81,
     "translations": {
       "en": "I'm okay with either. Whatever you think is more convenient.",
       "zh": "我都可以,看你覺得哪個比較方便"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 80,
     "translations": {
       "en": "If you find anything that needs to be changed or is unclear, let me know and I will make the necessary revisions.",
       "zh": "嗯,你如果覺得哪裡需要改或不清楚跟我說,我會去改"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 79,
     "translations": {
       "en": "I have 8 years of software engineering experience. I currently mainly do [React Native] mobile front-end work.",
       "zh": "我有8年的軟體工程經驗，目前主要做[React Native]的行動前端工作。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 78,
     "translations": {
       "en": "If someone says something impolite, you could say this~",
       "zh": "如果有人說了不禮貌的話，你可以這麼說~"
-    }
+    },
+    "tag": "Communication"
   },
   {
     "index": 77,
     "translations": {
       "en": "If my English sounds weird, please let me know!",
       "zh": "如果有說的英文很奇怪請跟我說XD"
-    }
+    },
+    "tag": "Communication"
   },
   {
     "index": 76,
     "translations": {
       "en": "Do you enjoy coding, or do you just see it as a job?",
       "zh": "您喜歡編碼，還是只是將其視為一份工作？"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 75,
     "translations": {
       "en": "I can hear your voice",
       "zh": "我聽得到你的聲音"
-    }
+    },
+    "tag": "Communication"
   },
   {
     "index": 74,
     "translations": {
       "en": "Last time, I remember you asked a question about unit testing in C#.",
       "zh": "上次，我記得你問了一個關於 C# 單元測試的問題。"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 73,
     "translations": {
       "en": "Did your job interview go well last time?",
       "zh": "你上次的面試順利嗎？"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 72,
     "translations": {
       "en": "Education in Taiwan involves too much rote learning.",
       "zh": "台灣的教育涉及太多的死記硬背。"
-    }
+    },
+    "tag": "Education"
   },
   {
     "index": 71,
     "translations": {
       "en": "I'm dead, you're so good at guessing.",
       "zh": "笑死，你猜得太準了。"
-    }
+    },
+    "tag": "Humor"
   },
   {
     "index": 70,
     "translations": {
       "en": "Trust me, you are better than me.",
       "zh": "相信我，你比我更好。"
-    }
+    },
+    "tag": "Compliment"
   },
   {
     "index": 69,
     "translations": {
       "en": "I believe this may cause problems, I recommend synchronizing the names.",
       "zh": "我相信這可能會引起問題,我建議同步名稱。"
-    }
+    },
+    "tag": "Recommendation"
   },
   {
     "index": 68,
     "translations": {
       "en": "Is it possible to work fully remotely at [Hsu Shen]'s company?",
       "zh": "在[徐深]的公司可以完全遠距工作嗎?"
-    }
+    },
+    "tag": "Work"
   },
   {
     "index": 67,
     "translations": {
       "en": "Okay, let's practice English together!",
       "zh": "好喔，我們一起練習英文吧！"
-    }
+    },
+    "tag": "Encouragement"
   },
   {
     "index": 66,
     "translations": {
       "en": "I'm really a rookie, I never pretend to be otherwise.",
       "zh": "我真的是個新手，我從不假裝不是。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 65,
     "translations": {
       "en": "You are my idol.",
       "zh": "你是我的偶像。"
-    }
+    },
+    "tag": "Compliment"
   },
   {
     "index": 64,
     "translations": {
       "en": "Yes, I was born in Taiwan.",
       "zh": "是的，我出生在台灣。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 63,
     "translations": {
       "en": "Because I've had a slight cold recently.",
       "zh": "因為我最近有點感冒。"
-    }
+    },
+    "tag": "Life"
   },
   {
     "index": 62,
     "translations": {
       "en": "Long time no see, how have you been?",
       "zh": "好久不見，你過得怎麼樣？"
-    }
+    },
+    "tag": "Life"
   },
   {
     "index": 61,
     "translations": {
       "en": "I added (Promise.all and db_usestate) to check if the data has been loaded.",
       "zh": "我添加了（Promise.all 和 db_usestate）來檢查數據是否已加載。"
-    }
+    },
+    "tag": "Development"
   },
   {
     "index": 60,
     "translations": {
       "en": "Move the function to a shared file.",
       "zh": "將函數移動到共享文件。"
-    }
+    },
+    "tag": "Code organization"
   },
   {
     "index": 59,
     "translations": {
       "en": "Convert a standalone useState boolean to a useState object.",
       "zh": "將獨立的 useState 布爾值轉換為一個 useState 對象。"
-    }
+    },
+    "tag": "React"
   },
   {
     "index": 58,
     "translations": {
       "en": "Add voice translation feature.",
       "zh": "添加語音翻譯功能。"
-    }
+    },
+    "tag": "Feature"
   },
   {
     "index": 57,
     "translations": {
       "en": "Modify CSS styles and layout.",
       "zh": "修改 CSS 樣式和佈局。"
-    }
+    },
+    "tag": "Development"
   },
   {
     "index": 56,
     "translations": {
       "en": "No special reason, just studying for work.",
       "zh": "沒有特別的原因，只是為工作學習。"
-    }
+    },
+    "tag": "Study"
   },
   {
     "index": 55,
     "translations": {
       "en": "I switched my phone and computer to English mode to practice English.",
       "zh": "我將手機和電腦切換到英文模式來練習英文。"
-    }
+    },
+    "tag": "Practice"
   },
   {
     "index": 54,
     "translations": {
       "en": "You are gorgeous.",
       "zh": "你真漂亮。"
-    }
+    },
+    "tag": "Compliment"
   },
   {
     "index": 53,
     "translations": {
       "en": "Incorporate several new sentences into the JSON file.",
       "zh": "將幾個新句子納入 JSON 檔案中。"
-    }
+    },
+    "tag": "Modify"
   },
   {
     "index": 52,
     "translations": {
       "en": "Modify the copy function prompt message.",
       "zh": "修改複製功能的提示訊息。"
-    }
+    },
+    "tag": "Modify"
   },
   {
     "index": 51,
     "translations": {
       "en": "Good evening, Big Rabbit.",
       "zh": "晚上好，大兔子。"
-    }
+    },
+    "tag": "greeting"
   },
   {
     "index": 50,
     "translations": {
       "en": "The triggers for my PTSD are usually not subjects, but people and teachers.",
       "zh": "觸發我的創傷後壓力症候群的通常不是主題，而是人和老師。"
-    }
+    },
+    "tag": "statement"
   },
   {
     "index": 49,
     "translations": {
       "en": "I specially created a web application to learn English.",
       "zh": "我為了學英文特地做了一個網頁應用程式。"
-    }
+    },
+    "tag": "statement"
   },
   {
     "index": 48,
     "translations": {
       "en": "Every day, I'm doing my best.",
       "zh": "每一天，我都在盡我最大的努力。"
-    }
+    },
+    "tag": "answer"
   },
   {
     "index": 47,
     "translations": {
       "en": "Please introduce me to a girl who can save me years of struggle.",
       "zh": "請介紹一個能讓我少奮鬥幾年的女孩。"
-    }
+    },
+    "tag": "request"
   },
   {
     "index": 46,
     "translations": {
       "en": "I also think so.",
       "zh": "我也是這樣想。"
-    }
+    },
+    "tag": "agree"
   },
   {
     "index": 45,
     "translations": {
       "en": "Now, when I'm confessing my feelings to you.",
       "zh": "現在，當我向你坦白我的感情時。"
-    }
+    },
+    "tag": "emotion,feeling"
   },
   {
     "index": 44,
     "translations": {
       "en": "In my heart, Casper, my senior, is the most awesome.",
       "zh": "在我心裡，我的學長 Casper 是最香的。"
-    }
+    },
+    "tag": "praise,compliment"
   },
   {
     "index": 43,
     "translations": {
       "en": "Well, that depends. Are you ready for a little adventure?",
       "zh": "這取決於情況。你準備好迎接一點冒險了嗎？"
-    }
+    },
+    "tag": "answer"
   },
   {
     "index": 42,
     "translations": {
       "en": "Sure, why not? Anything's possible if you're brave enough.",
       "zh": "當然可以，為什麼不呢？只要你足夠勇敢，一切皆有可能。"
-    }
+    },
+    "tag": "answer"
   },
   {
     "index": 41,
     "translations": {
       "en": "Of course, as long as you're brave enough to try.",
       "zh": "當然可以，只要你敢嘗試。"
-    }
+    },
+    "tag": "answer"
   },
   {
     "index": 40,
     "translations": {
       "en": "If I only have the frontend without backend server support, what methods can I use to store data on the client side?",
       "zh": "如果我只有前端，沒有後端服務器支援，那麼我可以使用什麼方法在客戶端存儲資料?"
-    }
+    },
+    "tag": "program"
   },
   {
     "index": 39,
     "translations": {
       "en": "How can I prepare for a technical interview?",
       "zh": "我該如何為技術面試做準備？"
-    }
+    },
+    "tag": "program"
   },
   {
     "index": 38,
     "translations": {
       "en": "Can you give me some tips for improving my programming skills?",
       "zh": "你能給我一些提高編程技能的建議嗎？"
-    }
+    },
+    "tag": "program"
   },
   {
     "index": 37,
     "translations": {
       "en": "Always placing other's priorities first, leaving myself for last",
       "zh": "任何事都為別人 自己擺在最後面"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 36,
     "translations": {
       "en": "Don't hesitate, just take off with no regrets?",
       "zh": "來一次遠走高飛 再猶豫就別後悔？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 35,
     "translations": {
       "en": "Did the company you interviewed with last time not accept you?",
       "zh": "上次面試的公司沒有錄取你嗎？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 34,
     "translations": {
       "en": "I'm waiting for you to introduce girls to me.",
       "zh": "我等著你跟我介紹女孩子。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 33,
     "translations": {
       "en": "With this tool, my English skills are bound to improve.",
       "zh": "有了這個工具，我的英語程度一定會提升。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 32,
     "translations": {
       "en": "The most important thing during the interview is to be in a good mood.",
       "zh": "面試的時候最重要的是心情好。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 31,
     "translations": {
       "en": "I haven't opened VRChat in at least a year.",
       "zh": "我至少有一年沒有打開 VRChat 了。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 30,
     "translations": {
       "en": "I don't want to teach others bad habits.",
       "zh": "我不想教別人壞習慣。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 29,
     "translations": {
       "en": "Don't worry about this problem.",
       "zh": "不用擔心這個問題。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 28,
     "translations": {
       "en": "I have several questions about this issue.",
       "zh": "對於這個問題我有幾個疑問。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 27,
     "translations": {
       "en": "I like white, it gives me a sense of innocence, optimism and a very sacred feeling",
       "zh": "我喜歡白色，它給我一種純真、樂觀和一種很神聖的感覺"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 26,
     "translations": {
       "en": "This is what I created from scratch",
       "zh": "這是我從頭開始創建的"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 25,
     "translations": {
       "en": "I practice English very hard.",
       "zh": "我非常努力地練習英語。"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 24,
     "translations": {
       "en": "Excuse me, are you referring to me?",
       "zh": "打擾一下，您指的是我嗎？？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 23,
     "translations": {
       "en": "I want to ask who got this job QQ?",
       "zh": "我想問一下誰得到了這個工作 QQ？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 22,
     "translations": {
       "en": "Show favorites list only",
       "zh": "僅顯示收藏夾列表"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 21,
     "translations": {
       "en": "What does this mean?",
       "zh": "這是什麼意思？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 20,
     "translations": {
       "en": "I will take a look.",
       "zh": "我會看一下"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 19,
     "translations": {
       "en": "You are a special girl to me.",
       "zh": "對我來說你是個很特別的女孩。"
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 18,
     "translations": {
       "en": "If there really is no way, I suggest...",
       "zh": "如果真的沒有辦法,我建議..."
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 17,
     "translations": {
       "en": "You are a special girl to me",
       "zh": "對我來說你是個很特別女孩"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 16,
     "translations": {
       "en": "It is hard to say",
       "zh": "這個不好說"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 15,
     "translations": {
       "en": "I don't know how to say this, but...",
       "zh": "我不知道該怎麼說，但..."
-    }
+    },
+    "tag": "Personal"
   },
   {
     "index": 14,
     "translations": {
       "en": "But I said it badly",
       "zh": "但我說的很差"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 13,
     "translations": {
       "en": "I have no AWS experience",
       "zh": "我沒有AWS的經驗"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 12,
     "translations": {
       "en": "I do not know what to say",
       "zh": "我不知該說什麼"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 11,
     "translations": {
       "en": "Thanks for talking to me",
       "zh": "謝謝你與我交談"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 10,
     "translations": {
       "en": "Sorry, I forgot, I can't answer you",
       "zh": "對不起，我忘記了，我不能回答你"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 9,
     "translations": {
       "en": "It will take a lot of time",
       "zh": "這會花很多時間"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 8,
     "translations": {
       "en": "Because we have more than 10 kinds of projects",
       "zh": "因為我們有10種以上的專案"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 7,
     "translations": {
       "en": "But I think I still need someone to talk to me",
       "zh": "但我認為我還是需要人跟我講話"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 6,
     "translations": {
       "en": "I will watch movies and comics to study",
       "zh": "我會看電影與漫畫學習"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 5,
     "translations": {
       "en": "I'm not used to speaking English",
       "zh": "我不習慣講英文"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 4,
     "translations": {
       "en": "How've you been?",
       "zh": "最近怎麼樣？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 3,
     "translations": {
       "en": "Shouldn't you go to bed?",
       "zh": "你不應該去睡覺嗎？"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 2,
     "translations": {
       "en": "It's been a while",
       "zh": "有一陣子了"
-    }
+    },
+    "tag": "default"
   },
   {
     "index": 1,
     "translations": {
       "en": "I will fully cooperate with you",
       "zh": "我將全力配合您"
-    }
+    },
+    "tag": "default"
   }
 ]
