@@ -5,21 +5,6 @@ import { RootState, AppDispatch } from './store';
 import { showCustomToast,downloadJSONFile } from '../../common/shared_function';
 import language_data_sheet from "../language_data_sheet.json";
 
-export interface OptionsState {
-  showOptionUI: boolean;
-  databaseHasBeenLoaded: boolean;
-  configOptions: {
-    copyTheTextBelow: boolean;
-    copyTheTextAbove: boolean;
-    showFavoritesListOnly: boolean;
-    selectedLanguages: string[];
-  };
-  favorites: number[];
-  queryString: string;
-  filteredQueryData: any[];
-  languageDataSheet: any[];
-}
-
 const filteredLanguageDataSheet = (languages:string[]) => {
   return language_data_sheet.map((entry:any) => {
     // Filter translations to only include the specified languages
@@ -34,10 +19,21 @@ const filteredLanguageDataSheet = (languages:string[]) => {
   // );
   // return { ...entry, translations: filteredTranslations };
 };
-
-
-
-
+export interface OptionsState {
+  showOptionUI: boolean;
+  databaseHasBeenLoaded: boolean;
+  configOptions: {
+    copyTheTextBelow: boolean;
+    copyTheTextAbove: boolean;
+    showFavoritesListOnly: boolean;
+    selectedLanguages: string[];
+    voiceTranslationSpeed: number;
+  };
+  favorites: number[];
+  queryString: string;
+  filteredQueryData: any[];
+  languageDataSheet: any[];
+}
 const initialState: OptionsState = {
   showOptionUI: false,
   databaseHasBeenLoaded: false,
@@ -45,12 +41,14 @@ const initialState: OptionsState = {
     copyTheTextBelow: true,
     copyTheTextAbove: true,
     showFavoritesListOnly: false,
-    selectedLanguages: ["en", "zh"],
+    selectedLanguages: ["zh","en"],
+    voiceTranslationSpeed: 1,
   },
   favorites: [],
   queryString: '',
   filteredQueryData: [],
-  languageDataSheet: filteredLanguageDataSheet(["en", "zh"])
+  languageDataSheet: filteredLanguageDataSheet(["zh","en"]),
+
 };
 
 const optionsSlice = createSlice({
@@ -120,6 +118,7 @@ const optionsSlice = createSlice({
     ) {
       state.configOptions = action.payload(state.configOptions);
     },
+    
     setFavorites(state, action: PayloadAction<number[]>) {
       state.favorites = action.payload;
     },

@@ -40,6 +40,7 @@ const SearchList: React.FC = () => {
     setShowOptionUI,
     filteredQueryData: filteredData,
     queryString,
+
   } = useOptions();
 
   useEffect(() => {
@@ -193,7 +194,17 @@ const SearchList: React.FC = () => {
                     <button
                       className=""
                       onClick={() => {
-                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]]);
+                        // console.log(
+                        //   "%c translateTextAndSpeak_onClick",
+                        //   "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+                        //   "configOptions.selectedLanguages[1]",
+                        //   configOptions.selectedLanguages[1],
+                        //   "item.translations",
+                        //   item.translations,
+                        //   "item.translations[configOptions.selectedLanguages[1]",
+                        //   item.translations[configOptions.selectedLanguages[1]]
+                        // );
+                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed);
                       }}
                     >
                       <SpeakerWaveIcon className="h-6 w-6 fill-current text-gray-200" />
