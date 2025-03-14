@@ -55,9 +55,8 @@ const Progress = () => {
       {/* 普通模式進度條 */}
       <section id="normal">
         <h2>
-          <span>普通模式</span>
           <button type="button" onClick={() => handleClick("normal")}>
-            點擊
+            普通模式點擊
           </button>
         </h2>
         <div className="progress">
@@ -68,9 +67,8 @@ const Progress = () => {
       {/* 防抖模式進度條 */}
       <section id="debounce">
         <h2>
-          <span>防抖模式</span>
           <button type="button" onClick={debounceHandleClick}>
-            點擊
+            防抖模式點擊
           </button>
         </h2>
         <div className="progress">
@@ -81,9 +79,9 @@ const Progress = () => {
       {/* 限流模式進度條 */}
       <section id="throttle">
         <h2>
-          <span>限流模式</span>
+          <span></span>
           <button type="button" onClick={throttleHandleClick}>
-            點擊
+            限流模式點擊
           </button>
         </h2>
         <div className="progress">
