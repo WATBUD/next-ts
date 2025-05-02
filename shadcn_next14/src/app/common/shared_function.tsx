@@ -25,27 +25,41 @@ export const showCustomToast = (text: string) => {
     },
   });
 };
-export function translateTextAndSpeak(text: string='',speed: number=0.1) {
-        console.log(
-          "%c translateTextAndSpeak",
-          "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
-          "text",
-          text,
-          "speed",
-          speed
-        );
+export function translateTextAndSpeak(text: string='',speed: number=1) {
   const utterance_input = new SpeechSynthesisUtterance(text);
   //const utterance_input = new SpeechSynthesisUtterance(`You pressed ${text}`);
-  utterance_input.lang = "en-US";
+  //utterance_input.lang = "en-US";
   utterance_input.volume = 1;
   utterance_input.rate = speed;
   //const synth = window.speechSynthesis;
   let voices = speechSynthesis.getVoices();
+  const enVoices = voices.filter((v) => v.lang.toLowerCase().includes("en"));
+
+  console.log(
+    "%c translateTextAndSpeak",
+    "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+    "text",
+    text,
+    "speed",
+    speed,
+    "enVoices",
+    enVoices
+  );
+
+  if (enVoices.length > 0) {
+    const randomVoice = enVoices[Math.floor(Math.random() * enVoices.length)];
+    console.log(
+      "%c translateTextAndSpeak+randomVoice",
+      "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+      "randomVoice",
+      randomVoice
+    );
+  
+    utterance_input.voice = randomVoice;
+  }
+
   //console.log(`voices ${JSON.stringify(voices)}`);
   console.dir(voices);
-  if(voices[4]){
-    utterance_input.voice = voices[4];
-  }
   if(speechSynthesis.speaking)
   speechSynthesis.cancel();
 
