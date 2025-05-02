@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { useOptions } from "./redux/options_reducer";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
 
 const LanguageSelector = () => {
-  const {
-    configOptions,
-    updateConfigOptions
-  } = useOptions();
-  
+  const { configOptions, updateConfigOptions } = useOptions();
+
   const handleLanguageChange = (index: number, lang: string) => {
     const newLanguages = [...configOptions.selectedLanguages];
-  
+
     // Check if the new language is already in the array
     const existingIndex = newLanguages.indexOf(lang);
-    
+
     if (existingIndex !== -1 && existingIndex !== index) {
       // Swap the elements if the lang exists and it's not the same index
       const temp = newLanguages[index];
@@ -22,12 +27,12 @@ const LanguageSelector = () => {
       // Otherwise, update the language as usual
       newLanguages[index] = lang;
     }
-  
+
     updateConfigOptions((prevOptions) => ({
       ...prevOptions,
       selectedLanguages: newLanguages,
     }));
-  
+
     console.log(
       "%c languageSelector+handleLanguageChange",
       "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
@@ -35,25 +40,28 @@ const LanguageSelector = () => {
       configOptions
     );
   };
-  
 
   return (
-    <div className="flex flex-col mb-4">
-      <label className="text-lg mb-2 text-center">Select Languages:</label>
-      <div className="flex flex-col space-y-4">
+    <div className="flex flex-col mb-4 px-2 space-y-4">
+      <div className="flex flex-col space-y-2">
+        <Label className="text-lg text-center">Select Languages:</Label>
         {[0, 1].map((index) => (
-          <div key={index} className="flex flex-col items-center">
-            <span className="text-md mb-1 text-center">
+          <div key={index} className="flex flex-col items-center w-full space-y-2">
+            <Label className="text-md">
               Language {index + 1}
-            </span>
-            <select
+            </Label>
+            <Select
               value={configOptions.selectedLanguages[index]}
-              onChange={(e) => handleLanguageChange(index, e.target.value)}
-              className="border rounded-md p-2"
+              onValueChange={(value) => handleLanguageChange(index, value)}
             >
-              <option value="en">English</option>
-              <option value="zh">Chinese</option>
-            </select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select language" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="en">English</SelectItem>
+                <SelectItem value="zh">Chinese</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         ))}
       </div>
