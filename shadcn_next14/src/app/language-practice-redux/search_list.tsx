@@ -45,14 +45,15 @@ const SearchList: React.FC = () => {
 
   useEffect(() => {
     console.log(
-      "%c optionsReducer+useEffect+showFavoritesListOnly",
-      "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold"
+      "%c search_list+useEffect+configOptions",
+      "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+      'configOptions',
+      configOptions
     );
     if (databaseHasBeenLoaded) {
       set_indexedDB_Data("favorites", "configOptions", configOptions, () => {});
     }
   }, [configOptions]);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     handleShowMode();
@@ -76,13 +77,13 @@ const SearchList: React.FC = () => {
       ])
       .then(([prevConfigOptions, favoritesData]) => {
         if (prevConfigOptions !== undefined) {
-          console.log("configOptions retrieved successfully:", prevConfigOptions);
+          console.log("indexedDB configOptions:", prevConfigOptions);
           initializeConfigOptions(prevConfigOptions);
 
         }
         
         if (favoritesData !== undefined) {
-          console.log("favorites/data retrieved successfully:", favoritesData);
+          console.log("indexedDB favoritesData:", favoritesData);
           setFavorites(favoritesData);
         }
         setDbHasBeenLoaded(true);

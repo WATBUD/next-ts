@@ -70,25 +70,23 @@ const optionsSlice = createSlice({
       action: PayloadAction<Partial<OptionsState["configOptions"]>>
     ) {
       if (action.payload) {
-        if (typeof action.payload.copyTheTextBelow === "boolean") {
-          state.configOptions.copyTheTextBelow =
-            action.payload.copyTheTextBelow;
-        }
-        if (typeof action.payload.copyTheTextAbove === "boolean") {
-          state.configOptions.copyTheTextAbove =
-            action.payload.copyTheTextAbove;
-        }
-        if (typeof action.payload.showFavoritesListOnly === "boolean") {
-          state.configOptions.showFavoritesListOnly =
-            action.payload.showFavoritesListOnly;
-        }
-        if (Array.isArray(action.payload.selectedLanguages)) {
-          state.configOptions.selectedLanguages =
-            action.payload.selectedLanguages;
-        }
+        const actionPayload = action.payload;
+        const keysToUpdate: (keyof OptionsState["configOptions"])[] = [
+          'copyTheTextBelow',
+          'copyTheTextAbove',
+          'showFavoritesListOnly',
+          'voiceTranslationVolume',
+          'voiceTranslationSpeed',
+        ];
+    
+        keysToUpdate.forEach((key) => {
+          if (key in actionPayload && actionPayload[key] !== undefined) {
+            // Use type assertion to tell TypeScript these types are compatible
+            (state.configOptions[key] as typeof actionPayload[typeof key]) = actionPayload[key]!;
+          }
+        });
       }
       state.databaseHasBeenLoaded = true;
-
     },
     setShowOptionUI(state, action: PayloadAction<boolean>) {
       state.showOptionUI = action.payload;
@@ -128,7 +126,6 @@ const optionsSlice = createSlice({
       state.queryString = action.payload;
     },
     handleShowMode: (state) => {
-      //const { showFavoritesListOnly} = action.payload;
       console.log(
         "%c handleShowMode",
         "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",

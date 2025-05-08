@@ -73,9 +73,14 @@ const OptionsModal = () => {
         <div className="flex items-center">
           <input
             type="checkbox"
-            id="copyTheTextAbove"
+            id="copyTheTextBelow"
             checked={configOptions.copyTheTextBelow}
             onChange={() => {
+              console.log(
+                "%c configOptions.copyTheTextBelow+onChange",
+                "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+                !configOptions.copyTheTextBelow
+              );
               setConfigOptions({
                 ...configOptions,
                 copyTheTextBelow: !configOptions.copyTheTextBelow,
@@ -84,7 +89,7 @@ const OptionsModal = () => {
             className="mr-2 w-5 h-5"
           />
           <label htmlFor="setCopyTheTextBelow" className="text-lg">
-            Copy the text below{" "}
+            Copy the text below
           </label>
         </div>
 
