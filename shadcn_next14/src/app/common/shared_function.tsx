@@ -25,11 +25,11 @@ export const showCustomToast = (text: string) => {
     },
   });
 };
-export function translateTextAndSpeak(text: string='',speed: number=1) {
+export function translateTextAndSpeak(text: string='',speed: number=1,volume: number=1) {
   const utterance_input = new SpeechSynthesisUtterance(text);
   //const utterance_input = new SpeechSynthesisUtterance(`You pressed ${text}`);
   //utterance_input.lang = "en-US";
-  utterance_input.volume = 1;
+  utterance_input.volume = volume;
   utterance_input.rate = speed;
   //const synth = window.speechSynthesis;
   let voices = speechSynthesis.getVoices();

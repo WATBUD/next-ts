@@ -204,7 +204,7 @@ const SearchList: React.FC = () => {
                         //   "item.translations[configOptions.selectedLanguages[1]",
                         //   item.translations[configOptions.selectedLanguages[1]]
                         // );
-                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed);
+                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed, configOptions.voiceTranslationVolume);
                       }}
                     >
                       <SpeakerWaveIcon className="h-6 w-6 fill-current text-gray-200" />

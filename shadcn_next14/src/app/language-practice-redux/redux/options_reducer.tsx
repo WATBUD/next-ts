@@ -28,6 +28,7 @@ export interface OptionsState {
     showFavoritesListOnly: boolean;
     selectedLanguages: string[];
     voiceTranslationSpeed: number;
+    voiceTranslationVolume: number;
   };
   favorites: number[];
   queryString: string;
@@ -43,6 +44,7 @@ const initialState: OptionsState = {
     showFavoritesListOnly: false,
     selectedLanguages: ["zh","en"],
     voiceTranslationSpeed: 1,
+    voiceTranslationVolume: 1,
   },
   favorites: [],
   queryString: '',

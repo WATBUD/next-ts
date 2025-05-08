@@ -117,6 +117,26 @@ const OptionsModal = () => {
           }}
           className="mr-2 w-[50%] h-5 py-5"
         />
+        <label className="text-lg pt-5">
+          Voice Volume:{configOptions.voiceTranslationVolume}
+        </label>
+        <input
+          type="range"
+          min="0"
+          max="2"
+          step="0.1"
+          id="rate"
+          value={configOptions.voiceTranslationVolume}
+          onChange={(e) => {
+            setConfigOptions({
+              ...configOptions,
+              voiceTranslationVolume: parseFloat(e.target.value), // Update with the new value
+            });
+          }}
+          className="mr-2 w-[50%] h-5 py-5"
+        />
+
+
         <div className="flex justify-end">
           <button
             className="options-btn"
