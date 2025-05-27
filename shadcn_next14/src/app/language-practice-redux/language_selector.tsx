@@ -51,12 +51,12 @@ const LanguageSelector = () => {
               value={configOptions.selectedLanguages[index]}
               onValueChange={(value) => handleLanguageChange(index, value)}
             >
-              <SelectTrigger className="w-full bg-transparent border-none focus:ring-0 p-0">
+              <SelectTrigger className="w-full bg-transparent border-none focus:ring-0 p-0 text-base">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="en">English</SelectItem>
-                <SelectItem value="zh">Chinese</SelectItem>
+                <SelectItem className="text-base" value="en">English</SelectItem>
+                <SelectItem className="text-base" value="zh">Chinese</SelectItem>
               </SelectContent>
             </Select>
           </div>
