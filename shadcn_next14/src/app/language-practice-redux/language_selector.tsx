@@ -8,23 +8,20 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 const LanguageSelector = () => {
   const { configOptions, updateConfigOptions } = useOptions();
 
   const handleLanguageChange = (index: number, lang: string) => {
     const newLanguages = [...configOptions.selectedLanguages];
-
-    // Check if the new language is already in the array
     const existingIndex = newLanguages.indexOf(lang);
 
     if (existingIndex !== -1 && existingIndex !== index) {
-      // Swap the elements if the lang exists and it's not the same index
       const temp = newLanguages[index];
       newLanguages[index] = newLanguages[existingIndex];
       newLanguages[existingIndex] = temp;
     } else {
-      // Otherwise, update the language as usual
       newLanguages[index] = lang;
     }
 
@@ -42,20 +39,20 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className="flex flex-col mb-4 px-2 space-y-4">
-      <div className="flex flex-col space-y-2">
-        <Label className="text-lg text-center">Select Languages:</Label>
-        {[0, 1].map((index) => (
-          <div key={index} className="flex flex-col items-center w-full space-y-2">
-            <Label className="text-md">
-              Language {index + 1}
-            </Label>
+    <div className="w-full">
+      {[0, 1].map((index) => (
+        <div key={index} className="settings-item">
+          <GlobeAltIcon className="settings-icon" />
+          <div className="settings-label">
+            {index === 0 ? "Source Language" : "Target Language"}
+          </div>
+          <div className="flex-1">
             <Select
               value={configOptions.selectedLanguages[index]}
               onValueChange={(value) => handleLanguageChange(index, value)}
             >
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select language" />
+              <SelectTrigger className="w-full bg-transparent border-none focus:ring-0 p-0">
+                <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="en">English</SelectItem>
@@ -63,8 +60,8 @@ const LanguageSelector = () => {
               </SelectContent>
             </Select>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
