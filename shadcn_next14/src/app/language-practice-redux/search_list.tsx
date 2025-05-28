@@ -133,7 +133,7 @@ const SearchList: React.FC = () => {
               }}
               className="rounded-md p-2 bg-[#0000] shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
             >
-              <Cog6ToothIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
+              <Cog6ToothIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
             </button>
           </div>
           <div className="flex w-full">
@@ -161,10 +161,10 @@ const SearchList: React.FC = () => {
                 style={{
                   backgroundColor: "rgba(45, 114, 210,0.3)",
                   bottom: isMobile ? "10vh" : "10vh",
-                  color: theme.colors.text.white
+                  color: "#ffffff"
                 }}
               >
-                <ChevronDoubleUpIcon className="h-6 w-6 fill-current mr-2" style={{ color: theme.colors.text.white }} />
+                <ChevronDoubleUpIcon className="h-6 w-6 fill-current mr-2" style={{ color: theme.colors.icon.primary }} />
                 Top
               </button>
               {filteredData.map((item) => (
@@ -187,13 +187,13 @@ const SearchList: React.FC = () => {
                     />
                   </button>
                   <div className="break-word flex-grow-[1] bg-[#0000]">
-                    <ThemeDiv variant="primary" type="text">
+                    <ThemeDiv type="text">
                       {highlightText(
                         item.translations[configOptions.selectedLanguages[0]],
                         queryString
                       )}
                     </ThemeDiv>
-                    <ThemeDiv themeColor="#4b5563" type="text">
+                    <ThemeDiv type="text">
                       {highlightText(
                         item.translations[configOptions.selectedLanguages[1]],
                         queryString
@@ -207,7 +207,7 @@ const SearchList: React.FC = () => {
                         translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed, configOptions.voiceTranslationVolume);
                       }}
                     >
-                      <SpeakerWaveIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
+                      <SpeakerWaveIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
                     </button>
                     <button
                       className="ml-2"
@@ -215,7 +215,7 @@ const SearchList: React.FC = () => {
                         copyText(item.translations[configOptions.selectedLanguages[0]],item.translations[configOptions.selectedLanguages[1]], configOptions);
                       }}
                     >
-                      <DocumentDuplicateIconSolid className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
+                      <DocumentDuplicateIconSolid className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
                     </button>
                   </div>
                 </li>

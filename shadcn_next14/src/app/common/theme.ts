@@ -8,13 +8,10 @@ export const theme = {
     // Text colors
     text: {
       primary: '#1f2937', // gray-800
-      light: '#9ca3af', // gray-400
-      white: '#ffffff',
     },
     // Icon colors
     icon: {
       primary: '#4b5563', // gray-600
-      light: '#e5e7eb', // gray-200
     },
     // Border colors
     border: {

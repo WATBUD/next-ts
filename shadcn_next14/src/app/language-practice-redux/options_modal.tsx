@@ -62,7 +62,7 @@ const OptionsModal = () => {
             </ThemeDiv>
             <div className="settings-item">
               <StarIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Show Favorites Only
               </ThemeDiv>
               <Switch
@@ -78,7 +78,7 @@ const OptionsModal = () => {
             </div>
             <div className="settings-item">
               <DocumentDuplicateIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Copy Text Above
               </ThemeDiv>
               <Switch
@@ -94,7 +94,7 @@ const OptionsModal = () => {
             </div>
             <div className="settings-item">
               <DocumentDuplicateIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Copy Text Below
               </ThemeDiv>
               <Switch
@@ -117,10 +117,10 @@ const OptionsModal = () => {
             </ThemeDiv>
             <div className="settings-item">
               <SpeakerWaveIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Voice Speed
               </ThemeDiv>
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-value">
+              <ThemeDiv type="text" className="settings-value">
                 {configOptions.voiceTranslationSpeed.toFixed(1)}x
               </ThemeDiv>
             </div>
@@ -141,10 +141,10 @@ const OptionsModal = () => {
             </div>
             <div className="settings-item">
               <SpeakerWaveIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Voice Volume
               </ThemeDiv>
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-value">
+              <ThemeDiv type="text" className="settings-value">
                 {configOptions.voiceTranslationVolume.toFixed(1)}x
               </ThemeDiv>
             </div>
@@ -178,7 +178,7 @@ const OptionsModal = () => {
               }}
             >
               <TrashIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Clear Favorites
               </ThemeDiv>
             </div>
@@ -190,7 +190,7 @@ const OptionsModal = () => {
               }}
             >
               <ArrowPathIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
-              <ThemeDiv themeColor="#4b5563" type="text" className="settings-label">
+              <ThemeDiv type="text" className="settings-label">
                 Factory Reset
               </ThemeDiv>
             </div>
