@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { showCustomToast } from "../common/shared_function";
 import "./options_css.css";
+import { Switch } from "@/components/ui/switch";
 
 import { useOptions } from "./redux/options_reducer";
 import LanguageSelector from "./language_selector";
@@ -61,57 +62,45 @@ const OptionsModal = () => {
           {/* Display Settings */}
           <div className="settings-section">
             <div className="section-title">Display</div>
-            <div 
-              className="settings-item cursor-pointer"
-              onClick={() =>
-                setConfigOptions({
-                  ...configOptions,
-                  showFavoritesListOnly: !configOptions.showFavoritesListOnly,
-                })
-              }
-            >
+            <div className="settings-item">
               <StarIcon className="settings-icon" />
               <div className="settings-label">Show Favorites Only</div>
-              <input
-                type="checkbox"
+              <Switch
                 checked={configOptions.showFavoritesListOnly}
-                onChange={(e) => e.stopPropagation()}
+                onCheckedChange={(checked) =>
+                  setConfigOptions({
+                    ...configOptions,
+                    showFavoritesListOnly: checked,
+                  })
+                }
                 className="ml-auto"
               />
             </div>
-            <div 
-              className="settings-item cursor-pointer"
-              onClick={() =>
-                setConfigOptions({
-                  ...configOptions,
-                  copyTheTextAbove: !configOptions.copyTheTextAbove,
-                })
-              }
-            >
+            <div className="settings-item">
               <DocumentDuplicateIcon className="settings-icon" />
               <div className="settings-label">Copy Text Above</div>
-              <input
-                type="checkbox"
+              <Switch
                 checked={configOptions.copyTheTextAbove}
-                onChange={(e) => e.stopPropagation()}
+                onCheckedChange={(checked) =>
+                  setConfigOptions({
+                    ...configOptions,
+                    copyTheTextAbove: checked,
+                  })
+                }
                 className="ml-auto"
               />
             </div>
-            <div 
-              className="settings-item cursor-pointer"
-              onClick={() =>
-                setConfigOptions({
-                  ...configOptions,
-                  copyTheTextBelow: !configOptions.copyTheTextBelow,
-                })
-              }
-            >
+            <div className="settings-item">
               <DocumentDuplicateIcon className="settings-icon" />
               <div className="settings-label">Copy Text Below</div>
-              <input
-                type="checkbox"
+              <Switch
                 checked={configOptions.copyTheTextBelow}
-                onChange={(e) => e.stopPropagation()}
+                onCheckedChange={(checked) =>
+                  setConfigOptions({
+                    ...configOptions,
+                    copyTheTextBelow: checked,
+                  })
+                }
                 className="ml-auto"
               />
             </div>
