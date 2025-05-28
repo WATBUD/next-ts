@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { theme } from "../common/theme";
 
 const LanguageSelector = () => {
   const { configOptions, updateConfigOptions } = useOptions();
@@ -42,7 +43,7 @@ const LanguageSelector = () => {
     <div className="w-full">
       {[0, 1].map((index) => (
         <div key={index} className="settings-item">
-          <GlobeAltIcon className="settings-icon" />
+          <GlobeAltIcon className="settings-icon" style={{ color: theme.colors.icon.primary }} />
           <div className="settings-label">
             {index === 0 ? "Source Language" : "Target Language"}
           </div>

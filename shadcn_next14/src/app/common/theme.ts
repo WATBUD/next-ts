@@ -11,7 +11,7 @@ export const theme = {
     },
     // Icon colors
     icon: {
-      primary: '#4b5563', // gray-600
+      primary: '#781e726e', // gray-600
     },
     // Border colors
     border: {
