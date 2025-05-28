@@ -9,13 +9,13 @@ import {
   TrashIcon,
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
-import { showCustomToast } from "../common/shared_function";
-import "./options_css.css";
+import { showCustomToast } from "../common/shared-function";
+import "./options-css.css";
 import { Switch } from "@/components/ui/switch";
 import { theme } from "../common/theme";
 import { ThemeDiv } from "../common/ThemeDiv";
-import { useOptions } from "./redux/options_reducer";
-import LanguageSelector from "./language_selector";
+import { useOptions } from "./redux/options-reducer";
+import LanguageSelector from "./language-selector";
 
 const OptionsModal = () => {
   const {
@@ -29,7 +29,7 @@ const OptionsModal = () => {
 
   return (
     <div className={`OptionsModal${showOptionUI ? " show" : ""}`}>
-      <ThemeDiv type="background" className="h-full flex flex-col">
+      <ThemeDiv type="background" className="h-full flex flex-col max-w-[980px] mx-auto">
         {/* Header */}
         <div className="p-4 flex items-center border-b sticky top-0 z-10" style={{ borderColor: theme.colors.border.light }}>
           <ThemeDiv type="background" className="p-2 rounded-full transition-colors hover:bg-gray-100">

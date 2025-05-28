@@ -2,11 +2,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './store'; 
-import { showCustomToast,downloadJSONFile } from '../../common/shared_function';
-import language_data_sheet from "../language_data_sheet.json";
+import { showCustomToast,downloadJSONFile } from '../../common/shared-function';
+import languageDataSheet from "../language-data-sheet.json";
 
 const filteredLanguageDataSheet = (languages:string[]) => {
-  return language_data_sheet.map((entry:any) => {
+  return languageDataSheet.map((entry:any) => {
     // Filter translations to only include the specified languages
     const filteredTranslations = {
       [languages[0]]: entry.translations[languages[0]],

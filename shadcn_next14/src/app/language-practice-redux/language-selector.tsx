@@ -1,5 +1,5 @@
 import React from "react";
-import { useOptions } from "./redux/options_reducer";
+import { useOptions } from "./redux/options-reducer";
 import {
   Select,
   SelectContent,

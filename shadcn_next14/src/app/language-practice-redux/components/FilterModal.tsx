@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import language_data_sheet from "../language_data_sheet.json";
+import languageDataSheet from "../language-data-sheet.json";
 
 interface FilterModalProps {
   isOpen: boolean;
@@ -21,7 +21,7 @@ const FilterModal: React.FC<FilterModalProps> = ({
 }) => {
   // Get unique tags from the language data sheet
   const uniqueTags = Array.from(
-    new Set(language_data_sheet.map((item) => item.tag))
+    new Set(languageDataSheet.map((item) => item.tag))
   ).filter(Boolean);
 
   const [localSelectedTags, setLocalSelectedTags] = useState<string[]>(selectedTags);

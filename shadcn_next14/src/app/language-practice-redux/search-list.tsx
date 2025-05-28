@@ -19,18 +19,18 @@ import toast, {
   Toaster,
   ValueFunction,
 } from "react-hot-toast";
-import OptionsModal from "./options_modal";
-import { useOptions } from "./redux/options_reducer";
+import OptionsModal from "./options-modal";
+import { useOptions } from "./redux/options-reducer";
 import { theme } from "../common/theme";
 import { ThemeDiv } from "../common/ThemeDiv";
 
-import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../common/shared_function';
-import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDB_utils";
-import './language_component.css'; 
+import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../common/shared-function';
+import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDB-utils";
+import './language-component.css'; 
 import { useDispatch, useSelector } from "react-redux";
 import FilterModal from "./components/FilterModal";
 import { RootState, AppDispatch } from "./redux/store";
-import { setSelectedTags, applyFilter, setQuery } from "./redux/options_reducer";
+import { setSelectedTags, applyFilter, setQuery } from "./redux/options-reducer";
 
 const SearchList: React.FC = () => {
   const isMobile = useIsMobile();
@@ -62,7 +62,7 @@ const SearchList: React.FC = () => {
 
   useEffect(() => {
     console.log(
-      "%c search_list+useEffect+configOptions",
+      "%c search-list+useEffect+configOptions",
       "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
       'configOptions',
       configOptions
@@ -116,7 +116,7 @@ const SearchList: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full max-w-[980px] mx-auto w-full">
       <div className="flex items-center justify-between p-4">
         <ThemeDiv type="text" className="self-center text-2xl font-bold">
               Sentence Search

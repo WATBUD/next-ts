@@ -173,7 +173,7 @@ export function downloadJSONFile(filename: string, data: object) {
 }
 
 export const handleScroll = () => {
-  //document.title = "language_practice_tool";
+  //document.title = "language-practice-tool";
   const _handleScroll = () => {
       const mainScreenUI = document.getElementById("MainScreenUI");
       const scrollToTopButton = document.getElementById("scrollToTopButton");

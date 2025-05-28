@@ -1,4 +1,4 @@
-import language_data_sheet from "./language_data_sheet.json";
+import languageDataSheet from "./language-data-sheet.json";
 
 export const toggleStarred = (
   index: number,
@@ -19,7 +19,7 @@ export const checkDuplicates = () => {
   const zhMap = new Map();
   const duplicates: { zh: string; indices: any[]; }[] = [];
   
-  language_data_sheet.forEach((item: { translations: { zh: string }; index: any; }) => {
+  languageDataSheet.forEach((item: { translations: { zh: string }; index: any; }) => {
     const zhTranslation = item.translations.zh; // 獲取 zh 翻譯
     if (zhMap.has(zhTranslation) && zhMap.get(zhTranslation) !== item.index) {
       duplicates.push({

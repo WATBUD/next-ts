@@ -4,7 +4,7 @@ import GoogleAd from "@/components/google_ad";
 import GoogleAdPC from "@/components/google_ad_pc";
 import Script from 'next/script';
 
-import {useIsMobile} from './common/shared_function';
+import {useIsMobile} from './common/shared-function';
 
 export default function Home() {
   const isMobile = useIsMobile();
