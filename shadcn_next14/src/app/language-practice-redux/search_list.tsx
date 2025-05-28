@@ -8,7 +8,8 @@ import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
 import { 
 DocumentDuplicateIcon as DocumentDuplicateIconSolid,
 SpeakerWaveIcon,
-ChevronDoubleUpIcon
+ChevronDoubleUpIcon,
+Cog6ToothIcon
 } from "@heroicons/react/24/solid";
 import React, { useState, useEffect, useRef, useContext } from "react";
 import toast, {
@@ -19,6 +20,8 @@ import toast, {
 } from "react-hot-toast";
 import OptionsModal from "./options_modal";
 import { useOptions } from "./redux/options_reducer";
+import { theme } from "../common/theme";
+import { ThemeDiv } from "../common/ThemeDiv";
 
 import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../common/shared_function';
 import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDB_utils";
@@ -110,13 +113,15 @@ const SearchList: React.FC = () => {
           id="navbar"
           className="max-w-[980px] w-[86%] mb-2 flex flex-col sticky top-0 z-2 rounded-lg py-2"
           style={{
-            background: "rgba(255, 255, 255, 0)",
-            backdropFilter: "blur(10px)", // blur
-            WebkitBackdropFilter: "blur(10px)", // Safari Support
+            background: theme.colors.background.transparent,
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
           }}
         >
           <div className="mb-2 mt-3 flex w-full items-center justify-between">
-            <h1 className="self-center text-2xl font-bold">Sentence Search</h1>
+            <ThemeDiv type="text" className="self-center text-2xl font-bold">
+              Sentence Search
+            </ThemeDiv>
             <button
               onClick={() => {
                 console.log(
@@ -126,9 +131,9 @@ const SearchList: React.FC = () => {
                 );
                 setShowOptionUI(true);
               }}
-              className="rounded-md px-3 py-2 bg-blue-500 text-white shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="rounded-md p-2 bg-[#0000] shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
             >
-              Options
+              <Cog6ToothIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
             </button>
           </div>
           <div className="flex w-full">
@@ -137,7 +142,12 @@ const SearchList: React.FC = () => {
               placeholder="Search..."
               value={queryString}
               onChange={(e) => handleInputChange(e.target.value)}
-              className="w-[100%] rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              className="w-[100%] rounded-md border px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              style={{ 
+                borderColor: theme.colors.border.medium,
+                color: theme.colors.text.primary,
+                backgroundColor: "#ffffff"
+              }}
             />
           </div>
         </div>
@@ -147,68 +157,57 @@ const SearchList: React.FC = () => {
               <button
                 id="scrollToTopButton"
                 onClick={scrollToTop}
-                className="fixed self-end hidden rounded-md px-3 py-2 text-yellow-50  
-                shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                className="fixed self-end hidden rounded-md px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
                 style={{
                   backgroundColor: "rgba(45, 114, 210,0.3)",
                   bottom: isMobile ? "10vh" : "10vh",
+                  color: theme.colors.text.white
                 }}
               >
-                <ChevronDoubleUpIcon className="h-6 w-6 fill-current text-yellow-50 mr-2" />
+                <ChevronDoubleUpIcon className="h-6 w-6 fill-current mr-2" style={{ color: theme.colors.text.white }} />
                 Top
               </button>
               {filteredData.map((item) => (
                 <li
                   key={item.index}
-                  className="flex w-[100%] items-center border-b border-gray-300 py-2"
+                  className="flex w-[100%] items-center border-b py-2"
+                  style={{ borderColor: theme.colors.border.medium }}
                 >
                   <button
                     className="mr-5 bg-[#0000]"
                     onClick={() => toggleStarred(item.index)}
                   >
-                    {/* <StarIcon className="size-6 text-blue-500" /> */}
                     <StarIconOutline
                       className={`size-6 ${
                         favorites.includes(item.index)
                           ? "fill-current text-yellow-400"
-                          : "stroke-current text-gray-400"
+                          : "stroke-current"
                       }`}
+                      style={{ color: favorites.includes(item.index) ? '#fbbf24' : theme.colors.icon.primary }}
                     />
-                    {/* <StarIconSolid className={`size-6 ${favorites.includes(item.index) ? 'text-yellow-400 fill-current' : 'text-gray-400 stroke-current'}`} /> */}
                   </button>
                   <div className="break-word flex-grow-[1] bg-[#0000]">
-                    <div>
+                    <ThemeDiv variant="primary" type="text">
                       {highlightText(
                         item.translations[configOptions.selectedLanguages[0]],
                         queryString
                       )}
-                    </div>
-                    {/* <br /> */}
-                    <div>
+                    </ThemeDiv>
+                    <ThemeDiv themeColor="#4b5563" type="text">
                       {highlightText(
                         item.translations[configOptions.selectedLanguages[1]],
                         queryString
                       )}
-                    </div>
+                    </ThemeDiv>
                   </div>
                   <div className="flex justify-end flex-grow-[1]">
                     <button
                       className=""
                       onClick={() => {
-                        // console.log(
-                        //   "%c translateTextAndSpeak_onClick",
-                        //   "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
-                        //   "configOptions.selectedLanguages[1]",
-                        //   configOptions.selectedLanguages[1],
-                        //   "item.translations",
-                        //   item.translations,
-                        //   "item.translations[configOptions.selectedLanguages[1]",
-                        //   item.translations[configOptions.selectedLanguages[1]]
-                        // );
                         translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed, configOptions.voiceTranslationVolume);
                       }}
                     >
-                      <SpeakerWaveIcon className="h-6 w-6 fill-current text-gray-200" />
+                      <SpeakerWaveIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
                     </button>
                     <button
                       className="ml-2"
@@ -216,7 +215,7 @@ const SearchList: React.FC = () => {
                         copyText(item.translations[configOptions.selectedLanguages[0]],item.translations[configOptions.selectedLanguages[1]], configOptions);
                       }}
                     >
-                      <DocumentDuplicateIconSolid className="h-6 w-6 fill-current text-gray-200" />
+                      <DocumentDuplicateIconSolid className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.light }} />
                     </button>
                   </div>
                 </li>
