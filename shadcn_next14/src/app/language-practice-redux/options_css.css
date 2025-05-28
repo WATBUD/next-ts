@@ -23,24 +23,6 @@
   position: relative;
 }
 
-@media (min-width: 640px) {
-  .OptionsModal > div {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .OptionsModal > div {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .OptionsModal > div {
-    max-width: 1024px;
-  }
-}
-
 .settings-section {
   background: white;
   border-radius: 12px;

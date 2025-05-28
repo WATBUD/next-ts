@@ -9,7 +9,8 @@ import {
 DocumentDuplicateIcon as DocumentDuplicateIconSolid,
 SpeakerWaveIcon,
 ChevronDoubleUpIcon,
-Cog6ToothIcon
+Cog6ToothIcon,
+FunnelIcon
 } from "@heroicons/react/24/solid";
 import React, { useState, useEffect, useRef, useContext } from "react";
 import toast, {
@@ -122,19 +123,29 @@ const SearchList: React.FC = () => {
             <ThemeDiv type="text" className="self-center text-2xl font-bold">
               Sentence Search
             </ThemeDiv>
-            <button
-              onClick={() => {
-                console.log(
-                  "%c searchList+onClick",
-                  "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
-                  showOptionUI
-                );
-                setShowOptionUI(true);
-              }}
-              className="rounded-md p-2 bg-[#0000] shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
-            >
-              <Cog6ToothIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
-            </button>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  setShowOptionUI(true);
+                }}
+              >
+                <FunnelIcon
+                  className="h-6 w-6 fill-current"
+                  style={{ color: theme.colors.icon.primary }}
+                />
+              </button>
+              <button
+                onClick={() => {
+                  setShowOptionUI(true);
+                }}
+              >
+                <Cog6ToothIcon
+                  className="h-6 w-6 fill-current"
+                  style={{ color: theme.colors.icon.primary }}
+                />
+              </button>
+            </div>
           </div>
           <div className="flex w-full">
             <input
@@ -143,10 +154,10 @@ const SearchList: React.FC = () => {
               value={queryString}
               onChange={(e) => handleInputChange(e.target.value)}
               className="w-[100%] rounded-md border px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
-              style={{ 
+              style={{
                 borderColor: theme.colors.border.medium,
                 color: theme.colors.text.primary,
-                backgroundColor: "#ffffff"
+                backgroundColor: "#ffffff",
               }}
             />
           </div>
@@ -161,10 +172,13 @@ const SearchList: React.FC = () => {
                 style={{
                   backgroundColor: "rgba(45, 114, 210,0.3)",
                   bottom: isMobile ? "10vh" : "10vh",
-                  color: "#ffffff"
+                  color: "#ffffff",
                 }}
               >
-                <ChevronDoubleUpIcon className="h-6 w-6 fill-current mr-2" style={{ color: theme.colors.icon.primary }} />
+                <ChevronDoubleUpIcon
+                  className="h-6 w-6 fill-current mr-2"
+                  style={{ color: theme.colors.icon.primary }}
+                />
                 Top
               </button>
               {filteredData.map((item) => (
@@ -183,7 +197,11 @@ const SearchList: React.FC = () => {
                           ? "fill-current text-yellow-400"
                           : "stroke-current"
                       }`}
-                      style={{ color: favorites.includes(item.index) ? '#fbbf24' : theme.colors.icon.primary }}
+                      style={{
+                        color: favorites.includes(item.index)
+                          ? "#fbbf24"
+                          : theme.colors.icon.primary,
+                      }}
                     />
                   </button>
                   <div className="break-word flex-grow-[1] bg-[#0000]">
@@ -204,18 +222,32 @@ const SearchList: React.FC = () => {
                     <button
                       className=""
                       onClick={() => {
-                        translateTextAndSpeak(item.translations[configOptions.selectedLanguages[1]], configOptions.voiceTranslationSpeed, configOptions.voiceTranslationVolume);
+                        translateTextAndSpeak(
+                          item.translations[configOptions.selectedLanguages[1]],
+                          configOptions.voiceTranslationSpeed,
+                          configOptions.voiceTranslationVolume
+                        );
                       }}
                     >
-                      <SpeakerWaveIcon className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
+                      <SpeakerWaveIcon
+                        className="h-6 w-6 fill-current"
+                        style={{ color: theme.colors.icon.primary }}
+                      />
                     </button>
                     <button
                       className="ml-2"
                       onClick={() => {
-                        copyText(item.translations[configOptions.selectedLanguages[0]],item.translations[configOptions.selectedLanguages[1]], configOptions);
+                        copyText(
+                          item.translations[configOptions.selectedLanguages[0]],
+                          item.translations[configOptions.selectedLanguages[1]],
+                          configOptions
+                        );
                       }}
                     >
-                      <DocumentDuplicateIconSolid className="h-6 w-6 fill-current" style={{ color: theme.colors.icon.primary }} />
+                      <DocumentDuplicateIconSolid
+                        className="h-6 w-6 fill-current"
+                        style={{ color: theme.colors.icon.primary }}
+                      />
                     </button>
                   </div>
                 </li>
