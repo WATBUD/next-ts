@@ -34,6 +34,7 @@ export interface OptionsState {
   queryString: string;
   filteredQueryData: any[];
   languageDataSheet: any[];
+  selectedTags: string[];
 }
 const initialState: OptionsState = {
   showOptionUI: false,
@@ -50,7 +51,7 @@ const initialState: OptionsState = {
   queryString: '',
   filteredQueryData: [],
   languageDataSheet: filteredLanguageDataSheet(["zh","en"]),
-
+  selectedTags: [],
 };
 
 const optionsSlice = createSlice({
@@ -151,26 +152,28 @@ const optionsSlice = createSlice({
       state.queryString = action.payload;
       optionsSlice.caseReducers.applyFilter(state);
     },
+    setSelectedTags: (state, action: PayloadAction<string[]>) => {
+      state.selectedTags = action.payload;
+    },
     applyFilter: (state) => {
       const inputQueryString = state.queryString.trim();
-      // console.log(
-      //   "%c mergedData",
-      //   "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
-      //   mergedData
-      // );
-      // downloadJSONFile("test",mergedData);
 
       const filtered = state.languageDataSheet.filter((item) => {
+        // Check if item matches selected tags
+        const matchesTags = state.selectedTags.length === 0 || 
+          (item.tag && state.selectedTags.includes(item.tag));
+
         if (inputQueryString.length === 0) {
-          return state.configOptions.showFavoritesListOnly
+          return matchesTags && (state.configOptions.showFavoritesListOnly
             ? state.favorites.includes(item.index)
-            : true;
+            : true);
         }
 
         return (
           Object.values(item.translations).some((translation: any) =>
             translation.toLowerCase().includes(inputQueryString.toLowerCase())
           ) &&
+          matchesTags &&
           (!state.configOptions.showFavoritesListOnly ||
             state.favorites.includes(item.index))
         );
@@ -204,7 +207,21 @@ const optionsSlice = createSlice({
   },
 });
 
-export const { resetState,initializeConfigOptions,setShowOptionUI, setDbHasBeenLoaded, setConfigOptions, updateConfigOptions, setFavorites, handleShowMode, handleInputChange, toggleStarred, setQuery } = optionsSlice.actions;
+export const { 
+  resetState,
+  initializeConfigOptions,
+  setShowOptionUI, 
+  setDbHasBeenLoaded, 
+  setConfigOptions, 
+  updateConfigOptions, 
+  setFavorites, 
+  handleShowMode, 
+  handleInputChange, 
+  toggleStarred, 
+  setQuery,
+  setSelectedTags,
+  applyFilter 
+} = optionsSlice.actions;
 
 export default optionsSlice.reducer;
 

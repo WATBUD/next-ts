@@ -27,7 +27,11 @@ import { ThemeDiv } from "../common/ThemeDiv";
 import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../common/shared_function';
 import { set_indexedDB_Data, get_indexedDB_data } from "../common/indexedDB_utils";
 import './language_component.css'; 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import FilterModal from "./components/FilterModal";
+import { RootState, AppDispatch } from "./redux/store";
+import { setSelectedTags, applyFilter, setQuery } from "./redux/options_reducer";
+
 const SearchList: React.FC = () => {
   const isMobile = useIsMobile();
   const {
@@ -46,6 +50,15 @@ const SearchList: React.FC = () => {
     queryString,
 
   } = useOptions();
+
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  const selectedTags = useSelector((state: RootState) => state.options.selectedTags);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleTagsChange = (tags: string[]) => {
+    dispatch(setSelectedTags(tags));
+    dispatch(applyFilter());
+  };
 
   useEffect(() => {
     console.log(
@@ -103,160 +116,151 @@ const SearchList: React.FC = () => {
 
 
   return (
-    <div className="w-full flex flex-col items-center mr-5">
-      <div
-        id="MainScreenUI"
-        className={`flex flex-col items-center bg-transparent${
-          !showOptionUI ? " show" : ""
-        }`}
-      >
-        <div
-          id="navbar"
-          className="max-w-[980px] w-[86%] mb-2 flex flex-col sticky top-0 z-2 rounded-lg py-2"
-          style={{
-            background: theme.colors.background.transparent,
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
-          }}
-        >
-          <div className="mb-2 mt-3 flex w-full items-center justify-between">
-            <ThemeDiv type="text" className="self-center text-2xl font-bold">
+    <div className="flex flex-col h-full">
+      <div className="flex items-center justify-between p-4">
+        <ThemeDiv type="text" className="self-center text-2xl font-bold">
               Sentence Search
             </ThemeDiv>
 
-            <div className="flex gap-2">
-              <button
-                onClick={() => {
-                  setShowOptionUI(true);
-                }}
-              >
-                <FunnelIcon
-                  className="h-6 w-6 fill-current"
-                  style={{ color: theme.colors.icon.primary }}
-                />
-              </button>
-              <button
-                onClick={() => {
-                  setShowOptionUI(true);
-                }}
-              >
-                <Cog6ToothIcon
-                  className="h-6 w-6 fill-current"
-                  style={{ color: theme.colors.icon.primary }}
-                />
-              </button>
-            </div>
-          </div>
-          <div className="flex w-full">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={queryString}
-              onChange={(e) => handleInputChange(e.target.value)}
-              className="w-[100%] rounded-md border px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
-              style={{
-                borderColor: theme.colors.border.medium,
-                color: theme.colors.text.primary,
-                backgroundColor: "#ffffff",
-              }}
+        <div className="flex gap-2">
+          <button
+            onClick={() => setIsFilterModalOpen(true)}
+            className="p-2 hover:bg-gray-100 rounded-lg"
+          >
+            <FunnelIcon
+              className="h-6 w-6 fill-current"
+              style={{ color: theme.colors.icon.primary }}
             />
-          </div>
-        </div>
-        <div className="max-w-[980px] w-[86%] flex flex-col items-center">
-          {queryString != null && (
-            <ul className="flex flex-col mt-2 bg-[#0000] w-[100%]">
-              <button
-                id="scrollToTopButton"
-                onClick={scrollToTop}
-                className="fixed self-end hidden rounded-md px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
-                style={{
-                  backgroundColor: "rgba(45, 114, 210,0.3)",
-                  bottom: isMobile ? "10vh" : "10vh",
-                  color: "#ffffff",
-                }}
-              >
-                <ChevronDoubleUpIcon
-                  className="h-6 w-6 fill-current mr-2"
-                  style={{ color: theme.colors.icon.primary }}
-                />
-                Top
-              </button>
-              {filteredData.map((item) => (
-                <li
-                  key={item.index}
-                  className="flex w-[100%] items-center border-b py-2"
-                  style={{ borderColor: theme.colors.border.medium }}
-                >
-                  <button
-                    className="mr-5 bg-[#0000]"
-                    onClick={() => toggleStarred(item.index)}
-                  >
-                    <StarIconOutline
-                      className={`size-6 ${
-                        favorites.includes(item.index)
-                          ? "fill-current text-yellow-400"
-                          : "stroke-current"
-                      }`}
-                      style={{
-                        color: favorites.includes(item.index)
-                          ? "#fbbf24"
-                          : theme.colors.icon.primary,
-                      }}
-                    />
-                  </button>
-                  <div className="break-word flex-grow-[1] bg-[#0000]">
-                    <ThemeDiv type="text">
-                      {highlightText(
-                        item.translations[configOptions.selectedLanguages[0]],
-                        queryString
-                      )}
-                    </ThemeDiv>
-                    <ThemeDiv type="text">
-                      {highlightText(
-                        item.translations[configOptions.selectedLanguages[1]],
-                        queryString
-                      )}
-                    </ThemeDiv>
-                  </div>
-                  <div className="flex justify-end flex-grow-[1]">
-                    <button
-                      className=""
-                      onClick={() => {
-                        translateTextAndSpeak(
-                          item.translations[configOptions.selectedLanguages[1]],
-                          configOptions.voiceTranslationSpeed,
-                          configOptions.voiceTranslationVolume
-                        );
-                      }}
-                    >
-                      <SpeakerWaveIcon
-                        className="h-6 w-6 fill-current"
-                        style={{ color: theme.colors.icon.primary }}
-                      />
-                    </button>
-                    <button
-                      className="ml-2"
-                      onClick={() => {
-                        copyText(
-                          item.translations[configOptions.selectedLanguages[0]],
-                          item.translations[configOptions.selectedLanguages[1]],
-                          configOptions
-                        );
-                      }}
-                    >
-                      <DocumentDuplicateIconSolid
-                        className="h-6 w-6 fill-current"
-                        style={{ color: theme.colors.icon.primary }}
-                      />
-                    </button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
+          </button>
+          <button
+            onClick={() => {
+              setShowOptionUI(true);
+            }}
+          >
+            <Cog6ToothIcon
+              className="h-6 w-6 fill-current"
+              style={{ color: theme.colors.icon.primary }}
+            />
+          </button>
         </div>
       </div>
+      <div className="flex items-center justify-between pl-4 pr-4">
+          <input
+            type="text"
+            value={queryString}
+            onChange={(e) => {
+              dispatch(setQuery(e.target.value));
+              dispatch(applyFilter());
+            }}
+            placeholder="Search..."
+            className="w-full rounded-md border px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+            style={{
+              borderColor: theme.colors.border.medium,
+              color: theme.colors.text.primary,
+              backgroundColor: "#ffffff",
+            }}
+          />
+        </div>
+      <div className="px-4">
+        {queryString != null && (
+          <ul className="flex flex-col mt-2 bg-[#0000] w-full">
+            <button
+              id="scrollToTopButton"
+              onClick={scrollToTop}
+              className="fixed self-end hidden rounded-md px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+              style={{
+                backgroundColor: "rgba(45, 114, 210,0.3)",
+                bottom: isMobile ? "10vh" : "10vh",
+                color: "#ffffff",
+              }}
+            >
+              <ChevronDoubleUpIcon
+                className="h-6 w-6 fill-current mr-2"
+                style={{ color: theme.colors.icon.primary }}
+              />
+              Top
+            </button>
+            {filteredData.map((item) => (
+              <li
+                key={item.index}
+                className="flex w-full items-center border-b py-2"
+                style={{ borderColor: theme.colors.border.medium }}
+              >
+                <button
+                  className="mr-5 bg-[#0000]"
+                  onClick={() => toggleStarred(item.index)}
+                >
+                  <StarIconOutline
+                    className={`size-6 ${
+                      favorites.includes(item.index)
+                        ? "fill-current text-yellow-400"
+                        : "stroke-current"
+                    }`}
+                    style={{
+                      color: favorites.includes(item.index)
+                        ? "#fbbf24"
+                        : theme.colors.icon.primary,
+                    }}
+                  />
+                </button>
+                <div className="break-word flex-grow-[1] bg-[#0000]">
+                  <ThemeDiv type="text">
+                    {highlightText(
+                      item.translations[configOptions.selectedLanguages[0]],
+                      queryString
+                    )}
+                  </ThemeDiv>
+                  <ThemeDiv type="text">
+                    {highlightText(
+                      item.translations[configOptions.selectedLanguages[1]],
+                      queryString
+                    )}
+                  </ThemeDiv>
+                </div>
+                <div className="flex justify-end flex-grow-[1]">
+                  <button
+                    className=""
+                    onClick={() => {
+                      translateTextAndSpeak(
+                        item.translations[configOptions.selectedLanguages[1]],
+                        configOptions.voiceTranslationSpeed,
+                        configOptions.voiceTranslationVolume
+                      );
+                    }}
+                  >
+                    <SpeakerWaveIcon
+                      className="h-6 w-6 fill-current"
+                      style={{ color: theme.colors.icon.primary }}
+                    />
+                  </button>
+                  <button
+                    className="ml-2"
+                    onClick={() => {
+                      copyText(
+                        item.translations[configOptions.selectedLanguages[0]],
+                        item.translations[configOptions.selectedLanguages[1]],
+                        configOptions
+                      );
+                    }}
+                  >
+                    <DocumentDuplicateIconSolid
+                      className="h-6 w-6 fill-current"
+                      style={{ color: theme.colors.icon.primary }}
+                    />
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
       <OptionsModal />
+      <FilterModal
+        isOpen={isFilterModalOpen}
+        onClose={() => setIsFilterModalOpen(false)}
+        selectedTags={selectedTags}
+        onTagsChange={handleTagsChange}
+      />
       <Toaster />
     </div>
   );
