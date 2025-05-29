@@ -112,7 +112,7 @@ const SearchList: React.FC = () => {
 
   return (
     <div className="h-[100vh] max-w-[680px] mx-auto w-full relative overflow-hidden overflow-y-auto">
-      <OptionsModal />
+              <OptionsModal />
       <FilterModal
         isOpen={isFilterModalOpen}
         onClose={() => setIsFilterModalOpen(false)}
@@ -131,13 +131,8 @@ const SearchList: React.FC = () => {
           msOverflowStyle: "none" /* IE and Edge */,
         }}
       >
-        <style jsx>{`
-          #MainScreenUI::-webkit-scrollbar {
-            display: none; /* Chrome, Safari and Opera */
-          }
-        `}</style>
         <div 
-          className="sticky top-0 z-10 backdrop-blur-[1.5px] rounded-[10px]"
+          className="sticky top-0 z-[2] backdrop-blur-[1.5px] rounded-[10px]"
         >
           <div className="flex items-center justify-between p-4">
             <ThemeDiv type="text" className="self-center text-2xl font-bold">
@@ -276,7 +271,9 @@ const SearchList: React.FC = () => {
             </ul>
           )}
         </div>
+
       </div>
+
     </div>
   );
 };

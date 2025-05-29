@@ -47,7 +47,7 @@ const LanguageSelector = () => {
           <div className="settings-label">
             {index === 0 ? "Source Language" : "Target Language"}
           </div>
-          <div className="flex-1">
+          <div className="flex-1 relative">
             <Select
               value={configOptions.selectedLanguages[index]}
               onValueChange={(value) => handleLanguageChange(index, value)}
@@ -55,7 +55,16 @@ const LanguageSelector = () => {
               <SelectTrigger className="w-full bg-transparent border-none focus:ring-0 p-0 text-base">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent 
+                position="popper" 
+                sideOffset={5}
+                className="z-[9999]"
+                style={{
+                  position: 'absolute',
+                  width: 'var(--radix-select-trigger-width)',
+                  minWidth: '100%',
+                }}
+              >
                 <SelectItem className="text-base" value="en">English</SelectItem>
                 <SelectItem className="text-base" value="zh">Chinese</SelectItem>
               </SelectContent>
