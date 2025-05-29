@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './store'; 
 import { showCustomToast,downloadJSONFile } from '../../common/shared-function';
@@ -157,11 +157,21 @@ const optionsSlice = createSlice({
     },
     applyFilter: (state) => {
       const inputQueryString = state.queryString.trim();
+      const selectedTags = current(state.selectedTags); // 從 immer 解包
+
+      console.log(
+        "%c options-reducer+applyFilter",
+        "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
+        "selectedTags:",
+        selectedTags,
+        "current(state)",
+         current(state)
+      );
 
       const filtered = state.languageDataSheet.filter((item) => {
         // Check if item matches selected tags
         const matchesTags = state.selectedTags.length === 0 || 
-          (item.tag && state.selectedTags.includes(item.tag));
+          (state.selectedTags.some(tag => item.tag.includes(tag)));
 
         if (inputQueryString.length === 0) {
           return matchesTags && (state.configOptions.showFavoritesListOnly

@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import languageDataSheet from "../language-data-sheet.json";
+import { downloadJSONFile } from "@/app/common/shared-function";
 
 interface FilterModalProps {
   isOpen: boolean;
@@ -19,12 +20,21 @@ const FilterModal: React.FC<FilterModalProps> = ({
   selectedTags,
   onTagsChange,
 }) => {
+  // // Get unique tags from the language data sheet
+  // const uniqueTags = Array.from(
+  //   new Set(languageDataSheet.map((item) => item.tag))
+  // ).filter(Boolean);
   // Get unique tags from the language data sheet
   const uniqueTags = Array.from(
-    new Set(languageDataSheet.map((item) => item.tag))
+    new Set(
+      languageDataSheet.flatMap(
+        (item) => item.tag?.split(",").map((t) => t.trim()) || []
+      )
+    )
   ).filter(Boolean);
 
-  const [localSelectedTags, setLocalSelectedTags] = useState<string[]>(selectedTags);
+  const [localSelectedTags, setLocalSelectedTags] =
+    useState<string[]>(selectedTags);
 
   useEffect(() => {
     setLocalSelectedTags(selectedTags);
@@ -38,6 +48,13 @@ const FilterModal: React.FC<FilterModalProps> = ({
   };
 
   const handleApply = () => {
+    console.log(
+      "%c FilterModal+handleApply",
+      "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
+      "localSelectedTags",
+      localSelectedTags
+    );
+  
     onTagsChange(localSelectedTags);
     onClose();
   };

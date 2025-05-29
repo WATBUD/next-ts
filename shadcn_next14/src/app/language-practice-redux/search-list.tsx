@@ -55,10 +55,6 @@ const SearchList: React.FC = () => {
   const selectedTags = useSelector((state: RootState) => state.options.selectedTags);
   const dispatch = useDispatch<AppDispatch>();
 
-  const handleTagsChange = (tags: string[]) => {
-    dispatch(setSelectedTags(tags));
-    dispatch(applyFilter());
-  };
 
   useEffect(() => {
     console.log(
@@ -259,7 +255,10 @@ const SearchList: React.FC = () => {
         isOpen={isFilterModalOpen}
         onClose={() => setIsFilterModalOpen(false)}
         selectedTags={selectedTags}
-        onTagsChange={handleTagsChange}
+        onTagsChange={(tags: string[]) => {
+          dispatch(setSelectedTags(tags));
+          dispatch(applyFilter());
+        }}
       />
       <Toaster />
     </div>
