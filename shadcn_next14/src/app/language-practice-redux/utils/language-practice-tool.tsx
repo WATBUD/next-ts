@@ -1,4 +1,4 @@
-import languageDataSheet from "../data/anguage-data-sheet.json";
+import languageDataSheet from "../data/language-data-sheet.json";
 
 export const toggleStarred = (
   index: number,
