@@ -9,13 +9,13 @@ import {
   TrashIcon,
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
-import { showCustomToast } from "../common/shared-function";
-import "./options-css.css";
+import { showCustomToast } from "../../common/shared-function";
+import "./OptionsModal.css";
 import { Switch } from "@/components/ui/switch";
-import { theme } from "../common/theme";
-import { ThemeDiv } from "../common/ThemeDiv";
-import { useOptions } from "./redux/options-reducer";
-import LanguageSelector from "./language-selector";
+import { theme } from "../../common/theme";
+import { ThemeDiv } from "../../common/ThemeDiv";
+import { useOptions } from "../redux/options-reducer";
+import LanguageSelector from "../LanguageSelector";
 
 const OptionsModal = () => {
   const {

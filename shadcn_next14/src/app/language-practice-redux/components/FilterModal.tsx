@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import languageDataSheet from "../language-data-sheet.json";
+import languageDataSheet from "../data/language-data-sheet.json";
 import { downloadJSONFile } from "@/app/common/shared-function";
 
 interface FilterModalProps {

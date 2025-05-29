@@ -32,7 +32,7 @@ const LanguageSelector = () => {
     }));
 
     console.log(
-      "%c languageSelector+handleLanguageChange",
+      "%c LanguageSelector+handleLanguageChange",
       "color:#BB3D00;font-family:system-ui;font-size:2rem;font-weight:bold",
       "configOptions:",
       configOptions
