@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import languageDataSheet from "../data/language-data-sheet.json";
 import { downloadJSONFile } from "@/app/common/shared-function";
+import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
+import { theme } from "../../common/theme";
+import { translateTextAndSpeak } from "../../common/shared-function";
+import { useOptions } from "../redux/options-reducer";
 
 interface FilterModalProps {
   isOpen: boolean;
@@ -20,18 +24,18 @@ const FilterModal: React.FC<FilterModalProps> = ({
   selectedTags,
   onTagsChange,
 }) => {
-  // // Get unique tags from the language data sheet
-  // const uniqueTags = Array.from(
-  //   new Set(languageDataSheet.map((item) => item.tag))
-  // ).filter(Boolean);
-  // Get unique tags from the language data sheet
+  const { configOptions } = useOptions();
+  
+  // Get unique tags from the language data sheet and sort alphabetically
   const uniqueTags = Array.from(
     new Set(
       languageDataSheet.flatMap(
         (item) => item.tag?.split(",").map((t) => t.trim()) || []
       )
     )
-  ).filter(Boolean);
+  )
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
 
   const [localSelectedTags, setLocalSelectedTags] =
     useState<string[]>(selectedTags);
@@ -63,6 +67,14 @@ const FilterModal: React.FC<FilterModalProps> = ({
     setLocalSelectedTags([]);
   };
 
+  const handlePlayAudio = (tag: string) => {
+    translateTextAndSpeak(
+      tag,
+      configOptions.voiceTranslationSpeed,
+      configOptions.voiceTranslationVolume
+    );
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
@@ -72,13 +84,24 @@ const FilterModal: React.FC<FilterModalProps> = ({
         <ScrollArea className="h-[300px] pr-4">
           <div className="space-y-4">
             {uniqueTags.map((tag) => (
-              <div key={tag} className="flex items-center space-x-2">
-                <Checkbox
-                  id={tag}
-                  checked={localSelectedTags.includes(tag)}
-                  onCheckedChange={() => handleTagToggle(tag)}
-                />
-                <Label htmlFor={tag}>{tag}</Label>
+              <div key={tag} className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={tag}
+                    checked={localSelectedTags.includes(tag)}
+                    onCheckedChange={() => handleTagToggle(tag)}
+                  />
+                  <Label htmlFor={tag}>{tag}</Label>
+                </div>
+                <button
+                  className="hover:opacity-80 transition-opacity p-1"
+                  onClick={() => handlePlayAudio(tag)}
+                >
+                  <SpeakerWaveIcon
+                    className="h-5 w-5 fill-current"
+                    style={{ color: theme.colors.icon.primary }}
+                  />
+                </button>
               </div>
             ))}
           </div>
