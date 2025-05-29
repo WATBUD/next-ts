@@ -109,7 +109,7 @@
       "en": "Hi Chris, I'm leaving for a new job next week. I wanted to confirm if this task/order needs to be processed?",
       "zh": "hi,chris,我下週要離職去新工作了,這邊想確認這張單需要上嗎?"
     },
-    "tag": "Personal"
+    "tag": "Confirmation"
   },
   {
     "index": 298,
@@ -269,7 +269,7 @@
       "en": "I just want to confirm, we only need to add this feature in (Forum/Discover), right?",
       "zh": "我想確認一下目前只需在（論壇/發現）兩個地方加此功能,對嗎？"
     },
-    "tag": "Asking"
+    "tag": "Confirmation"
   },
   {
     "index": 278,
@@ -1597,7 +1597,7 @@
       "en": "It seems like I won’t be able to avoid getting involved.",
       "zh": "我應該是跑不掉要參與。"
     },
-    "tag": "Personal"
+    "tag": "It seems"
   },
   {
     "index": 112,
@@ -1605,7 +1605,7 @@
       "en": "Updated services and controllers to use the new DI setup.",
       "zh": "更新服務和控制器使用新的DI設定。"
     },
-    "tag": "Work"
+    "tag": "Updated"
   },
   {
     "index": 111,
@@ -1613,7 +1613,7 @@
       "en": "Improved clarity of dependency management across the application.",
       "zh": "提高整體應用程式依賴關係清晰度。"
     },
-    "tag": "Work"
+    "tag": "Improved"
   },
   {
     "index": 110,
@@ -1621,7 +1621,7 @@
       "en": "Refactor user avatar logic and user authentication logic.",
       "zh": "重構使用者頭像邏輯與user檢查帳密邏輯。"
     },
-    "tag": "Work"
+    "tag": "Code"
   },
   {
     "index": 109,
@@ -1637,7 +1637,7 @@
       "en": "Sorry to bother you, but do you have multiple agent accounts on the SMH platform? I need them for testing.",
       "zh": "打擾下,請問smh平台你有很多代理的帳號嗎?我需要做測試。"
     },
-    "tag": "Work"
+    "tag": "Sorry"
   },
   {
     "index": 107,
@@ -1645,7 +1645,7 @@
       "en": "Refactor GetUserChatrooms using MongoDB's aggregation pipeline for data composition.",
       "zh": "使用MongoDB的聚合管道重構GetUserChatrooms以進行資料組合。"
     },
-    "tag": "Work"
+    "tag": "Code"
   },
   {
     "index": 106,
@@ -1653,7 +1653,7 @@
       "en": "A D should not be constructed with duplicate key names, as that can cause undefined server behavior.",
       "zh": "D應該避免使用重複的鍵名，因為這可能會導致伺服器行為異常。"
     },
-    "tag": "Work"
+    "tag": "Should"
   },
   {
     "index": 105,
@@ -1661,7 +1661,7 @@
       "en": "If the order of the elements does not matter, an M should be used instead.",
       "zh": "如果元素的順序不重要，則應使用M代替。"
     },
-    "tag": "Work"
+    "tag": "If"
   },
   {
     "index": 104,
@@ -1837,7 +1837,7 @@
       "en": "I would like to confirm the requirements.",
       "zh": "我想確認一下這張單需求"
     },
-    "tag": "Work"
+    "tag": "Confirmation"
   },
   {
     "index": 82,
@@ -2117,7 +2117,7 @@
       "en": "Every day, I'm doing my best.",
       "zh": "每一天，我都在盡我最大的努力。"
     },
-    "tag": "Answer"
+    "tag": "Self motivation"
   },
   {
     "index": 47,
@@ -2133,7 +2133,7 @@
       "en": "I also think so.",
       "zh": "我也是這樣想。"
     },
-    "tag": "Agree"
+    "tag": "Also"
   },
   {
     "index": 45,
@@ -2301,7 +2301,7 @@
       "en": "I practice English very hard.",
       "zh": "我非常努力地練習英語。"
     },
-    "tag": "practice"
+    "tag": "Practice"
   },
   {
     "index": 24,
