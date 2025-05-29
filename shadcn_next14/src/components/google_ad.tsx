@@ -67,7 +67,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({ isMobile,adClient, adSlot, adStyle 
   return (
     <>
         <ins
-          className="adsbygoogle max-w-[980px] w-[100%]" 
+          className="adsbygoogle max-w-[680px] w-[100%]" 
           //mr-[0.8vw]
           style={{
             // position: 'fixed',
@@ -79,8 +79,6 @@ const GoogleAd: React.FC<GoogleAdProps> = ({ isMobile,adClient, adSlot, adStyle 
             //height: '100%',
             marginRight:  isMobile ? "0" : "0.8vw",
             // height: isAdVisible?height:'0px', 
-            // maxHeight: "50px", 
-            // //maxWidth: '980px',
             backgroundColor: '#0000', 
             ...adStyle,
           }}

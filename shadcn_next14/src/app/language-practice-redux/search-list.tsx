@@ -116,7 +116,7 @@ const SearchList: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col h-full max-w-[980px] mx-auto w-full">
+    <div className="flex flex-col h-[100vh] max-w-[680px] mx-auto w-full relative overflow-hidden">
       <div className="flex items-center justify-between p-4">
         <ThemeDiv type="text" className="self-center text-2xl font-bold">
               Sentence Search

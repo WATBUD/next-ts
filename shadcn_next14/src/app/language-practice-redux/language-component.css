@@ -1,29 +1,6 @@
 :root {
   --transition-duration: 0.5s;
 }
-.OptionsModal {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  z-index: 5;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: right var(--transition-duration) ease;
-}
-
-
-.OptionsModal.show {
-  right: 0%;
-  transition: right var(--transition-duration) ease;
-}
-
-
 
 #MainScreenUI{
   position: fixed;

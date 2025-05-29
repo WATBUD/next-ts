@@ -24,7 +24,7 @@ export default function Home() {
             backgroundColor: "#0000",
             zIndex: 9999,
             bottom: "0",
-            width: "980px",
+            width: "680px",
             height: "50px",
             maxHeight: "50px",
           }}
@@ -53,7 +53,7 @@ export default function Home() {
           adStyle={{
             width: "1200px",
             height: "50px",
-            maxWidth: '980px',
+            maxWidth: '680px',
           }}
           adSlot="1239843369"
         />

@@ -29,7 +29,7 @@ const OptionsModal = () => {
 
   return (
     <div className={`OptionsModal${showOptionUI ? " show" : ""}`}>
-      <ThemeDiv type="background" className="h-full flex flex-col max-w-[980px] mx-auto">
+      <ThemeDiv type="background" className="h-full flex flex-col mx-auto">
         {/* Header */}
         <div className="p-4 flex items-center border-b sticky top-0 z-10" style={{ borderColor: theme.colors.border.light }}>
           <ThemeDiv type="background" className="p-2 rounded-full transition-colors hover:bg-gray-100">
