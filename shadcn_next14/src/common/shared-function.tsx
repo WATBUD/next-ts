@@ -102,56 +102,6 @@ export const highlightText = (text: string, query: string) => {
 };
 
 
-
-export const copyText = (
-  textAbove: string,
-  textBelow: string,
-  configOptions: any
-) => {
-  const text =
-    !configOptions.copyTheTextAbove && !configOptions.copyTheTextBelow
-      ? 'No copy conditions selected\n(未選擇複製條件)'
-      : configOptions.copyTheTextAbove && configOptions.copyTheTextBelow
-      ? textAbove + "\n" + textBelow
-      : configOptions.copyTheTextBelow
-      ? textBelow
-      : configOptions.copyTheTextAbove
-      ? textAbove
-      : 'No copy conditions selected';
-
-  if (text.includes('未選擇複製條件')) {
-    showCustomToast(text);
-  } else {
-    const textArea = document.createElement("textarea");
-    textArea.value = text;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-    showCustomToast(text);
-    showCustomToast("Copied");
-  }
-};
-
-export const scrollToTop = () => {
-
-  const mainScreenUI = document.getElementById("MainScreenUI");
-
-  if(mainScreenUI){
-    const scrollDuration = 300;
-    const scrollStep = -mainScreenUI.scrollTop / (scrollDuration / 15);
-
-    const scrollInterval = setInterval(() => {
-      if (mainScreenUI.scrollTop !== 0) {
-        mainScreenUI.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval); 
-      }
-    }, 15);
-  }
-
-};
-
 export function downloadJSONFile(filename: string, data: object) {
   // Convert data to a JSON string
   const jsonString = JSON.stringify(data, null, 2);
@@ -202,4 +152,53 @@ export const handleScroll = () => {
         mainScreenUI.removeEventListener('scroll', handleScroll);
       };
     }
+};
+
+export const copyText = (
+  textAbove: string,
+  textBelow: string,
+  configOptions: any
+) => {
+  const text =
+    !configOptions.copyTheTextAbove && !configOptions.copyTheTextBelow
+      ? 'No copy conditions selected\n(未選擇複製條件)'
+      : configOptions.copyTheTextAbove && configOptions.copyTheTextBelow
+      ? textAbove + "\n" + textBelow
+      : configOptions.copyTheTextBelow
+      ? textBelow
+      : configOptions.copyTheTextAbove
+      ? textAbove
+      : 'No copy conditions selected';
+
+  if (text.includes('未選擇複製條件')) {
+    showCustomToast(text);
+  } else {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    showCustomToast(text);
+    showCustomToast("Copied");
+  }
+};
+
+export const scrollToTop = () => {
+
+  const mainScreenUI = document.getElementById("MainScreenUI");
+
+  if(mainScreenUI){
+    const scrollDuration = 300;
+    const scrollStep = -mainScreenUI.scrollTop / (scrollDuration / 15);
+
+    const scrollInterval = setInterval(() => {
+      if (mainScreenUI.scrollTop !== 0) {
+        mainScreenUI.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval); 
+      }
+    }, 15);
+  }
+
 };

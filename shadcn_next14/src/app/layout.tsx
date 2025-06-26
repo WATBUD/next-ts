@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { Inter as FontSans } from "next/font/google"
  
 import { cn } from "@/lib/utils"
-import AnimatedFavicon from './common/animated-favicon';
+import AnimatedFavicon from '../common/animated-favicon';
 
 const fontSans = FontSans({
   subsets: ["latin"],

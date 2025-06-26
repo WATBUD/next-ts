@@ -2,7 +2,7 @@
 import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './store'; 
-import { showCustomToast,downloadJSONFile } from '../../common/shared-function';
+import { showCustomToast,downloadJSONFile } from '../../../common/shared-function';
 import languageDataSheet from "../data/language-data-sheet.json";
 
 const filteredLanguageDataSheet = (languages:string[]) => {

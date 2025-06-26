@@ -21,11 +21,13 @@ import toast, {
 } from "react-hot-toast";
 import OptionsModal from "./OptionsModal";
 import { useOptions } from "../redux/options-reducer";
-import { theme } from "../../common/theme";
-import { ThemeDiv } from "../../common/ThemeDiv";
+import { theme } from "../../../common/theme";
+import { ThemeDiv } from "../../../common/ThemeDiv";
 
-import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../../common/shared-function';
-import { set_indexedDB_Data, get_indexedDB_data } from "../../common/indexedDB-utils";
+import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,handleScroll } from '../../../common/shared-function';
+
+
+import { set_indexedDB_Data, get_indexedDB_data } from "../../../common/indexedDB-utils";
 import { useDispatch, useSelector } from "react-redux";
 import FilterModal from "./FilterModal";
 import { RootState, AppDispatch } from "../redux/store";

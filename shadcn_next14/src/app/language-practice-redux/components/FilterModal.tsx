@@ -5,10 +5,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import languageDataSheet from "../data/language-data-sheet.json";
-import { downloadJSONFile } from "@/app/common/shared-function";
+import { downloadJSONFile } from "@/common/shared-function";
 import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
-import { theme } from "../../common/theme";
-import { translateTextAndSpeak } from "../../common/shared-function";
+import { theme } from "../../../common/theme";
+import { translateTextAndSpeak } from "../../../common/shared-function";
 import { useOptions } from "../redux/options-reducer";
 
 interface FilterModalProps {

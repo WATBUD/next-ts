@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
-import { theme } from "../common/theme";
+import { theme } from "../../common/theme";
 
 const LanguageSelector = () => {
   const { configOptions, updateConfigOptions } = useOptions();
