@@ -1,4 +1,85 @@
 [
+    {
+      "index": 322,
+      "translations": {
+        "en": "I’m going to the bathroom first, wait for me.",
+        "zh": "我先去廁所等我一下"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 321,
+      "translations": {
+        "en": "I’ll switch to another character to fight the boss first.",
+        "zh": "我先切換其他角色打王"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 320,
+      "translations": {
+        "en": "I don’t have any keys left, sorry, and thanks everyone.",
+        "zh": "我沒有鑰匙了 抱歉 感謝各位"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 319,
+      "translations": {
+        "en": "If you’re interested, you can join Discord to chat together.",
+        "zh": "如果你有興趣 可以加入DC一起聊天"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 318,
+      "translations": {
+        "en": "You can open the event interface on the left; it has an introduction.",
+        "zh": "你可以打開左邊的活動介面 上面有介紹"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 317,
+      "translations": {
+        "en": "Does anyone want to fight the Boss together?",
+        "zh": "有人要一起打Boss嗎?"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 316,
+      "translations": {
+        "en": "I’m from Taiwan. Where are you from?",
+        "zh": "我來自台灣?你來自哪裡"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 315,
+      "translations": {
+        "en": "Everyone remember to check in, you can earn character honor points~",
+        "zh": "大家記得簽到 可以拿角色榮譽值呦~"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 314,
+      "translations": {
+        "en": "Does anyone in your guild want to come over and play together?",
+        "zh": "你公會有人可以過來一起玩嗎?"
+      },
+      "tag": "MapleStory"
+    },
+    {
+      "index": 313,
+      "translations": {
+        "en": "Have you finished all your bosses this week?",
+        "zh": "你這週的boss都完成了嗎？"
+      },
+      "tag": "MapleStory"
+    }
+    ,
   {
     "index": 312,
     "translations": {
