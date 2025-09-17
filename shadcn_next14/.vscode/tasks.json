@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  // bind Preferences: Open Keyboard Shortcuts (JSON) {
+  //   "key": "cmd+5",
+  //   "command": "workbench.action.tasks.runTask",
+  //   "args": "convert-18n-ts"
+  // }
+  "tasks": [
+    {
+      "label": "generate-translation-json",
+      "type": "shell",
+      "isBackground": true,
+      "command": "yarn generate-translation-json",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+  ]
+}

@@ -6,7 +6,8 @@
     "dev": "next dev -p 9527",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-translation-json": "node script/generate-translation-json.js 322 MapleStory"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",
