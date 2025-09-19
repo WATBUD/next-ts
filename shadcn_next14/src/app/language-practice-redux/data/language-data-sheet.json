@@ -317,7 +317,7 @@
       "en": "Hi, is this ticket about modifying the text color format below?",
       "zh": "請問這張單的需求是修改下面的文字顏色格式嗎?"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 297,
@@ -653,7 +653,7 @@
       "en": "May I ask which page of the document contains the translation for this page?",
       "zh": "想請問這個頁面的翻譯在文件的哪個頁面?"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 255,
@@ -669,7 +669,7 @@
       "en": "Is this UI ready? I have time to work on it now.",
       "zh": "請問這個UI有了嗎？我這邊有空做了"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 253,
@@ -981,7 +981,7 @@
       "en": "I’d like to ask, on which page can I find the translation for this page?",
       "zh": "我想請問這個頁面翻譯在哪一頁?"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 214,
@@ -1165,7 +1165,7 @@
       "en": "Good morning, may I ask if Zeplin currently provides the UI for this screen? Based on the web version, the color theme seems to differ significantly.",
       "zh": "早,請問目前zeplin可以提供這個畫面的UI嗎?目前參照網頁部分看起來顏色主題差異過大"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 191,
@@ -1173,7 +1173,7 @@
       "en": "Hi, I need the new images for all VIP levels. Where can I get them?",
       "zh": "我需要vip所有等級的新圖片@@ 請問我可以去哪裡拿?"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 190,
@@ -1245,7 +1245,7 @@
       "en": "Currently, I can't retrieve the trendChart domain in the settings. Has anything been changed in this part?",
       "zh": "目前在settings拿不到trendChart Domain,想請問這部分有改什麼嗎? 英文怎麼說"
     },
-    "tag": "Default"
+    "tag": "Inquiry"
   },
   {
     "index": 181,
@@ -1261,7 +1261,7 @@
       "en": "May I ask if the new offers mission still requires the promotion page? I currently can't find the page style in Zeplin.",
       "zh": "請問新的offers mission還需要promotion這個頁面嗎? 目前在zeplin styles找不到頁面樣式"
     },
-    "tag": "Default"
+    "tag": "Inquiry"
   },
   {
     "index": 179,
@@ -1349,7 +1349,7 @@
       "en": "Error occasionally occurs during login. Is the backend being deployed?",
       "zh": "登入時不時會出現error, 請問後端有在部署嗎？"
     },
-    "tag": "Default"
+    "tag": "Inquiry"
   },
   {
     "index": 168,
@@ -1605,7 +1605,7 @@
       "en": "Can you suggest any tools for monitoring our API performance?",
       "zh": "您能建議任何工具來監控我們的API性能嗎？"
     },
-    "tag": "Can you"
+    "tag": "Suggest,Recommendation"
   },
   {
     "index": 136,
@@ -1709,7 +1709,7 @@
       "en": "May I ask which domain this API will be deployed to?",
       "zh": "請問這個api會部署到哪一個domain?"
     },
-    "tag": "May I"
+    "tag": "Inquiry"
   },
   {
     "index": 123,
@@ -1837,7 +1837,7 @@
       "en": "Sorry to bother you, but do you have multiple agent accounts on the SMH platform? I need them for testing.",
       "zh": "打擾下,請問smh平台你有很多代理的帳號嗎?我需要做測試。"
     },
-    "tag": "Sorry"
+    "tag": "Inquiry"
   },
   {
     "index": 107,
@@ -1973,7 +1973,7 @@
       "en": "Hi, could you insert game records into my account from the back end? I need them for testing.",
       "zh": "hi,請問您這邊可以從後端塞遊戲紀錄進我的帳號嗎?我才能測試 謝謝"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 90,
@@ -2149,7 +2149,7 @@
       "en": "I believe this may cause problems, I recommend synchronizing the names.",
       "zh": "我相信這可能會引起問題,我建議同步名稱。"
     },
-    "tag": "Recommendation"
+    "tag": "Suggest,Recommendation"
   },
   {
     "index": 68,
@@ -2173,7 +2173,7 @@
       "en": "I'm really a rookie, I never pretend to be otherwise.",
       "zh": "我真的是個新手，我從不假裝不是。"
     },
-    "tag": "Really"
+    "tag": "I AM"
   },
   {
     "index": 65,
@@ -2557,7 +2557,7 @@
       "en": "If there really is no way, I suggest...",
       "zh": "如果真的沒有辦法,我建議..."
     },
-    "tag": "If there really"
+    "tag": "Suggest,Recommendation"
   },
   {
     "index": 17,
