@@ -221,7 +221,7 @@
       "en": "Standardize the resolution on the VIP page by using device Width Ratio.",
       "zh": "修改vip page 解析度統一使用 deviceWidthRatio"
     },
-    "tag": "Standardize"
+    "tag": "Modify,Change"
   },
   {
     "index": 309,
@@ -333,13 +333,13 @@
       "en": "Modify CustomVerticalScrollView to add customizable properties, allowing external definition of component styles.",
       "zh": "修改CustomVerticalScrollView 新增客製化屬性,外部可定義組件樣式"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 295,
     "translations": {
       "en": "If the new variable doesn't exist, show 'Post' by default.",
-      "zh": "新增變數不存在時預設顯示帖子"
+      "zh": "如果變數不存在時預設顯示帖子"
     },
     "tag": "Work"
   },
@@ -421,7 +421,7 @@
       "en": "hi,There’s no image from the art team. Is this the way you want it to be changed?",
       "zh": "這張美術沒有給圖,這是你想要修改的樣子嗎？"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 284,
@@ -997,7 +997,7 @@
       "en": "Hi CY, good morning! I’d like to ask if this URL contains the latest translations?",
       "zh": "HI,CY早,我想問這個網址是最新的翻譯嗎？"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 212,
@@ -1133,7 +1133,7 @@
       "en": "Modify the domain key name based on backend requirements.",
       "zh": "根據後端需求修改domain key 名稱"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 195,
@@ -1157,7 +1157,7 @@
       "en": "I’d like to ask if this option will be hidden.",
       "zh": "想問這個選項會隱藏嗎？"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 192,
@@ -1341,7 +1341,7 @@
       "en": "Revise New Withdrawal Standards (Tentative)",
       "zh": "修改新提款標準(暫定)"
     },
-    "tag": "Default"
+    "tag": "Modify,Change"
   },
   {
     "index": 169,
@@ -1901,7 +1901,7 @@
       "en": "Modify the shard's dependency injection and move it to the index file.",
       "zh": "修改shard的依賴注入移到index檔案。"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 99,
@@ -1941,7 +1941,7 @@
       "en": "Modify the TypeScript-style code in lotterHistoryData.js/slider.js to resolve issues when applied in JavaScript.",
       "zh": "修改lotterHistoryData.js/slider.js ts寫法用在js的問題。"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 94,
@@ -1965,7 +1965,7 @@
       "en": "Your microphone has no sound.",
       "zh": "你的麥克風沒有聲音"
     },
-    "tag": "Technical"
+    "tag": "Sound,Listen,Voice,Hear"
   },
   {
     "index": 91,
@@ -1981,7 +1981,7 @@
       "en": "Please let me know if there are any specific changes needed, and I will make the necessary adjustments.",
       "zh": "Ok,如果有具體的改動再麻煩告知我,我配合修改"
     },
-    "tag": "Work"
+    "tag": "Modify,Change"
   },
   {
     "index": 89,
@@ -1997,7 +1997,7 @@
       "en": "Hey, do you know who is responsible for the backend? I'd like to contact them to insert some data.",
       "zh": "cy,想問你知道這個後端是誰負責嗎@@? 我去找他塞資料好了"
     },
-    "tag": "Work"
+    "tag": "Inquiry"
   },
   {
     "index": 87,
@@ -2245,7 +2245,7 @@
       "en": "Modify CSS styles and layout.",
       "zh": "修改 CSS 樣式和佈局。"
     },
-    "tag": "Modify"
+    "tag": "Modify,Change"
   },
   {
     "index": 56,
@@ -2277,7 +2277,7 @@
       "en": "Incorporate several new sentences into the JSON file.",
       "zh": "將幾個新句子納入 JSON 檔案中。"
     },
-    "tag": "Modify"
+    "tag": "Modify,Change"
   },
   {
     "index": 52,
@@ -2285,7 +2285,7 @@
       "en": "Modify the copy function prompt message.",
       "zh": "修改複製功能的提示訊息。"
     },
-    "tag": "Modify"
+    "tag": "Modify,Change"
   },
   {
     "index": 51,
@@ -2517,7 +2517,7 @@
       "en": "I want to ask who got this job QQ?",
       "zh": "我想問一下誰得到了這個工作 QQ？"
     },
-    "tag": "Default"
+    "tag": "Inquiry"
   },
   {
     "index": 22,
