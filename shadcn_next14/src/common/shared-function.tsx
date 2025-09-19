@@ -32,8 +32,12 @@ export function translateTextAndSpeak(text: string='',speed: number=1,volume: nu
   utterance_input.volume = volume;
   utterance_input.rate = speed;
   //const synth = window.speechSynthesis;
+  const BLACKLISTED_VOICES = ["Zarvox", "Bubbles","Albert","Whisper","Bahh","Bad News","Good News","Organ","Sandy (英文（美國）)"]; // Add more voices to blacklist here
   let voices = speechSynthesis.getVoices();
-  const enVoices = voices.filter((v) => v.lang.toLowerCase().includes("en"));
+  const enVoices = voices.filter((v) => 
+    v.lang.toLowerCase().includes("en") && 
+    !BLACKLISTED_VOICES.includes(v.voiceURI)
+  );
 
   console.log(
     "%c translateTextAndSpeak",
