@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import dynamic from "next/dynamic";
-
+//template {{domain}}/test-ui/CustomSwitch
 export default function DynamicUIPage() {
   const params = useParams<{ name: string }>();
   const name = params?.name;
