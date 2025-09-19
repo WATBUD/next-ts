@@ -84,7 +84,7 @@ const FilterModal: React.FC<FilterModalProps> = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px] p-0 overflow-hidden [&>button]:hidden">
+      <DialogContent className="max-w-[480px] p-0 overflow-hidden [&>button]:hidden w-full">
         <DialogHeader className="border-b px-6 py-4">
           <div className="flex items-center justify-between">
             <FunnelIcon className="h-5 w-5 text-primary" />
@@ -97,18 +97,24 @@ const FilterModal: React.FC<FilterModalProps> = ({
         <ScrollArea className="h-[300px] px-6">
           <div className="py-1">
             {filteredTags.map((tag) => (
-              <div key={tag} className="flex items-center justify-between group hover:bg-accent/50 rounded-md my-1 transition-colors">
-                <div className="flex items-center space-x-3">
+              <div 
+                key={tag} 
+                className="flex items-center justify-between group hover:bg-accent/50 rounded-md my-1 transition-colors cursor-pointer"
+                onClick={() => handleTagToggle(tag)}
+              >
+                <div className="flex items-center space-x-3 w-full">
                   <div className="flex items-center h-5">
                     <Checkbox
                       id={tag}
                       checked={localSelectedTags.includes(tag)}
                       onCheckedChange={() => handleTagToggle(tag)}
+                      className="cursor-pointer"
+                      onClick={(e) => e.stopPropagation()}
                     />
                   </div>
                   <Label 
                     htmlFor={tag} 
-                    className={`text-sm font-medium leading-none ${
+                    className={`text-sm font-medium leading-none py-2 px-1 select-none ${
                       localSelectedTags.includes(tag) ? 'text-foreground' : 'text-muted-foreground'
                     }`}
                   >
