@@ -84,7 +84,10 @@ const FilterModal: React.FC<FilterModalProps> = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-[480px] p-0 overflow-hidden [&>button]:hidden w-full">
+      <DialogContent 
+        className="max-w-[480px] p-0 overflow-hidden [&>button]:hidden w-full"
+        aria-describedby="filter-dialog-description"
+      >
         <DialogHeader className="border-b px-6 py-4">
           <div className="flex items-center justify-between">
             <FunnelIcon className="h-5 w-5 text-primary" />

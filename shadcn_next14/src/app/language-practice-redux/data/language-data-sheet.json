@@ -397,7 +397,7 @@
       "en": "Hi, I have a question regarding the Account Statement Page. Is it different from a standard Deposit/Withdraw?",
       "zh": "hi,關於 Account Statement Page我有疑問,這個跟一般的Deposit/Ｗithdraw不同嗎？"
     },
-    "tag": "Asking"
+    "tag": "I have"
   },
   {
     "index": 288,
@@ -477,7 +477,7 @@
       "en": "I just want to confirm, we only need to add this feature in (Forum/Discover), right?",
       "zh": "我想確認一下目前只需在（論壇/發現）兩個地方加此功能,對嗎？"
     },
-    "tag": "Confirmation"
+    "tag": "I just"
   },
   {
     "index": 278,
@@ -501,7 +501,7 @@
       "en": "Great, convert this section of the file into a markdown (.md) file for me.",
       "zh": "很好，將這部分轉換為 markdown (.md) 給我。"
     },
-    "tag": "Work"
+    "tag": "For"
   },
   {
     "index": 275,
@@ -525,7 +525,7 @@
       "en": "What format will the data become after using this?",
       "zh": "使用這個後資料會變成甚麼格式?"
     },
-    "tag": "Asking"
+    "tag": "What"
   },
   {
     "index": 272,
@@ -541,15 +541,15 @@
       "en": "Refactor File Naming Conventions",
       "zh": "重構文件命名約定"
     },
-    "tag": "Work"
+    "tag": "Refactor"
   },
   {
     "index": 270,
     "translations": {
-      "en": "I’ll have to claim before you visit again",
+      "en": "I will have to claim before you visit again.",
       "zh": "在您再次訪問之前我必須先聲明"
     },
-    "tag": "Work"
+    "tag": "I will"
   },
   {
     "index": 269,
@@ -557,7 +557,7 @@
       "en": "Otherwise none of you will get energy from trade",
       "zh": "否則你們誰都不會從貿易中獲得能量"
     },
-    "tag": "Work"
+    "tag": "Otherwise"
   },
   {
     "index": 268,
@@ -565,7 +565,7 @@
       "en": "Hi can somebody help me with removing an object?",
       "zh": "你好，有人可以幫我移除一個物體嗎？"
     },
-    "tag": "Work"
+    "tag": "Help"
   },
   {
     "index": 267,
@@ -1061,7 +1061,7 @@
       "en": "For the handling fee at points 13 and 14 in the user interface, how would you like it to be presented?",
       "zh": "對於第13/14點手續費部分使用者UI,您這邊想如何呈現?"
     },
-    "tag": "For the"
+    "tag": "For"
   },
   {
     "index": 205,
