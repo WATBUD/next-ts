@@ -153,6 +153,13 @@ const optionsSlice = createSlice({
       optionsSlice.caseReducers.applyFilter(state);
     },
     setSelectedTags: (state, action: PayloadAction<string[]>) => {
+      console.log(
+        "%c options-reducer+setSelectedTags",
+        "color:#DDDD00;font-family:system-ui;font-size:2rem;font-weight:bold",
+        "action.payload:",
+        action.payload,
+      );
+
       state.selectedTags = action.payload;
     },
     applyFilter: (state) => {

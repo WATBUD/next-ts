@@ -333,7 +333,7 @@
       "en": "I think the normal situation should be that data can only be retrieved with a token, and without a token, data cannot be accessed.",
       "zh": "我認為正常的狀況應該是有帶token 才能取得資料,沒帶token無法取得資料"
     },
-    "tag": "Work"
+    "tag": "I think"
   },
   {
     "index": 296,
@@ -437,7 +437,7 @@
       "en": "Hi, could you please provide a new image with the updated text? Since the text is embedded in the image, we need a new version. Thanks!",
       "zh": "hi,這個單子的圖片需要麻煩您提供新文字的圖,因為文字與圖片在一起"
     },
-    "tag": "Because,Since"
+    "tag": "Please,Since"
   },
   {
     "index": 283,
@@ -453,7 +453,7 @@
       "en": "If the order is related to the A offer, please transfer all of them to me. I am responsible for this part. Thank you!",
       "zh": "如果是A offer部分的單子,請全部轉給我,這部分是我負責的"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 281,
@@ -493,7 +493,7 @@
       "en": "Hi, I don’t see a download option for this image. Could you please grant us permission to download it? Thank you!",
       "zh": "hi,這個圖片我沒有下載選項,可以麻煩開放給我們權限下載嗎？謝謝"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 276,
@@ -621,7 +621,7 @@
       "en": "Got it. Please notify me and arrange the testing.",
       "zh": "可以,再麻煩通知安排測試"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 260,
@@ -877,7 +877,7 @@
       "en": "Sure, please give me a moment.",
       "zh": "當然，請給我一點時間。"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 228,
@@ -909,7 +909,7 @@
       "en": "After the event, when we get back home, we can do voice coding and discuss programming together.",
       "zh": "活動結束後,回到家我們可以一起語音交流寫程式"
     },
-    "tag": "Personal"
+    "tag": "We can"
   },
   {
     "index": 224,
@@ -933,7 +933,7 @@
       "en": "We can try coding together at a coffee shop.",
       "zh": "我們可以試著到咖啡館一起coding"
     },
-    "tag": "Personal"
+    "tag": "We can"
   },
   {
     "index": 221,
@@ -941,7 +941,7 @@
       "en": "I think going to a coffee shop gives a different vibe.XD",
       "zh": "我認為去咖啡館是不一樣的感覺"
     },
-    "tag": "Personal"
+    "tag": "I think"
   },
   {
     "index": 220,
@@ -973,7 +973,7 @@
       "en": "OK, please open your Line Pay account.",
       "zh": "OK,請開啟你的line pay 帳戶"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 216,
@@ -1069,7 +1069,7 @@
       "en": "OK, then I will handle them separately. PIX and Bank will each have their own independent screens.",
       "zh": "OK,那我拆開來做 PIX/Bank都是獨立畫面"
     },
-    "tag": "Work"
+    "tag": "I Will"
   },
   {
     "index": 204,
@@ -1229,7 +1229,7 @@
       "en": "Sure, please update Zeplin when you have time. Since we currently have standalone page UIs, we've created two versions.",
       "zh": "OK 麻煩有空請更新Zeplin,因為目前有獨立頁面Page UI 所以我們做了兩個版本"
     },
-    "tag": "Because,Since"
+    "tag": "Please,Since"
   },
   {
     "index": 184,
@@ -1317,7 +1317,7 @@
       "en": "The initial version of the Deposit app has been deployed. If you have time, please help arrange testing. Thank you.",
       "zh": "存款應用程式的初始版本已部署。如果您有時間，請幫忙安排測試。謝謝。"
     },
-    "tag": "Default"
+    "tag": "Please"
   },
   {
     "index": 173,
@@ -1325,7 +1325,7 @@
       "en": "The App version of the Transfer app has been deployed. If you have time, please help arrange testing. Thank you.",
       "zh": "Transfer應用程式的App版本已部署。如果您有時間，請幫忙安排測試。謝謝。"
     },
-    "tag": "Default"
+    "tag": "Please"
   },
   {
     "index": 172,
@@ -1341,7 +1341,7 @@
       "en": "Can we let the UI create the schematic?",
       "zh": "我們可以讓 UI 建立原理圖嗎？"
     },
-    "tag": "Default"
+    "tag": "We can"
   },
   {
     "index": 170,
@@ -1365,7 +1365,7 @@
       "en": "The username or account already exists. Please use a different name.",
       "zh": "使用者名稱或帳號已存在，請使用不同的名稱"
     },
-    "tag": "Default"
+    "tag": "Please"
   },
   {
     "index": 167,
@@ -1477,7 +1477,7 @@
       "en": "Please reach out if you have any questions or need assistance.",
       "zh": "如有任何問題或需要協助，請隨時聯繫我。"
     },
-    "tag": "Offer-help"
+    "tag": "Please"
   },
   {
     "index": 153,
@@ -1589,7 +1589,7 @@
       "en": "I will ensure that all new code is covered by tests before it gets deployed.",
       "zh": "我會確保所有新代碼在部署之前都有測試覆蓋。"
     },
-    "tag": "I will"
+    "tag": "I Will"
   },
   {
     "index": 139,
@@ -1626,10 +1626,10 @@
   {
     "index": 135,
     "translations": {
-      "en": "I’ll review our database queries to see if any optimizations can be made.",
+      "en": "I Will review our database queries to see if any optimizations can be made.",
       "zh": "我會檢查我們的數據庫查詢，以查看是否可以進行優化。"
     },
-    "tag": "I will"
+    "tag": "I Will"
   },
   {
     "index": 134,
@@ -1701,7 +1701,7 @@
       "en": "Could you please let me know who I can contact to get access opened?",
       "zh": "您能否告訴我可以聯絡誰來開通存取權限？"
     },
-    "tag": "Could you"
+    "tag": "Please"
   },
   {
     "index": 125,
@@ -1989,7 +1989,7 @@
       "en": "Please let me know if there are any specific changes needed, and I will make the necessary adjustments.",
       "zh": "Ok,如果有具體的改動再麻煩告知我,我配合修改"
     },
-    "tag": "Modify,Change"
+    "tag": "Please,Change"
   },
   {
     "index": 89,
@@ -1997,7 +1997,7 @@
       "en": "If the app isn't updated, please let me know.",
       "zh": "如果app沒更新,請跟我說"
     },
-    "tag": "Work"
+    "tag": "Please"
   },
   {
     "index": 88,
@@ -2069,7 +2069,7 @@
       "en": "If you find anything that needs to be changed or is unclear, let me know and I will make the necessary revisions.",
       "zh": "嗯,你如果覺得哪裡需要改或不清楚跟我說,我會去改"
     },
-    "tag": "Work"
+    "tag": "I Will"
   },
   {
     "index": 79,
@@ -2093,7 +2093,7 @@
       "en": "If my English sounds weird, please let me know!",
       "zh": "如果有說的英文很奇怪請跟我說XD"
     },
-    "tag": "Communication"
+    "tag": "Please"
   },
   {
     "index": 76,
@@ -2333,7 +2333,7 @@
       "en": "Please introduce me to a girl who can save me years of struggle.",
       "zh": "請介紹一個能讓我少奮鬥幾年的女孩。"
     },
-    "tag": "Request"
+    "tag": "Please"
   },
   {
     "index": 46,
@@ -2701,6 +2701,6 @@
       "en": "I will fully cooperate with you",
       "zh": "我將全力配合您"
     },
-    "tag": "Default"
+    "tag": "I Will"
   }
 ]
