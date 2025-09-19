@@ -853,7 +853,7 @@
       "en": "Sounds great",
       "zh": "聽起來很棒"
     },
-    "tag": "Personal"
+    "tag": "Sound,Listen,Voice,Hear"
   },
   {
     "index": 230,
@@ -885,7 +885,7 @@
       "en": "Many people also don't speak, they just go up to listen to the chat like a podcast while coding.",
       "zh": "很多人也是不講話,上去當podcast聽聊天,然後coding"
     },
-    "tag": "Work"
+    "tag": "Sound,Listen,Voice,Hear"
   },
   {
     "index": 226,
@@ -1773,7 +1773,7 @@
       "en": "I heard this project is really rushed.",
       "zh": "聽說這個案子很趕。"
     },
-    "tag": "Heard"
+    "tag": "Sound,Listen,Voice,Hear"
   },
   {
     "index": 115,
@@ -2101,7 +2101,7 @@
       "en": "I can hear your voice",
       "zh": "我聽得到你的聲音"
     },
-    "tag": "Communication"
+    "tag": "Sound,Listen,Voice,Hear"
   },
   {
     "index": 74,
