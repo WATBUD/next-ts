@@ -437,7 +437,7 @@
       "en": "Hi, could you please provide a new image with the updated text? Since the text is embedded in the image, we need a new version. Thanks!",
       "zh": "hi,這個單子的圖片需要麻煩您提供新文字的圖,因為文字與圖片在一起"
     },
-    "tag": "Work"
+    "tag": "Because,Since"
   },
   {
     "index": 283,
@@ -469,7 +469,7 @@
       "en": "Since there's no UI design yet, we’ll just use the default pop-up message for now. Is that okay?",
       "zh": "因為目前沒有畫UI,那我們就用預設的pop up message 可以嗎？"
     },
-    "tag": "Asking"
+    "tag": "Because,Since"
   },
   {
     "index": 279,
@@ -533,7 +533,7 @@
       "en": "Why do you have to work today?",
       "zh": "為甚麼你今天要上班呀?"
     },
-    "tag": "Asking"
+    "tag": "Why"
   },
   {
     "index": 271,
@@ -597,7 +597,7 @@
       "en": "Because we agreed to practice English together.",
       "zh": "因為我們說好一起練英文"
     },
-    "tag": "Together"
+    "tag": "Because,Since"
   },
   {
     "index": 263,
@@ -749,7 +749,7 @@
       "en": "He may feel uncomfortable due to language problem",
       "zh": "他可能會因為語言問題而感到不舒服"
     },
-    "tag": "Personal"
+    "tag": "Because,Since"
   },
   {
     "index": 244,
@@ -1157,7 +1157,7 @@
       "en": "I mean, why did you respond to the withdrawal issue with the lucky wheel ticket? XD",
       "zh": "我意思是,為什麼你回覆的提款問題 貼的是幸運輪工單XD"
     },
-    "tag": "Personal"
+    "tag": "Why"
   },
   {
     "index": 193,
@@ -1213,7 +1213,7 @@
       "en": "Since the order status is in SIT, I won't move it to UAT.",
       "zh": "因為單子狀態在sit我不會換到uat"
     },
-    "tag": "Default"
+    "tag": "Because,Since"
   },
   {
     "index": 186,
@@ -1229,7 +1229,7 @@
       "en": "Sure, please update Zeplin when you have time. Since we currently have standalone page UIs, we've created two versions.",
       "zh": "OK 麻煩有空請更新Zeplin,因為目前有獨立頁面Page UI 所以我們做了兩個版本"
     },
-    "tag": "Default"
+    "tag": "Because,Since"
   },
   {
     "index": 184,
@@ -1285,7 +1285,7 @@
       "en": "I gave you everything, and you still left me. Why?",
       "zh": "我給了你一切，你卻還是離開了我。為什麼？"
     },
-    "tag": "Default"
+    "tag": "Why"
   },
   {
     "index": 177,
@@ -1757,7 +1757,7 @@
       "en": "JavaScript, because in my nine-year career, every job has involved JavaScript in some capacity. I also use JavaScript for side projects after work or on weekends.",
       "zh": "JavaScript，因為在我九年的職業生涯中，每項工作都以某種方式涉及JavaScript。我也會在下班後或週末使用JavaScript進行業餘專案。"
     },
-    "tag": "Interview"
+    "tag": "Because,Since"
   },
   {
     "index": 118,
@@ -1861,7 +1861,7 @@
       "en": "A D should not be constructed with duplicate key names, as that can cause undefined server behavior.",
       "zh": "D應該避免使用重複的鍵名，因為這可能會導致伺服器行為異常。"
     },
-    "tag": "Should"
+    "tag": "Because,Since"
   },
   {
     "index": 105,
@@ -2205,7 +2205,7 @@
       "en": "Because I've had a slight cold recently.",
       "zh": "因為我最近有點感冒。"
     },
-    "tag": "Because"
+    "tag": "Because,Since"
   },
   {
     "index": 62,
@@ -2373,7 +2373,7 @@
       "en": "Sure, why not? Anything's possible if you're brave enough.",
       "zh": "當然可以，為什麼不呢？只要你足夠勇敢，一切皆有可能。"
     },
-    "tag": "Answer"
+    "tag": "Why"
   },
   {
     "index": 41,
@@ -2573,7 +2573,7 @@
       "en": "so why do we still need bundlers?",
       "zh": "所以為什麼我們還需要捆綁器？"
     },
-    "tag": "So why do"
+    "tag": "Why"
   },
   {
     "index": 16,
@@ -2645,7 +2645,7 @@
       "en": "Because we have more than 10 kinds of projects",
       "zh": "因為我們有10種以上的專案"
     },
-    "tag": "Because"
+    "tag": "Because,Since"
   },
   {
     "index": 7,
