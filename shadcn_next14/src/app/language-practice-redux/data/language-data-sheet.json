@@ -1,5 +1,13 @@
 [
   {
+    "index": 338,
+    "translations": {
+      "en": "Fix the VIP EXP bar decimal offset issue on Android.",
+      "zh": "修復 Android 上 VIP 經驗條因小數點造成的偏移"
+    },
+    "tag": "Fix"
+  },
+  {
     "index": 337,
     "translations": {
       "en": "Were you looking for me just now?",

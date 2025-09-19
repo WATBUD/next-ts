@@ -30,7 +30,8 @@ const FilterModal: React.FC<FilterModalProps> = ({
   const uniqueTags = Array.from(
     new Set(
       languageDataSheet.flatMap(
-        (item) => item.tag?.split(",").map((t) => t.trim()) || []
+        //(item) => item.tag?.split(",").map((t) => t.trim()) || []
+        (item) => item.tag
       )
     )
   )
