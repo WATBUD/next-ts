@@ -1,2 +1,4 @@
 修改 VIP 黑名單上層與下層陰影顯示邏輯
 Modify the shadow display logic for the upper and lower layers of the VIP blacklist
+my bonus 頁面也需要加上上下遮罩。
+The "My Bonus" page also needs to include top and bottom masks.
