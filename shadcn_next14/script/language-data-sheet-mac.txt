@@ -2,3 +2,7 @@
 Modify the shadow display logic for the upper and lower layers of the VIP blacklist
 my bonus 頁面也需要加上上下遮罩。
 The "My Bonus" page also needs to include top and bottom masks.
+whitelist icon 的觸控範圍不好點，觸控範圍高度改為 36px。
+The touch area of the whitelist icon is difficult to tap. Adjust the touch area height to 36px.
+視窗滑動時，scroll bar 才會出現。
+The scrollbar should only appear when the window is scrolling.
