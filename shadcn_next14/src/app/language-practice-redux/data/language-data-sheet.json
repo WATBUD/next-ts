@@ -1,5 +1,101 @@
 [
   {
+    "index": 350,
+    "translations": {
+      "en": "You can see there are many people, but they’ve all already done it.",
+      "zh": "你可以看到有很多人，但是大家都打過了"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 349,
+    "translations": {
+      "en": "Yes, but we need to find people.",
+      "zh": "有，但是要找人"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 348,
+    "translations": {
+      "en": "Welcome to our guild.",
+      "zh": "歡迎加入我們公會"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 347,
+    "translations": {
+      "en": "We need more active players.",
+      "zh": "我們需要更多活人玩家"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 346,
+    "translations": {
+      "en": "Yes, you couldn’t draw, and your reward was taken away.",
+      "zh": "是的，你不能抽籤，你獎勵被吃掉了"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 345,
+    "translations": {
+      "en": "It resets on Thursday.",
+      "zh": "星期四會重置"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 344,
+    "translations": {
+      "en": "I remember we went in together just now.",
+      "zh": "我記得我們剛剛一起進去的"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 343,
+    "translations": {
+      "en": "We’ve already finished, you’ll probably have to wait until next week.",
+      "zh": "我們已經完成了 你應該要等下週才能了"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 342,
+    "translations": {
+      "en": "As long as your teammates finish, you're considered finished too.",
+      "zh": "只要隊友完成，你就等於完成了"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 341,
+    "translations": {
+      "en": "I only saw you leave.",
+      "zh": "我只看到你離開了"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 340,
+    "translations": {
+      "en": "Or did you run out of lives?",
+      "zh": "還是你死亡次數沒了?"
+    },
+    "tag": "MapleStory"
+  },
+  {
+    "index": 339,
+    "translations": {
+      "en": "Did you just get disconnected?",
+      "zh": "你剛剛是斷線嗎?"
+    },
+    "tag": "MapleStory"
+  },
+  {
     "index": 338,
     "translations": {
       "en": "Fix the VIP EXP bar decimal offset issue on Android.",
