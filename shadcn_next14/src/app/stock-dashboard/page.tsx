@@ -148,16 +148,19 @@ export default function StockDashboard() {
       
       try {
         // Format dates to YYYY-MM-DD to avoid timezone issues
-        const formatDate = (date: Date) => {
-          const year = date.getFullYear();
-          const month = String(date.getMonth() + 1).padStart(2, '0');
-          const day = String(date.getDate()).padStart(2, '0');
+        const formatDate = (date: Date, isEndDate = false) => {
+          const d = new Date(date);
+          if (isEndDate) {
+            d.setDate(d.getDate() + 1); // Add one day for end date to include the full day
+          }
+          const year = d.getFullYear();
+          const month = String(d.getMonth() + 1).padStart(2, '0');
+          const day = String(d.getDate()).padStart(2, '0');
           return `${year}-${month}-${day}`;
         };
         
         const startDateStr = formatDate(startDate);
-        const endDateStr = formatDate(endDate);
-        
+        const endDateStr = formatDate(endDate, true);
         const data = await fetchStockData(
           symbol, 
           startDateStr,
@@ -223,7 +226,7 @@ export default function StockDashboard() {
       const localDate = new Date(
         date.getFullYear(),
         date.getMonth(),
-        date.getDate()+1,
+        date.getDate(),
         23, 59, 59, 999
       );
       // const nextDay = new Date(date);
