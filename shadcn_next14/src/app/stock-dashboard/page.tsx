@@ -176,7 +176,7 @@ export default function StockDashboard() {
         }));
         
         // Sort by date (newest first)
-        const sortedData = formattedData.sort((a: StockData, b: StockData) => 
+        const sortedData = [...formattedData].sort((a, b) => 
           b.date.getTime() - a.date.getTime()
         );
         
