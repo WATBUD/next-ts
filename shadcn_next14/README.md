@@ -1,5 +1,34 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Project Structure
+
+This project uses the **App Router** (introduced in Next.js 13). Below is a comparison between App Router and the older Pages Router:
+
+| Feature | App Router | Pages Router |
+|---------|------------|--------------|
+| **Directory** | Uses `/app` directory | Uses `/pages` directory |
+| **File-based Routing** | `page.js` for routes | `index.js` for routes |
+| **Layouts** | Built-in support with `layout.js` | Requires manual implementation |
+| **Loading States** | Built-in `loading.js` | Requires manual implementation |
+| **Error Handling** | Built-in `error.js` | Uses `_error.js` |
+| **Data Fetching** | `async/await` in Server Components | `getServerSideProps`/`getStaticProps` |
+| **Rendering** | Server Components by default | Client Components by default |
+| **Nested Routes** | Native support with folders | Requires `_app.js` and manual setup |
+| **Route Groups** | Supported with `(group)` | Not available |
+| **Streaming** | Built-in support | Limited support |
+| **Metadata API** | Built-in with `metadata` | Requires `next/head` |
+
+### Key Advantages of App Router:
+- **Server Components by Default**: Better performance with less client-side JavaScript
+- **Nested Layouts**: Easier to create complex UIs with shared layouts
+- **Loading States**: Built-in loading states with `loading.js`
+- **Error Boundaries**: Built-in error handling with `error.js`
+- **Route Groups**: Better organization with `(group)` folders
+- **Parallel Routes**: Render multiple pages in the same layout
+- **Intercepting Routes**: Create modals and other UI patterns
+
+
+
 ## Getting Started
 
 First, run the development server:
