@@ -1,95 +1,71 @@
-"use client";
-import LanguagePracticeRedux from "../app/language-practice-redux/page";
-import GoogleAd from "@/components/google_ad";
-import GoogleAdPC from "@/components/google_ad_pc";
-import Script from 'next/script';
+'use client';
 
-import {useIsMobile} from '../common/shared-function';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import AdLayout from '@/components/AdLayout';
+
+// Default page if no valid page is specified
+const DEFAULT_PAGE = 'language-practice-redux';
+
+// Get the page name from environment variable or use default
+const getPageComponent = (pageName: string = '') => {
+  const page = pageName || DEFAULT_PAGE;
+  const isDefaultPage = page === 'language-practice-redux';
+  
+  // Try to dynamically import the page component
+  try {
+    return dynamic(
+      () => import(`@/app/${page}/page`)
+        .then(module => {
+          // Handle both default and named exports
+          const PageComponent = module.default || module;
+          return (props: any) => {
+            const content = <PageComponent {...props} />;
+            return isDefaultPage ? <AdLayout>{content}</AdLayout> : content;
+          };
+        })
+        .catch(() => {
+          // If page doesn't exist, fall back to default
+          const DefaultPage = require(`@/app/${DEFAULT_PAGE}/page`).default;
+          return (props: any) => <AdLayout><DefaultPage {...props} /></AdLayout>;
+        }),
+      {
+        loading: () => (
+          <div className="flex justify-center items-center min-h-screen">
+            Loading {page}...
+          </div>
+        ),
+      }
+    );
+  } catch (error) {
+    // If there's any error, fall back to default page
+    const DefaultPage = require(`@/app/${DEFAULT_PAGE}/page`).default;
+    return dynamic(() => Promise.resolve((props: any) => (
+      <AdLayout>
+        <DefaultPage {...props} />
+      </AdLayout>
+    )));
+  }
+};
 
 export default function Home() {
-  const isMobile = useIsMobile();
-  const adClient = "ca-pub-5036446798216533";
-  return (
-    <>
-      <Script
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
-        crossOrigin="anonymous"
-        strategy="lazyOnload"
-      />
-      {/* <GoogleAdPC
-          adClient={adClient}
-          adStyle={{
-            position: "fixed",
-            backgroundColor: "#0000",
-            zIndex: 9999,
-            bottom: "0",
-            width: "680px",
-            height: "50px",
-            maxHeight: "50px",
-          }}
-          adSlot="4767523822"
-      /> */}
-      <div
-        //className="!h-[14.5vh]"
-        style={{
-          position: "fixed",
-          display: "flex",
-          backgroundColor: "#0000",
-          zIndex: 9999,
-          overflow: "hidden",
-          marginTop:  isMobile ? "90vh" : "90vh",
-          //bottom: 0,
-          // bottom: isMobile ? "-30vh" : "-20vh",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%"
-        }}
-      >
-        <div>
-        <GoogleAd
-          isMobile={isMobile}
-          adClient={adClient}
-          adStyle={{
-            width: "1200px",
-            height: "50px",
-            maxWidth: '680px',
-          }}
-          adSlot="1239843369"
-        />
-        </div>
+  // Get the page name from environment variable
+  const pageName = process.env.NEXT_PUBLIC_HOME_PAGE || DEFAULT_PAGE;
+  const isDefaultPage = pageName === 'language-practice-redux';
+  
+  // Get the component for the specified page
+  const PageComponent = getPageComponent(pageName);
+
+  const content = (
+    <Suspense fallback={
+      <div className="flex justify-center items-center min-h-screen">
+        Loading {pageName}...
       </div>
-      {!isMobile && (
-        <GoogleAdPC
-          adClient={adClient}
-          adStyle={{
-            position: "fixed",
-            backgroundColor: "#0000",
-            zIndex: 9999,
-            left: "0",
-            width: "120px",
-            height: "1200px",
-            maxHeight: "100%",
-          }}
-          adSlot="2939969664"
-        />
-      )}
-      {!isMobile && (
-        <GoogleAdPC
-          adClient={adClient}
-          adStyle={{
-            position: "fixed",
-            backgroundColor: "#0000",
-            zIndex: 9999,
-            right: "20",
-            width: "120px",
-            height: "1200px",
-            maxHeight: "100%",
-          }}
-          adSlot="8132887911"
-        />
-      )}
-      <LanguagePracticeRedux />
-    </>
+    }>
+      <PageComponent />
+    </Suspense>
   );
+
+  // Only wrap with AdLayout for the default page
+  return isDefaultPage ? <AdLayout>{content}</AdLayout> : content;
 }
