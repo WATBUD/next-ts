@@ -98,7 +98,7 @@ export default function StockDashboard() {
   const [endDate, setEndDate] = useState<Date | null>(new Date());
 
   type StockData = {
-    date: string;
+    date: string;  // Keep as string to match API response
     open: number;
     high: number;
     low: number;
@@ -317,7 +317,7 @@ export default function StockDashboard() {
               <TableBody>
                 {stockData.map((data, index) => (
                   <TableRow key={index} className="hover:bg-gray-50">
-                    <TableCell>{data.date.toLocaleDateString()}</TableCell>
+                    <TableCell>{new Date(data.date).toLocaleDateString()}</TableCell>
                     <TableCell>{data.open.toFixed(2)}</TableCell>
                     <TableCell>{data.high.toFixed(2)}</TableCell>
                     <TableCell>{data.low.toFixed(2)}</TableCell>
