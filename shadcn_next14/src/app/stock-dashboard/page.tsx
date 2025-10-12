@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -12,132 +12,28 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Label } from "@/components/ui/label";
-import { format, subDays, startOfDay, endOfDay, parseISO } from 'date-fns';
-import { Search } from "lucide-react";
 import { DatePicker } from "@/components/ui/date-picker";
-import { calculateMovingAverages,StockData } from './stockUtils';
-import { fetchStockData } from './stockService';
+import { Search } from "lucide-react";
+import { subDays } from 'date-fns';
+import { useStockData } from './useStockData';
+import { StockData } from './stockUtils';
 
 const DEFAULT_SYMBOL = '2330.TW';
 const DEFAULT_DAYS = 30;
 
-
-
 export default function StockDashboard() {
-  const [symbol, setSymbol] = useState<string>(DEFAULT_SYMBOL);
-  const [stockData, setStockData] = useState<StockData[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  // Initialize with null instead of undefined for better type safety with the DatePicker
-  const [startDate, setStartDate] = useState<Date | null>(subDays(new Date(), DEFAULT_DAYS));
-  const [endDate, setEndDate] = useState<Date | null>(new Date());
+  const [symbol, setSymbol] = useState(DEFAULT_SYMBOL);
+  const [startDate, setStartDate] = useState<Date>(subDays(new Date(), DEFAULT_DAYS));
+  const [endDate, setEndDate] = useState<Date>(new Date());
 
-  // Fetch stock data when symbol or date range changes
-  useEffect(() => {
-    const fetchData = async () => {
-      // Add null checks since TypeScript can't infer that startDate and endDate are not null
-      if (!symbol || !startDate || !endDate) return;
-      
-      setLoading(true);
-      setError(null);
-      
-      try {
-        // Format dates to YYYY-MM-DD to avoid timezone issues
-        const formatDate = (date: Date, isEndDate = false) => {
-          const d = new Date(date);
-          if (isEndDate) {
-            d.setDate(d.getDate() + 1); // Add one day for end date to include the full day
-          }
-          const year = d.getFullYear();
-          const month = String(d.getMonth() + 1).padStart(2, '0');
-          const day = String(d.getDate()).padStart(2, '0');
-          return `${year}-${month}-${day}`;
-        };
-        
-        const startDateStr = formatDate(startDate);
-        const endDateStr = formatDate(endDate, true);
-        const data = await fetchStockData(
-          symbol, 
-          startDateStr,
-          endDateStr
-        );
-        
-        // Convert date strings to Date objects
-        const formattedData = data.map((item: any) => ({
-          ...item,
-          date: parseISO(item.date),
-          open: Number(item.open),
-          high: Number(item.high),
-          low: Number(item.low),
-          close: Number(item.close),
-          volume: Number(item.volume)
-        }));
-        
-        // Sort by date (newest first)
-        const sortedData = [...formattedData].sort((a, b) => 
-          b.date.getTime() - a.date.getTime()
-        );
-        
-        // Filter out non-trading days (volume = 0)
-        const filteredData = sortedData.filter((item: StockData) => item.volume > 0);
-        
-        console.log(`Original data: ${sortedData.length} points, Filtered data: ${filteredData.length} points`);
-        console.log('sortedData:', sortedData);
+  const { data: stockData, loading, error } = useStockData(symbol, startDate, endDate);
 
-        // Calculate moving averages
-        const dataWithMA = calculateMovingAverages(filteredData);
-        setStockData(dataWithMA);
-      } catch (err) {
-        console.error('Error:', err);
-        setError('Failed to fetch stock data. Please try again.');
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    fetchData();
-  }, [symbol, startDate, endDate]);
-
-  // Helper functions to handle date changes with proper timezone handling
   const handleStartDateChange = (date: Date | null) => {
-    if (date) {
-      // Create a new date from the selected date's local time components
-      const localDate = new Date(
-        date.getFullYear(),
-        date.getMonth(),
-        date.getDate(),
-        0, 0, 0, 0
-      );
-      
-      // Store the date as is, without timezone adjustments
-      setStartDate(localDate);
-    } else {
-      setStartDate(new Date());
-    }
+    if (date) setStartDate(new Date(date.getFullYear(), date.getMonth(), date.getDate()));
   };
 
   const handleEndDateChange = (date: Date | null) => {
-    if (date) {
-      const localDate = new Date(
-        date.getFullYear(),
-        date.getMonth(),
-        date.getDate(),
-        23, 59, 59, 999
-      );
-      // const nextDay = new Date(date);
-      // nextDay.setDate(date.getDate()+);
-
-
-      // Store the date as is, without timezone adjustments
-      setEndDate(localDate);
-    } else {
-      setEndDate(new Date());
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // The form submission is handled by the useEffect hook
+    if (date) setEndDate(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59));
   };
 
   return (
@@ -145,7 +41,7 @@ export default function StockDashboard() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Stock Dashboard</h1>
         
-        <form onSubmit={handleSubmit} className="mb-8">
+        <form className="mb-8" onSubmit={e => e.preventDefault()}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <Label htmlFor="symbol" className="block mb-2">Stock Symbol</Label>
@@ -163,35 +59,31 @@ export default function StockDashboard() {
                 </Button>
               </div>
             </div>
-            
-            <div className="w-full">
+
+            <div>
               <Label className="block mb-2">Start Date</Label>
               <DatePicker
                 value={startDate}
                 onChange={handleStartDateChange}
-                placeholder="Start date"
                 maxDate={new Date()}
                 className="w-full"
-                isStartDate={true}
               />
             </div>
-            <div className="w-full">
+            <div>
               <Label className="block mb-2">End Date</Label>
               <DatePicker
                 value={endDate}
                 onChange={handleEndDateChange}
-                placeholder="End date"
+                minDate={startDate}
                 maxDate={new Date()}
-                minDate={startDate || undefined}
                 className="w-full"
-                isEndDate={true}
               />
             </div>
           </div>
         </form>
 
         {error && (
-          <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-6">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
             {error}
           </div>
         )}
@@ -213,8 +105,8 @@ export default function StockDashboard() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {stockData.map((data, index) => (
-                  <TableRow key={index} className="hover:bg-gray-50">
+                {stockData.map((data: StockData, idx: number) => (
+                  <TableRow key={idx} className="hover:bg-gray-50">
                     <TableCell>{new Date(data.date).toLocaleDateString()}</TableCell>
                     <TableCell>{data.open.toFixed(2)}</TableCell>
                     <TableCell>{data.high.toFixed(2)}</TableCell>
@@ -232,7 +124,7 @@ export default function StockDashboard() {
         ) : (
           <div className="text-center py-12 bg-gray-50 rounded-lg">
             <p className="text-gray-500">
-              {loading ? 'Loading stock data...' : 'Generating demo stock data...'}
+              {loading ? 'Loading stock data...' : 'No stock data available.'}
             </p>
           </div>
         )}
