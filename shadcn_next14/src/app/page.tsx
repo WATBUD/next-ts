@@ -19,15 +19,19 @@ const getPageComponent = (pageName: string = '') => {
         .then(module => {
           // Handle both default and named exports
           const PageComponent = module.default || module;
-          return (props: any) => {
+          const DynamicComponent = (props: any) => {
             const content = <PageComponent {...props} />;
             return isDefaultPage ? <AdLayout>{content}</AdLayout> : content;
           };
+          DynamicComponent.displayName = `DynamicPage(${page})`;
+          return DynamicComponent;
         })
         .catch(() => {
           // If page doesn't exist, fall back to default
           const DefaultPage = require(`@/app/${DEFAULT_PAGE}/page`).default;
-          return (props: any) => <AdLayout><DefaultPage {...props} /></AdLayout>;
+          const FallbackComponent = (props: any) => <AdLayout><DefaultPage {...props} /></AdLayout>;
+          FallbackComponent.displayName = `FallbackPage(${DEFAULT_PAGE})`;
+          return FallbackComponent;
         }),
       {
         loading: () => (
@@ -40,11 +44,13 @@ const getPageComponent = (pageName: string = '') => {
   } catch (error) {
     // If there's any error, fall back to default page
     const DefaultPage = require(`@/app/${DEFAULT_PAGE}/page`).default;
-    return dynamic(() => Promise.resolve((props: any) => (
+    const ErrorFallback = (props: any) => (
       <AdLayout>
         <DefaultPage {...props} />
       </AdLayout>
-    )));
+    );
+    ErrorFallback.displayName = 'ErrorFallbackPage';
+    return dynamic(() => Promise.resolve(ErrorFallback));
   }
 };
 
