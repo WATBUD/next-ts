@@ -1,43 +1,52 @@
 import { NextResponse } from 'next/server';
 import yahooFinance from 'yahoo-finance2';
 
+/**
+ * /api/stock-data
+ * 取得股票歷史資料
+ * Query 參數：
+ *   - symbol: 股票代號 (必填)
+ *   - from: 起始日期 (YYYY-MM-DD)
+ *   - to: 結束日期 (YYYY-MM-DD)
+ */
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const symbol = searchParams.get('symbol');
-  const from = searchParams.get('from');
-  const to = searchParams.get('to');
-
-  if (!symbol) {
-    return NextResponse.json(
-      { error: 'Symbol is required' },
-      { status: 400 }
-    );
-  }
-
   try {
-    // Convert dates to Date objects
+    const { searchParams } = new URL(request.url);
+    const symbol = searchParams.get('symbol');
+    const from = searchParams.get('from');
+    const to = searchParams.get('to');
+
+    // ✅ 驗證 symbol 是否存在
+    if (!symbol) {
+      return NextResponse.json({ error: 'Symbol is required' }, { status: 400 });
+    }
+
+    // ✅ 處理日期參數（若沒提供，預設抓近 30 天）
     const fromDate = from ? new Date(from) : subDays(new Date(), 30);
     const toDate = to ? new Date(to) : new Date();
-    
-    // Format dates as YYYY-MM-DD for yahoo-finance2
-    const formatForYahoo = (date: Date) => {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
-    };
-    
-    // Fetch historical data using yahoo-finance2
-    const queryOptions = { 
-      period1: formatForYahoo(fromDate),
-      period2: formatForYahoo(toDate),
+
+    // ✅ Yahoo Finance 需要 timestamp（秒）
+    const period1 = Math.floor(fromDate.getTime() / 1000);
+    const period2 = Math.floor(toDate.getTime() / 1000);
+
+    // ✅ 查詢參數設定
+    const queryOptions = {
+      period1,
+      period2,
       interval: '1d' as const,
     };
-    
-    const results = await yahooFinance.historical(symbol, queryOptions);
-    
-    // Format the response
-    const formattedData = results.map(item => ({
+
+    console.log('-----Fetching from Yahoo Finance:---------');
+    console.log(`\n\n\nhttps://query2.finance.yahoo.com/v8/finance/chart/${symbol}?period1=${period1}&period2=${period2}&interval=1d\n\n\n`);
+    console.log('-----Fetching from Yahoo Finance:---------');
+
+    // ✅ 呼叫 Yahoo Finance API
+    const results = await yahooFinance.historical(symbol, queryOptions, {
+      validateResult: false,
+    });
+
+    // ✅ 格式化輸出資料
+    const formattedData = results.map((item:any) => ({
       date: item.date.toISOString(),
       open: item.open,
       high: item.high,
@@ -47,22 +56,20 @@ export async function GET(request: Request) {
     }));
 
     return NextResponse.json(formattedData);
-  } catch (error) {
-    console.error('Error fetching stock data:', error);
+  } catch (error: any) {
+    console.error('❌ Error fetching stock data:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch stock data' },
+      { error: 'Failed to fetch stock data', details: error.message },
       { status: 500 }
     );
   }
 }
 
-// Helper functions
+/**
+ * 工具函式：回傳往前幾天的日期
+ */
 function subDays(date: Date, days: number): Date {
   const result = new Date(date);
   result.setDate(result.getDate() - days);
   return result;
-}
-
-function format(date: Date, formatStr: string): string {
-  return date.toISOString().split('T')[0]; // Simple format for YYYY-MM-DD
 }

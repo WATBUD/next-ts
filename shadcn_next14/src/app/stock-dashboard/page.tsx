@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import { format, subDays, startOfDay, endOfDay, parseISO } from 'date-fns';
 import { Search } from "lucide-react";
 import { DatePicker } from "@/components/ui/date-picker";
-import { calculateMovingAverages,StockData } from './utils/stockUtils';
+import { calculateMovingAverages,StockData } from './stockUtils';
 
 const DEFAULT_SYMBOL = '2330.TW';
 const DEFAULT_DAYS = 30;
