@@ -15,20 +15,7 @@ import { Label } from "@/components/ui/label";
 import { format, subDays, startOfDay, endOfDay, parseISO } from 'date-fns';
 import { Search } from "lucide-react";
 import { DatePicker } from "@/components/ui/date-picker";
-import yahooFinance from 'yahoo-finance2';
-import { nodeServerPages } from 'next/dist/build/webpack/plugins/pages-manifest-plugin';
-
-type StockData = {
-  date: Date;
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-  volume: number;
-  ma5?: number;
-  ma20?: number;
-  ma60?: number;
-};
+import { calculateMovingAverages,StockData } from './utils/stockUtils';
 
 const DEFAULT_SYMBOL = '2330.TW';
 const DEFAULT_DAYS = 30;
@@ -97,46 +84,6 @@ export default function StockDashboard() {
   const [startDate, setStartDate] = useState<Date | null>(subDays(new Date(), DEFAULT_DAYS));
   const [endDate, setEndDate] = useState<Date | null>(new Date());
 
-  type StockData = {
-    date: string;  // Keep as string to match API response
-    open: number;
-    high: number;
-    low: number;
-    close: number;
-    volume: number;
-    ma5?: number;
-    ma10?: number;
-    ma20?: number;
-    ma60?: number;
-  };
-  
-  const calculateMovingAverages = (data: StockData[]): StockData[] => {
-    return data.map((item, index, array) => {
-      const calcMA = (days: number) => {
-        // 嚴格要求前 N 天資料完整
-        if (index + days > array.length) return undefined;
-  
-        const subset = array.slice(index, index + days);
-        const avg = subset.reduce((sum, d) => sum + d.close, 0) / days;
-        return Number(avg.toFixed(2));
-      };
-  
-      return {
-        ...item,
-        ma5: calcMA(5),
-        ma10: calcMA(10),
-        ma20: calcMA(20),
-        ma60: calcMA(60),
-      };
-    });
-  };
-  
-  
-  
-  
-  
-  
-  
   // Fetch stock data when symbol or date range changes
   useEffect(() => {
     const fetchData = async () => {
