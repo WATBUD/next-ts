@@ -16,64 +16,12 @@ import { format, subDays, startOfDay, endOfDay, parseISO } from 'date-fns';
 import { Search } from "lucide-react";
 import { DatePicker } from "@/components/ui/date-picker";
 import { calculateMovingAverages,StockData } from './stockUtils';
+import { fetchStockData } from './stockService';
 
 const DEFAULT_SYMBOL = '2330.TW';
 const DEFAULT_DAYS = 30;
 
-async function fetchStockData(symbol: string, startDate: Date | string, endDate: Date | string) {
-  try {
-    // Function to format date as YYYY-MM-DDTHH:mm:ss, preserving original time components when possible
-    const formatDate = (date: Date | string, isEndDate = false) => {
-      // 永遠轉成 Date 物件
-      const d = new Date(date);
-    
-      // 取出各時間組件
-      const year = d.getFullYear();
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const hours = String(d.getHours()).padStart(2, '0');
-      const minutes = String(d.getMinutes()).padStart(2, '0');
-      const seconds = String(d.getSeconds()).padStart(2, '0');
-    
-      if (isEndDate) {
-        // 若是結束日期，統一補到當天的 23:59:59
-        return `${year}-${month}-${day}T23:59:59`;
-      }
-    
-      // 若是開始日期，若沒時間就預設 00:00:00
-      const hasTime = typeof date === 'string' && date.includes('T');
-      if (!hasTime) {
-        return `${year}-${month}-${day}T00:00:00`;
-      }
-    
-      // 否則保留原始時間
-      return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
-    };
-    
-    const from = formatDate(startDate);
-    const to = formatDate(endDate, true);
-    
-    console.log('Formatted from:', from);
-    console.log('Formatted to:', to);
-    
-    // Manually construct the URL to ensure time component is preserved
-    const baseUrl = `${window.location.origin}/api/stock-data`;
-    const queryString = `symbol=${encodeURIComponent(symbol)}&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`;
-    const fullUrl = `${baseUrl}?${queryString}`;
-    
- 
-    console.log('API Request URL:', fullUrl);
-    
-    const response = await fetch(fullUrl);
-    if (!response.ok) {
-      throw new Error('Failed to fetch stock data');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error('Error fetching stock data:', error);
-    throw error;
-  }
-}
+
 
 export default function StockDashboard() {
   const [symbol, setSymbol] = useState<string>(DEFAULT_SYMBOL);
