@@ -17,6 +17,8 @@ import { Search } from "lucide-react";
 import { subDays } from 'date-fns';
 import { useStockData } from './useStockData';
 import { StockData } from './stockUtils';
+import { StockToolbar } from '@/app/stock/components/StockToolbar';
+import { usePathname } from 'next/navigation';
 
 const DEFAULT_SYMBOL = '2330.TW';
 const DEFAULT_DAYS = 30;
@@ -36,10 +38,13 @@ export default function StockDashboard() {
     if (date) setEndDate(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59));
   };
 
+  const pathname = usePathname();
+
   return (
     <main className="container mx-auto py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">Stock Dashboard</h1>
+        <StockToolbar currentPath={pathname} />
         
         <form className="mb-8" onSubmit={e => e.preventDefault()}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

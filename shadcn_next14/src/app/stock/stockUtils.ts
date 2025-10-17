@@ -46,7 +46,6 @@ export const calculateMovingAverages = (data: StockData[]): StockData[] => {
   });
 };
 
-// utils/quadrupleWitching.ts
 export const getQuadrupleWitchingDays = (): { date: string; daysUntil: number }[] => {
   const today = new Date();
   const year = today.getFullYear();
@@ -66,6 +65,32 @@ export const getQuadrupleWitchingDays = (): { date: string; daysUntil: number }[
     const daysUntil = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     result.push({
       date: thirdFriday.toISOString().split("T")[0],
+      daysUntil,
+    });
+  }
+
+  return result;
+};
+
+export const getTaiexFuturesSettlementDays = (): { date: string; daysUntil: number }[] => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const months = Array.from({ length: 12 }, (_, i) => i + 1); // 1 ~ 12 月
+  const result: { date: string; daysUntil: number }[] = [];
+
+  const getThirdWednesday = (year: number, month: number): Date => {
+    const firstDay = new Date(year, month - 1, 1);
+    const firstDayWeekday = firstDay.getDay(); // 0=Sun, 3=Wed
+    const day = 1 + ((3 - firstDayWeekday + 7) % 7) + 14; // 第三個星期三
+    return new Date(year, month - 1, day);
+  };
+
+  for (const month of months) {
+    const thirdWednesday = getThirdWednesday(year, month);
+    const diffTime = thirdWednesday.getTime() - today.getTime();
+    const daysUntil = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    result.push({
+      date: thirdWednesday.toISOString().split("T")[0],
       daysUntil,
     });
   }
