@@ -10,7 +10,8 @@ if (!tag) {
 }
 
 // 固定檔案路徑
-const inputPath = path.resolve("script/language-data-sheet.txt");
+//const inputPath = path.resolve("script/language-data-sheet.txt");
+const inputPath = path.resolve("script/language-data-sheet-mac.txt");
 const outputPath = path.resolve("src/app/language-practice-redux/data/language-data-sheet.json");
 
 // 讀取 txt

@@ -1,5 +1,77 @@
 [
   {
+    "index": 359,
+    "translations": {
+      "en": "Start translating below, wait for my input",
+      "zh": "以下開始翻譯，等我輸入"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 358,
+    "translations": {
+      "en": "Move to JSON, replace underscores in text with spaces",
+      "zh": "移動至 JSON，移除文字底線改為空白"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 357,
+    "translations": {
+      "en": "Please help me implement the best solution.",
+      "zh": "請幫我實做最好的解決方案"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 356,
+    "translations": {
+      "en": "You didn’t help me modify the file.",
+      "zh": "你沒有幫我修改檔案"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 355,
+    "translations": {
+      "en": "The test is working fine now, thank you!",
+      "zh": "現在測試正常了 謝謝"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 354,
+    "translations": {
+      "en": "The scrollbar should only appear when the window is scrolling.",
+      "zh": "視窗滑動時，scroll bar 才會出現。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 353,
+    "translations": {
+      "en": "The touch area of the whitelist icon is difficult to tap. Adjust the touch area height to 36px.",
+      "zh": "whitelist icon 的觸控範圍不好點，觸控範圍高度改為 36px。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 352,
+    "translations": {
+      "en": "The \"My Bonus\" page also needs to include top and bottom masks.",
+      "zh": "my bonus 頁面也需要加上上下遮罩。"
+    },
+    "tag": "Work"
+  },
+  {
+    "index": 351,
+    "translations": {
+      "en": "Modify the shadow display logic for the upper and lower layers of the VIP blacklist",
+      "zh": "修改 VIP 黑名單上層與下層陰影顯示邏輯"
+    },
+    "tag": "Work"
+  },
+  {
     "index": 350,
     "translations": {
       "en": "You can see there are many people, but they’ve all already done it.",
