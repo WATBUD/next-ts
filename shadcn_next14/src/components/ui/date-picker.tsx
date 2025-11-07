@@ -92,6 +92,7 @@ export function DatePicker({
       maxDate={maxDate}
       minDate={minDate}
       showTimeSelect={showTimeSelect}
+      showMonthYearPicker
       dateFormat={showTimeSelect ? `${dateFormat} h:mm aa` : dateFormat}
       className="w-full"
       {...props}

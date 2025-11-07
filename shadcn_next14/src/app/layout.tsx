@@ -7,6 +7,7 @@ import { Inter as FontSans } from "next/font/google"
  
 import { cn } from "@/lib/utils"
 import AnimatedFavicon from '../common/animated-favicon';
+import { ReduxProvider } from "@/redux/redux-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,8 +38,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-      <AnimatedFavicon />
-      {children}
+      <ReduxProvider>
+        <AnimatedFavicon />
+        {children}
+      </ReduxProvider>
       </body>
 
       {/* <body className={inter.className}>{children}</body> */}

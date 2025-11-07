@@ -1,20 +1,5 @@
 import languageDataSheet from "../data/language-data-sheet.json";
 
-export const toggleStarred = (
-  index: number,
-  favorites: number[],
-  setFavorites: (favorites: number[]) => void,
-  showCustomToast: (message: string) => void
-) => {
-  if (favorites.includes(index)) {
-    setFavorites(favorites.filter((item) => item !== index));
-    showCustomToast("已取消收藏");
-  } else {
-    setFavorites([...favorites, index]);
-    showCustomToast("已收藏");
-  }
-};
-
 export const checkDuplicates = () => {
   const zhMap = new Map();
   const duplicates: { zh: string; indices: any[]; }[] = [];

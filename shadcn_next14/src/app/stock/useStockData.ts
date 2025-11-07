@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { fetchStockData } from './stockService';
 import { StockData, formatStockData, calculateMovingAverages } from './stockUtils';
 
-export const useStockData = (symbol: string, startDate: Date, endDate: Date) => {
+export const useStockData = (symbol: string, startDate: Date, endDate: Date, maDays: number[] = [5, 10, 20, 60, 180]) => {
   const [data, setData] = useState<StockData[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +32,7 @@ export const useStockData = (symbol: string, startDate: Date, endDate: Date) => 
           .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .filter(item => item.volume > 0);
 
-        setData(calculateMovingAverages(formattedData));
+        setData(calculateMovingAverages(formattedData, maDays));
       } catch (err) {
         setError((err as Error).message);
       } finally {
@@ -41,7 +41,7 @@ export const useStockData = (symbol: string, startDate: Date, endDate: Date) => 
     };
 
     fetchData();
-  }, [symbol, startDate, endDate]);
+  }, [symbol, startDate, endDate, maDays]);
 
   return { data, loading, error };
 };

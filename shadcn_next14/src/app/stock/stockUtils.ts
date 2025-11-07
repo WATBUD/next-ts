@@ -8,10 +8,7 @@ export type StockData = {
   low: number;
   close: number;
   volume: number;
-  ma5?: number;
-  ma10?: number;
-  ma20?: number;
-  ma60?: number;
+  [key: `ma${number}`]: number | undefined;
 };
 
 // 將 API 回傳資料轉成可用型態
@@ -27,21 +24,21 @@ export const formatStockData = (data: any[]): StockData[] =>
   }));
 
 // 計算移動平均
-export const calculateMovingAverages = (data: StockData[]): StockData[] => {
+export const calculateMovingAverages = (data: StockData[], maDays: number[] = [5, 10, 20, 60, 180]): StockData[] => {
   return data.map((item, index, array) => {
-    const calcMA = (days: number) => {
-      if (index + days > array.length) return undefined;
-      const subset = array.slice(index, index + days);
-      const avg = subset.reduce((sum, d) => sum + d.close, 0) / days;
-      return Number(avg.toFixed(2));
-    };
+    const maValues: Record<string, number | undefined> = {};
+    
+    maDays.forEach(days => {
+      if (index + days <= array.length) {
+        const subset = array.slice(index, index + days);
+        const avg = subset.reduce((sum, d) => sum + d.close, 0) / days;
+        maValues[`ma${days}`] = Number(avg.toFixed(2));
+      }
+    });
 
     return {
       ...item,
-      ma5: calcMA(5),
-      ma10: calcMA(10),
-      ma20: calcMA(20),
-      ma60: calcMA(60),
+      ...maValues
     };
   });
 };
