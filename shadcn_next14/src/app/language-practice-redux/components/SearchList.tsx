@@ -30,7 +30,7 @@ import { copyText,useIsMobile,translateTextAndSpeak,highlightText,scrollToTop,ha
 import { set_indexedDB_Data, get_indexedDB_data } from "../../../common/indexedDB-utils";
 import { useDispatch, useSelector } from "react-redux";
 import FilterModal from "./FilterModal";
-import { RootState, AppDispatch } from "../redux/store";
+import { RootState, AppDispatch } from "@/redux/store";
 import { setSelectedTags, applyFilter, setQuery } from "../redux/options-reducer";
 
 const SearchList: React.FC = () => {
@@ -47,7 +47,7 @@ const SearchList: React.FC = () => {
     setFavorites,
     setDbHasBeenLoaded,
     setShowOptionUI,
-    filteredQueryData: filteredData,
+    filteredQueryData,
     queryString,
 
   } = useOptions();
@@ -199,7 +199,7 @@ const SearchList: React.FC = () => {
                 />
                 Top
               </button>
-              {filteredData.map((item) => (
+              {filteredQueryData.map((item: any) => (
                 <li
                   key={item.index}
                   className="flex w-full items-center border-b py-2 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"

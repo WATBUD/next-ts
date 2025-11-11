@@ -26,7 +26,7 @@ const LanguageSelector = () => {
       newLanguages[index] = lang;
     }
 
-    updateConfigOptions((prevOptions) => ({
+    updateConfigOptions((prevOptions: any) => ({
       ...prevOptions,
       selectedLanguages: newLanguages,
     }));
