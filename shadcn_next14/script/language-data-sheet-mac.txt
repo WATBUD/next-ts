@@ -1,0 +1,2 @@
+我要的是點擊主畫面才會隱藏視窗
+I want the window to hide only when clicking on the main screen
