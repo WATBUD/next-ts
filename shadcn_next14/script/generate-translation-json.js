@@ -1,25 +1,29 @@
 const fs = require("fs");
 const path = require("path");
 
-// 用法: node convert.js MapleStory
-const [,, tag] = process.argv;
-
-if (!tag) {
-  console.error("用法: node convert.js <tag>");
-  process.exit(1);
-}
-
 // 固定檔案路徑
 //const inputPath = path.resolve("script/language-data-sheet.txt");
-const inputPath = path.resolve("script/language-data-sheet-mac.txt");
+const inputPath = path.resolve("script/language-data-sheet-game.txt");
 const outputPath = path.resolve("src/app/language-practice-redux/data/language-data-sheet.json");
 
 // 讀取 txt
 const content = fs.readFileSync(inputPath, "utf-8").trim();
 const lines = content.split(/\r?\n/);
 
-if (lines.length % 2 !== 0) {
-  console.error("❌ txt 檔案內容必須為偶數行 (一行中文 + 一行英文)");
+// 從第一行提取 tag (格式: /*tag: MapleStory*/)
+const tagLine = lines[0].trim();
+const tagMatch = tagLine.match(/\/\*tag:\s*(.+?)\*\//);
+if (!tagMatch) {
+  console.error("❌ 第一行必須為 tag 格式: /*tag: <tag>*/");
+  process.exit(1);
+}
+const tag = tagMatch[1].trim();
+
+// 移除第一行 (tag 行) 並過濾空行
+const translationLines = lines.slice(1).filter(line => line.trim() !== "");
+
+if (translationLines.length % 2 !== 0) {
+  console.error("❌ 翻譯內容必須為偶數行 (一行中文 + 一行英文)");
   process.exit(1);
 }
 
@@ -45,9 +49,9 @@ if (fs.existsSync(outputPath)) {
 let index = maxIndex + 1;
 const newData = [];
 
-for (let i = 0; i < lines.length; i += 2) {
-  const zh = lines[i].trim();
-  const en = lines[i + 1].trim();
+for (let i = 0; i < translationLines.length; i += 2) {
+  const zh = translationLines[i].trim();
+  const en = translationLines[i + 1].trim();
 
   newData.push({
     index: index++,
