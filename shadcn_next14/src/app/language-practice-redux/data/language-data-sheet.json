@@ -1,5 +1,157 @@
 [
   {
+    "index": 405,
+    "translations": {
+      "en": "Optimize the overall project architecture and codebase to maximize development efficiency and maintainability while minimizing the number of tokens required for AI to understand and work with the project.",
+      "zh": "優化目前整體的專案程式碼與架構，讓 AI 在讀取專案時能以更少的 Token 達到最大的開發效率與維護性。"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 404,
+    "translations": {
+      "en": "Please rename it to **XP Quests** and move it to the bottom of the list.",
+      "zh": "請改為 **XP Quests**，並將其排序至最底部。"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 403,
+    "translations": {
+      "en": "Looks great! I'd like the scroll position to update as well when the selection is changed using the keyboard, ensuring that the currently selected item remains visible within the viewport.",
+      "zh": "很棒！我希望當透過鍵盤按鍵改變選取位置時，捲軸也能同步捲動，讓目前選取的項目保持在可視範圍內。"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 402,
+    "translations": {
+      "en": "When using the Up/Down arrow keys, if a file in the upper section has the same name as a file in the lower section, the selection jumps to the matching file in the other section. Please modify the behavior so that navigation within the upper and lower sections is independent and is not affected by files with the same name in the other section.",
+      "zh": "目前按壓上下鍵時，如果上方區塊的檔案與下方區塊存在同名檔案，會跳轉到另一個區塊的同名檔案。請修改為上下兩個區塊的彼此獨立，不受另一個區塊同名檔案影響。"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 401,
+    "translations": {
+      "en": "Please implement all of your suggested improvements.",
+      "zh": "請實作你所有建議的修改"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 400,
+    "translations": {
+      "en": "Please add a feature to delete items by pressing the Enter key.",
+      "zh": "請幫我新增按回車鍵刪除項目的功能。"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 399,
+    "translations": {
+      "en": "Please help me implement it using the best-performing solution.",
+      "zh": "請幫我用效能最好的方案改"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 398,
+    "translations": {
+      "en": "I want the divider in the middle to be freely draggable to adjust the display width.",
+      "zh": "我希望中間的左右分隔線是可以自由拖曳顯示寬度"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 397,
+    "translations": {
+      "en": "Please restore the window to the center position.",
+      "zh": "請把視窗還原置中"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 396,
+    "translations": {
+      "en": "What I mean is: the file list should be on the left, and after clicking a file, the diff should be displayed on the right.",
+      "zh": "我的意思是左邊是檔案列表，點擊後右邊顯示異動"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 395,
+    "translations": {
+      "en": "Please move the functions on the right side, such as drop and apply, into `StashContextMenu`.",
+      "zh": "請將右邊的 drop、apply 等功能移至 StashContextMenu"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 394,
+    "translations": {
+      "en": "However, the first line hash is still not aligned with the icon.",
+      "zh": "但是第一行 hash 還是沒有跟 icon 對齊"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 393,
+    "translations": {
+      "en": "However, the icons and text are currently misaligned. Please adjust them to a clean and visually aligned UI.",
+      "zh": "不過目前的圖與文字都沒對齊，請修正為好看整齊的 UI"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 392,
+    "translations": {
+      "en": "Please separate `commitDiffModal` into its own component.",
+      "zh": "commitDiffModal 幫我獨立出一個組件"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 391,
+    "translations": {
+      "en": "After clicking a sub-item, the command log does not refresh immediately.",
+      "zh": "子項目點擊後沒有立即刷新指令到指令紀錄"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 390,
+    "translations": {
+      "en": "Only add it to the sub-items, not the main items.",
+      "zh": "只有子項目要加入 主項目不用"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 389,
+    "translations": {
+      "en": "Please help add the modification time next to each item.",
+      "zh": "請幫我在每個項目旁加入修改時間"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 388,
+    "translations": {
+      "en": "Right now only the last file can be expanded, but what I want is for each file’s changes to be individually collapsible.",
+      "zh": "裡面的檔案只有最後一個有展開，我要的是個別檔案異動可以收縮的"
+    },
+    "tag": "work"
+  },
+  {
+    "index": 387,
+    "translations": {
+      "en": "Great—next, please help modify it so that we can view commit changes in the branch list.",
+      "zh": "很好,接下來請幫我改可以在branchLIst看 看commit changes"
+    },
+    "tag": "work"
+  },
+  {
     "index": 386,
     "translations": {
       "en": "I’m also a Taiwanese player.",

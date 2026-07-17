@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 // 固定檔案路徑
-//const inputPath = path.resolve("script/language-data-sheet.txt");
-const inputPath = path.resolve("script/language-data-sheet-game.txt");
+const inputPath = path.resolve("script/language-data-sheet-work.txt");
+//const inputPath = path.resolve("script/language-data-sheet-game.txt");
 const outputPath = path.resolve("src/app/language-practice-redux/data/language-data-sheet.json");
 
 // 讀取 txt
